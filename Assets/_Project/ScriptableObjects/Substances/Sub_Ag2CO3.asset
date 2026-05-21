@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_Ag2CO3
   m_EditorClassIdentifier: 
   Id: Ag2CO3
-  Formula: "Ag\u2082CO\u2083"
+  Formula: Ag<sub>2</sub>CO<sub>3</sub>
   DisplayName: "B\u1EA1c cacbonat"
   Category: 2
   Phase: 4

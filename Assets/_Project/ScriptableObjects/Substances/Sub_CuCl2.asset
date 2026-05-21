@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_CuCl2
   m_EditorClassIdentifier: 
   Id: CuCl2
-  Formula: "CuCl\u2082"
+  Formula: CuCl<sub>2</sub>
   DisplayName: "\u0110\u1ED3ng clorua"
   Category: 2
   Phase: 3

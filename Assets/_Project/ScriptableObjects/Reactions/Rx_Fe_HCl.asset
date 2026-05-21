@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rx_Fe_HCl
   m_EditorClassIdentifier: 
   Id: Fe_HCl
-  Description: "Fe + 2HCl \u2192 FeCl\u2082 + H\u2082\u2191"
+  Description: "Fe + 2HCl \u2192 FeCl<sub>2</sub> + H<sub>2</sub>\u2191"
   Inputs:
   - Substance: {fileID: 11400000, guid: bc789f29091e88b4e842dbaadac03de1, type: 2}
     Ratio: 1
@@ -27,6 +27,6 @@ MonoBehaviour:
     Ratio: 1
   PrimarySideEffect: 1
   FlashColor: {r: 1, g: 1, b: 1, a: 1}
-  ReactionEquation: "Fe + 2HCl \u2192 FeCl\u2082 + H\u2082"
+  ReactionEquation: "Fe + 2HCl \u2192 FeCl<sub>2</sub> + H<sub>2</sub>"
   LimitedByLowestInput: 1
   SlowReaction: 0

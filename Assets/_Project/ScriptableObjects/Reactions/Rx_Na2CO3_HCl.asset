@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Rx_Na2CO3_HCl
   m_EditorClassIdentifier: 
   Id: Na2CO3_HCl
-  Description: "Na\u2082CO\u2083 + 2HCl \u2192 2NaCl + CO\u2082\u2191 + H\u2082O"
+  Description: "Na<sub>2</sub>CO<sub>3</sub> + 2HCl \u2192 2NaCl + CO<sub>2</sub>\u2191
+    + H<sub>2</sub>O"
   Inputs:
   - Substance: {fileID: 11400000, guid: 5dbc919d17dc2884fa09d562525c2642, type: 2}
     Ratio: 1
@@ -29,6 +30,7 @@ MonoBehaviour:
     Ratio: 1
   PrimarySideEffect: 2
   FlashColor: {r: 1, g: 1, b: 1, a: 1}
-  ReactionEquation: "Na\u2082CO\u2083 + 2HCl \u2192 2NaCl + CO\u2082 + H\u2082O"
+  ReactionEquation: "Na<sub>2</sub>CO<sub>3</sub> + 2HCl \u2192 2NaCl + CO<sub>2</sub>
+    + H<sub>2</sub>O"
   LimitedByLowestInput: 1
   SlowReaction: 0

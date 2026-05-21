@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Rx_CaCO3_HCl
   m_EditorClassIdentifier: 
   Id: CaCO3_HCl
-  Description: "CaCO\u2083 + 2HCl \u2192 CaCl\u2082 + CO\u2082\u2191 + H\u2082O"
+  Description: "CaCO<sub>3</sub> + 2HCl \u2192 CaCl<sub>2</sub> + CO<sub>2</sub>\u2191
+    + H<sub>2</sub>O"
   Inputs:
   - Substance: {fileID: 11400000, guid: 5b264e4212adf0048a0309b62b7a1899, type: 2}
     Ratio: 1
@@ -29,6 +30,7 @@ MonoBehaviour:
     Ratio: 1
   PrimarySideEffect: 2
   FlashColor: {r: 1, g: 1, b: 1, a: 1}
-  ReactionEquation: "CaCO\u2083 + 2HCl \u2192 CaCl\u2082 + CO\u2082 + H\u2082O"
+  ReactionEquation: "CaCO<sub>3</sub> + 2HCl \u2192 CaCl<sub>2</sub> + CO<sub>2</sub>
+    + H<sub>2</sub>O"
   LimitedByLowestInput: 1
   SlowReaction: 0

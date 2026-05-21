@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_HNO3
   m_EditorClassIdentifier: 
   Id: HNO3
-  Formula: "HNO\u2083"
+  Formula: HNO<sub>3</sub>
   DisplayName: Axit nitric
   Category: 0
   Phase: 3

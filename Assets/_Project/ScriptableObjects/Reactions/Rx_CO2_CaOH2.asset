@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Rx_CO2_CaOH2
   m_EditorClassIdentifier: 
   Id: CO2_CaOH2
-  Description: "CO\u2082 + Ca(OH)\u2082 \u2192 CaCO\u2083\u2193 + H\u2082O"
+  Description: "CO<sub>2</sub> + Ca(OH)<sub>2</sub> \u2192 CaCO<sub>3</sub>\u2193
+    + H<sub>2</sub>O"
   Inputs:
   - Substance: {fileID: 11400000, guid: c77ad211e2fbccd428fd4dba9aa0c80e, type: 2}
     Ratio: 1
@@ -27,7 +28,7 @@ MonoBehaviour:
     Ratio: 1
   PrimarySideEffect: 8
   FlashColor: {r: 1, g: 1, b: 1, a: 1}
-  ReactionEquation: "CO\u2082 + Ca(OH)\u2082 \u2192 CaCO\u2083 + H\u2082O (n\u01B0\u1EDBc
-    v\xF4i \u0111\u1EE5c)"
+  ReactionEquation: "CO<sub>2</sub> + Ca(OH)<sub>2</sub> \u2192 CaCO<sub>3</sub>
+    + H<sub>2</sub>O (n\u01B0\u1EDBc v\xF4i \u0111\u1EE5c)"
   LimitedByLowestInput: 1
   SlowReaction: 0

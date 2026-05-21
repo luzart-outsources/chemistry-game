@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_FeCl2
   m_EditorClassIdentifier: 
   Id: FeCl2
-  Formula: "FeCl\u2082"
+  Formula: FeCl<sub>2</sub>
   DisplayName: "S\u1EAFt(II) clorua"
   Category: 2
   Phase: 3

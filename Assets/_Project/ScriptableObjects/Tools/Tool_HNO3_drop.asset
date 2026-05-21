@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tool_HNO3_drop
   m_EditorClassIdentifier: 
   Id: HNO3_drop
-  DisplayName: "HNO\u2083 pha lo\xE3ng"
+  DisplayName: "HNO<sub>3</sub> pha lo\xE3ng"
   FunctionType: 5
   IconSprite: {fileID: 0}
   AssociatedSubstance: {fileID: 11400000, guid: 766b27aae5e19ec4a9da0ccfd9f21aaa, type: 2}

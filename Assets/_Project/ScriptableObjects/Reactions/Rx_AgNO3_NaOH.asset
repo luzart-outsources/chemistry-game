@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Rx_AgNO3_NaOH
   m_EditorClassIdentifier: 
   Id: AgNO3_NaOH
-  Description: "2AgNO\u2083 + 2NaOH \u2192 Ag\u2082O\u2193 + 2NaNO\u2083 + H\u2082O"
+  Description: "2AgNO<sub>3</sub> + 2NaOH \u2192 Ag<sub>2</sub>O\u2193 + 2NaNO<sub>3</sub>
+    + H<sub>2</sub>O"
   Inputs:
   - Substance: {fileID: 11400000, guid: 7c240929f8ff0834cb605e9e1233f280, type: 2}
     Ratio: 2
@@ -29,6 +30,7 @@ MonoBehaviour:
     Ratio: 1
   PrimarySideEffect: 8
   FlashColor: {r: 1, g: 1, b: 1, a: 1}
-  ReactionEquation: "2AgNO\u2083 + 2NaOH \u2192 Ag\u2082O + 2NaNO\u2083 + H\u2082O"
+  ReactionEquation: "2AgNO<sub>3</sub> + 2NaOH \u2192 Ag<sub>2</sub>O + 2NaNO<sub>3</sub>
+    + H<sub>2</sub>O"
   LimitedByLowestInput: 1
   SlowReaction: 0

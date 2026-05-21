@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_H2SO4
   m_EditorClassIdentifier: 
   Id: H2SO4
-  Formula: "H\u2082SO\u2084"
+  Formula: H<sub>2</sub>SO<sub>4</sub>
   DisplayName: Axit sunfuric
   Category: 0
   Phase: 3

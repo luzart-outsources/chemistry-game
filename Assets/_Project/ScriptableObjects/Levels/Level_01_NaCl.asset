@@ -53,7 +53,7 @@ MonoBehaviour:
     ExplanationVi: "D\u01B0 NaOH \u2014 m\xF4i tr\u01B0\u1EDDng c\xF2n baz\u01A1"
   - TrapId: Carbonate
     TriggerProduct: {fileID: 11400000, guid: 5dbc919d17dc2884fa09d562525c2642, type: 2}
-    ExplanationVi: "C\xF2n Na\u2082CO\u2083 \u2014 kh\xF4ng tinh khi\u1EBFt"
+    ExplanationVi: "C\xF2n Na<sub>2</sub>CO<sub>3</sub> \u2014 kh\xF4ng tinh khi\u1EBFt"
   Hints: {fileID: 11400000, guid: 699c8650a1c413e4a8590532d91488d4, type: 2}
   ThreeStarBlockingTraps:
   - TrapId: ExcessAcid
@@ -64,4 +64,4 @@ MonoBehaviour:
     ExplanationVi: "D\u01B0 NaOH \u2014 m\xF4i tr\u01B0\u1EDDng c\xF2n baz\u01A1"
   - TrapId: Carbonate
     TriggerProduct: {fileID: 11400000, guid: 5dbc919d17dc2884fa09d562525c2642, type: 2}
-    ExplanationVi: "C\xF2n Na\u2082CO\u2083 \u2014 kh\xF4ng tinh khi\u1EBFt"
+    ExplanationVi: "C\xF2n Na<sub>2</sub>CO<sub>3</sub> \u2014 kh\xF4ng tinh khi\u1EBFt"

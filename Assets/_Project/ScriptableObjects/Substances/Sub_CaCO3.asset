@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_CaCO3
   m_EditorClassIdentifier: 
   Id: CaCO3
-  Formula: "CaCO\u2083"
+  Formula: CaCO<sub>3</sub>
   DisplayName: Canxi cacbonat
   Category: 2
   Phase: 1

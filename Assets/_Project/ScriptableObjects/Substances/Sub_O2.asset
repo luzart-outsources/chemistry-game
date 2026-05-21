@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_O2
   m_EditorClassIdentifier: 
   Id: O2
-  Formula: "O\u2082"
+  Formula: O<sub>2</sub>
   DisplayName: "Kh\xED oxi"
   Category: 6
   Phase: 2

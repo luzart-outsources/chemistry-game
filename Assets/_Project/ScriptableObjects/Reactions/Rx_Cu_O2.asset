@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rx_Cu_O2
   m_EditorClassIdentifier: 
   Id: Cu_O2
-  Description: "2Cu + O\u2082 -t\xB0\u2192 2CuO"
+  Description: "2Cu + O<sub>2</sub> -t\xB0\u2192 2CuO"
   Inputs:
   - Substance: {fileID: 11400000, guid: 25e037b3edc4bb9489b3638084f0f1cd, type: 2}
     Ratio: 2
@@ -27,6 +27,6 @@ MonoBehaviour:
     Ratio: 2
   PrimarySideEffect: 5
   FlashColor: {r: 1, g: 1, b: 1, a: 1}
-  ReactionEquation: "2Cu + O\u2082 --t\xB0\u2192 2CuO"
+  ReactionEquation: "2Cu + O<sub>2</sub> --t\xB0\u2192 2CuO"
   LimitedByLowestInput: 1
   SlowReaction: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tool_Bubble_Cl2
   m_EditorClassIdentifier: 
   Id: Bubble_Cl2
-  DisplayName: "S\u1EE5c Cl\u2082"
+  DisplayName: "S\u1EE5c Cl<sub>2</sub>"
   FunctionType: 6
   IconSprite: {fileID: 0}
   AssociatedSubstance: {fileID: 11400000, guid: 06d355f1cd1342f4db4f7af805addaff, type: 2}

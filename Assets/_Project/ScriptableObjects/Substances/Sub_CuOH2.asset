@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_CuOH2
   m_EditorClassIdentifier: 
   Id: CuOH2
-  Formula: "Cu(OH)\u2082"
+  Formula: Cu(OH)<sub>2</sub>
   DisplayName: "\u0110\u1ED3ng hidroxit"
   Category: 1
   Phase: 4

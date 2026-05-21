@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_AgNO3
   m_EditorClassIdentifier: 
   Id: AgNO3
-  Formula: "AgNO\u2083"
+  Formula: AgNO<sub>3</sub>
   DisplayName: "B\u1EA1c nitrat"
   Category: 2
   Phase: 3

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Level_05_FeCl3
   m_EditorClassIdentifier: 
   LevelIndex: 5
-  DisplayName: "FeCl\u2083 kh\xF4ng l\u1EABn FeCl\u2082"
-  ObjectiveText: "T\u1EA1o FeCl\u2083, ki\u1EC3m b\u1EB1ng KSCN cho \u0111\u1ECF
+  DisplayName: "FeCl<sub>3</sub> kh\xF4ng l\u1EABn FeCl<sub>2</sub>"
+  ObjectiveText: "T\u1EA1o FeCl<sub>3</sub>, ki\u1EC3m b\u1EB1ng KSCN cho \u0111\u1ECF
     m\xE1u."
   Bottles:
   - Substance: {fileID: 11400000, guid: bc789f29091e88b4e842dbaadac03de1, type: 2}
@@ -52,23 +52,25 @@ MonoBehaviour:
   Traps:
   - TrapId: LeftOverFe2
     TriggerProduct: {fileID: 11400000, guid: 3767135d72b31e643b623d57d43dc572, type: 2}
-    ExplanationVi: "C\xF2n FeCl\u2082 \u2014 s\u1EE5c th\xEAm Cl\u2082."
+    ExplanationVi: "C\xF2n FeCl<sub>2</sub> \u2014 s\u1EE5c th\xEAm Cl<sub>2</sub>."
   - TrapId: Hydroxide_Fe2
     TriggerProduct: {fileID: 11400000, guid: 672db9b35c2a18b44b20bd22fc73f658, type: 2}
-    ExplanationVi: "B\u1EA1n t\u1EA1o Fe(OH)\u2082 (xanh l\xE1) \u2014 tr\xE1nh NaOH."
+    ExplanationVi: "B\u1EA1n t\u1EA1o Fe(OH)<sub>2</sub> (xanh l\xE1) \u2014 tr\xE1nh
+      NaOH."
   - TrapId: Hydroxide_Fe3
     TriggerProduct: {fileID: 11400000, guid: fa66ebf3fd6c00046973af664efcf5fd, type: 2}
-    ExplanationVi: "B\u1EA1n t\u1EA1o Fe(OH)\u2083 (n\xE2u \u0111\u1ECF) \u2014 tr\xE1nh
-      NaOH."
+    ExplanationVi: "B\u1EA1n t\u1EA1o Fe(OH)<sub>3</sub> (n\xE2u \u0111\u1ECF) \u2014
+      tr\xE1nh NaOH."
   Hints: {fileID: 11400000, guid: 4b7e5381e52cec2408a32a3d8ad0209d, type: 2}
   ThreeStarBlockingTraps:
   - TrapId: LeftOverFe2
     TriggerProduct: {fileID: 11400000, guid: 3767135d72b31e643b623d57d43dc572, type: 2}
-    ExplanationVi: "C\xF2n FeCl\u2082 \u2014 s\u1EE5c th\xEAm Cl\u2082."
+    ExplanationVi: "C\xF2n FeCl<sub>2</sub> \u2014 s\u1EE5c th\xEAm Cl<sub>2</sub>."
   - TrapId: Hydroxide_Fe2
     TriggerProduct: {fileID: 11400000, guid: 672db9b35c2a18b44b20bd22fc73f658, type: 2}
-    ExplanationVi: "B\u1EA1n t\u1EA1o Fe(OH)\u2082 (xanh l\xE1) \u2014 tr\xE1nh NaOH."
+    ExplanationVi: "B\u1EA1n t\u1EA1o Fe(OH)<sub>2</sub> (xanh l\xE1) \u2014 tr\xE1nh
+      NaOH."
   - TrapId: Hydroxide_Fe3
     TriggerProduct: {fileID: 11400000, guid: fa66ebf3fd6c00046973af664efcf5fd, type: 2}
-    ExplanationVi: "B\u1EA1n t\u1EA1o Fe(OH)\u2083 (n\xE2u \u0111\u1ECF) \u2014 tr\xE1nh
-      NaOH."
+    ExplanationVi: "B\u1EA1n t\u1EA1o Fe(OH)<sub>3</sub> (n\xE2u \u0111\u1ECF) \u2014
+      tr\xE1nh NaOH."

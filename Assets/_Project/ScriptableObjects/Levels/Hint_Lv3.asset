@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bac70751ef23ea49930cc7a4b32d5cb, type: 3}
   m_Name: Hint_Lv3
   m_EditorClassIdentifier: 
-  Tier1_Reagent: "Qu\u1EF3 t\xEDm \u0111\u1EC3 ph\xE2n acid; ch\xFA \xFD CO\u2082
-    v\xE0 H\u2082 kh\xE1c nhau."
-  Tier2_Order: "D\xF9ng CaCO\u2083 + HCl \u0111\u1EC3 sinh kh\xED. S\u1EE5c v\xE0o
-    Ca(OH)\u2082."
-  Tier3_Formula: "CaCO\u2083 + 2HCl \u2192 CaCl\u2082 + CO\u2082 + H\u2082O. Sau
-    \u0111\xF3 CO\u2082 + Ca(OH)\u2082 \u2192 CaCO\u2083\u2193 + H\u2082O."
+  Tier1_Reagent: "Qu\u1EF3 t\xEDm \u0111\u1EC3 ph\xE2n acid; ch\xFA \xFD CO<sub>2</sub>
+    v\xE0 H<sub>2</sub> kh\xE1c nhau."
+  Tier2_Order: "D\xF9ng CaCO<sub>3</sub> + HCl \u0111\u1EC3 sinh kh\xED. S\u1EE5c
+    v\xE0o Ca(OH)<sub>2</sub>."
+  Tier3_Formula: "CaCO<sub>3</sub> + 2HCl \u2192 CaCl<sub>2</sub> + CO<sub>2</sub>
+    + H<sub>2</sub>O. Sau \u0111\xF3 CO<sub>2</sub> + Ca(OH)<sub>2</sub> \u2192 CaCO<sub>3</sub>\u2193
+    + H<sub>2</sub>O."

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rx_FeCl2_Cl2
   m_EditorClassIdentifier: 
   Id: FeCl2_Cl2
-  Description: "2FeCl\u2082 + Cl\u2082 \u2192 2FeCl\u2083"
+  Description: "2FeCl<sub>2</sub> + Cl<sub>2</sub> \u2192 2FeCl<sub>3</sub>"
   Inputs:
   - Substance: {fileID: 11400000, guid: 3767135d72b31e643b623d57d43dc572, type: 2}
     Ratio: 2
@@ -25,6 +25,7 @@ MonoBehaviour:
     Ratio: 2
   PrimarySideEffect: 7
   FlashColor: {r: 1, g: 1, b: 1, a: 1}
-  ReactionEquation: "2FeCl\u2082 + Cl\u2082 \u2192 2FeCl\u2083 (oxi ho\xE1)"
+  ReactionEquation: "2FeCl<sub>2</sub> + Cl<sub>2</sub> \u2192 2FeCl<sub>3</sub>
+    (oxi ho\xE1)"
   LimitedByLowestInput: 1
   SlowReaction: 0

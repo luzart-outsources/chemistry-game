@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_Ag2O
   m_EditorClassIdentifier: 
   Id: Ag2O
-  Formula: "Ag\u2082O"
+  Formula: Ag<sub>2</sub>O
   DisplayName: "B\u1EA1c oxit"
   Category: 5
   Phase: 4

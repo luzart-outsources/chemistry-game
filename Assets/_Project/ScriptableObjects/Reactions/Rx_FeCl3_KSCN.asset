@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rx_FeCl3_KSCN
   m_EditorClassIdentifier: 
   Id: FeCl3_KSCN
-  Description: "FeCl\u2083 + 3KSCN \u2192 Fe(SCN)\u2083 + 3KCl"
+  Description: "FeCl<sub>3</sub> + 3KSCN \u2192 Fe(SCN)<sub>3</sub> + 3KCl"
   Inputs:
   - Substance: {fileID: 11400000, guid: b3fe2c63b32453f4eb84e71f49f4d09c, type: 2}
     Ratio: 1
@@ -27,7 +27,7 @@ MonoBehaviour:
     Ratio: 3
   PrimarySideEffect: 7
   FlashColor: {r: 1, g: 1, b: 1, a: 1}
-  ReactionEquation: "FeCl\u2083 + 3KSCN \u2192 Fe(SCN)\u2083 + 3KCl (\u0111\u1ECF
+  ReactionEquation: "FeCl<sub>3</sub> + 3KSCN \u2192 Fe(SCN)<sub>3</sub> + 3KCl (\u0111\u1ECF
     m\xE1u)"
   LimitedByLowestInput: 1
   SlowReaction: 0

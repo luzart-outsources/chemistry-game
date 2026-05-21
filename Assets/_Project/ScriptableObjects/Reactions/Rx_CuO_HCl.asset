@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rx_CuO_HCl
   m_EditorClassIdentifier: 
   Id: CuO_HCl
-  Description: "CuO + 2HCl \u2192 CuCl\u2082 + H\u2082O"
+  Description: "CuO + 2HCl \u2192 CuCl<sub>2</sub> + H<sub>2</sub>O"
   Inputs:
   - Substance: {fileID: 11400000, guid: f553b0ea6d96270409b43c52bb821574, type: 2}
     Ratio: 1
@@ -27,6 +27,6 @@ MonoBehaviour:
     Ratio: 1
   PrimarySideEffect: 7
   FlashColor: {r: 1, g: 1, b: 1, a: 1}
-  ReactionEquation: "CuO + 2HCl \u2192 CuCl\u2082 + H\u2082O (sai mu\u1ED1i)"
+  ReactionEquation: "CuO + 2HCl \u2192 CuCl<sub>2</sub> + H<sub>2</sub>O (sai mu\u1ED1i)"
   LimitedByLowestInput: 1
   SlowReaction: 0

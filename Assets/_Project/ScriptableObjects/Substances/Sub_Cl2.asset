@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_Cl2
   m_EditorClassIdentifier: 
   Id: Cl2
-  Formula: "Cl\u2082"
+  Formula: Cl<sub>2</sub>
   DisplayName: "Kh\xED clo"
   Category: 6
   Phase: 2

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rx_CuSO4_NaOH
   m_EditorClassIdentifier: 
   Id: CuSO4_NaOH
-  Description: "CuSO\u2084 + 2NaOH \u2192 Cu(OH)\u2082\u2193 + Na\u2082SO\u2084"
+  Description: "CuSO<sub>4</sub> + 2NaOH \u2192 Cu(OH)<sub>2</sub>\u2193 + Na<sub>2</sub>SO<sub>4</sub>"
   Inputs:
   - Substance: {fileID: 11400000, guid: 543018d2dd85703469c24322b1210c89, type: 2}
     Ratio: 1
@@ -27,7 +27,7 @@ MonoBehaviour:
     Ratio: 1
   PrimarySideEffect: 8
   FlashColor: {r: 1, g: 1, b: 1, a: 1}
-  ReactionEquation: "CuSO\u2084 + 2NaOH \u2192 Cu(OH)\u2082 + Na\u2082SO\u2084 (xanh
-    k\u1EBFt t\u1EE7a)"
+  ReactionEquation: "CuSO<sub>4</sub> + 2NaOH \u2192 Cu(OH)<sub>2</sub> + Na<sub>2</sub>SO<sub>4</sub>
+    (xanh k\u1EBFt t\u1EE7a)"
   LimitedByLowestInput: 1
   SlowReaction: 0

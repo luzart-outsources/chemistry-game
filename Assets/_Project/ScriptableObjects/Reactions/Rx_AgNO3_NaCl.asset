@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rx_AgNO3_NaCl
   m_EditorClassIdentifier: 
   Id: AgNO3_NaCl
-  Description: "AgNO\u2083 + NaCl \u2192 AgCl\u2193 + NaNO\u2083"
+  Description: "AgNO<sub>3</sub> + NaCl \u2192 AgCl\u2193 + NaNO<sub>3</sub>"
   Inputs:
   - Substance: {fileID: 11400000, guid: 7c240929f8ff0834cb605e9e1233f280, type: 2}
     Ratio: 1
@@ -27,6 +27,6 @@ MonoBehaviour:
     Ratio: 1
   PrimarySideEffect: 8
   FlashColor: {r: 1, g: 1, b: 1, a: 1}
-  ReactionEquation: "AgNO\u2083 + NaCl \u2192 AgCl\u2193 + NaNO\u2083"
+  ReactionEquation: "AgNO<sub>3</sub> + NaCl \u2192 AgCl\u2193 + NaNO<sub>3</sub>"
   LimitedByLowestInput: 1
   SlowReaction: 0

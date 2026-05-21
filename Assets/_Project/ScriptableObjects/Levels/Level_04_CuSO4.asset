@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Level_04_CuSO4
   m_EditorClassIdentifier: 
   LevelIndex: 4
-  DisplayName: "CuSO\u2084 tinh khi\u1EBFt"
-  ObjectiveText: "T\u1EA1o dung d\u1ECBch CuSO\u2084 xanh, kh\xF4ng k\u1EBFt t\u1EE7a."
+  DisplayName: "CuSO<sub>4</sub> tinh khi\u1EBFt"
+  ObjectiveText: "T\u1EA1o dung d\u1ECBch CuSO<sub>4</sub> xanh, kh\xF4ng k\u1EBFt
+    t\u1EE7a."
   Bottles:
   - Substance: {fileID: 11400000, guid: 25e037b3edc4bb9489b3638084f0f1cd, type: 2}
     InitialAmount: 30
@@ -59,15 +60,17 @@ MonoBehaviour:
   Traps:
   - TrapId: Hydroxide
     TriggerProduct: {fileID: 11400000, guid: 1a63c075124b99546ae8353143a5589d, type: 2}
-    ExplanationVi: "B\u1EA1n t\u1EA1o Cu(OH)\u2082 \u2014 k\u1EBFt t\u1EE7a xanh."
+    ExplanationVi: "B\u1EA1n t\u1EA1o Cu(OH)<sub>2</sub> \u2014 k\u1EBFt t\u1EE7a
+      xanh."
   - TrapId: WrongSalt
     TriggerProduct: {fileID: 11400000, guid: 1b9b7a1a38491824e9a7dd279a041447, type: 2}
-    ExplanationVi: "B\u1EA1n t\u1EA1o CuCl\u2082 thay v\xEC CuSO\u2084."
+    ExplanationVi: "B\u1EA1n t\u1EA1o CuCl<sub>2</sub> thay v\xEC CuSO<sub>4</sub>."
   Hints: {fileID: 11400000, guid: 193196020f7c2944996a297f6f9c48f3, type: 2}
   ThreeStarBlockingTraps:
   - TrapId: Hydroxide
     TriggerProduct: {fileID: 11400000, guid: 1a63c075124b99546ae8353143a5589d, type: 2}
-    ExplanationVi: "B\u1EA1n t\u1EA1o Cu(OH)\u2082 \u2014 k\u1EBFt t\u1EE7a xanh."
+    ExplanationVi: "B\u1EA1n t\u1EA1o Cu(OH)<sub>2</sub> \u2014 k\u1EBFt t\u1EE7a
+      xanh."
   - TrapId: WrongSalt
     TriggerProduct: {fileID: 11400000, guid: 1b9b7a1a38491824e9a7dd279a041447, type: 2}
-    ExplanationVi: "B\u1EA1n t\u1EA1o CuCl\u2082 thay v\xEC CuSO\u2084."
+    ExplanationVi: "B\u1EA1n t\u1EA1o CuCl<sub>2</sub> thay v\xEC CuSO<sub>4</sub>."

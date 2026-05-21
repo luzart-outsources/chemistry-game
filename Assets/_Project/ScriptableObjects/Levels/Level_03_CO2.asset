@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Level_03_CO2
   m_EditorClassIdentifier: 
   LevelIndex: 3
-  DisplayName: "\u0110i\u1EC1u ch\u1EBF CO\u2082"
-  ObjectiveText: "Thu CO\u2082 v\xE0 ch\u1EE9ng minh b\u1EB1ng n\u01B0\u1EDBc v\xF4i."
+  DisplayName: "\u0110i\u1EC1u ch\u1EBF CO<sub>2</sub>"
+  ObjectiveText: "Thu CO<sub>2</sub> v\xE0 ch\u1EE9ng minh b\u1EB1ng n\u01B0\u1EDBc
+    v\xF4i."
   Bottles:
   - Substance: {fileID: 11400000, guid: 5b264e4212adf0048a0309b62b7a1899, type: 2}
     InitialAmount: 40
@@ -58,11 +59,11 @@ MonoBehaviour:
   Traps:
   - TrapId: WrongMetal
     TriggerProduct: {fileID: 11400000, guid: 3a8209c71fc0a4748a26fb5139494837, type: 2}
-    ExplanationVi: "B\u1EA1n d\xF9ng Zn \u2014 sinh H\u2082 ch\u1EE9 kh\xF4ng ph\u1EA3i
-      CO\u2082."
+    ExplanationVi: "B\u1EA1n d\xF9ng Zn \u2014 sinh H<sub>2</sub> ch\u1EE9 kh\xF4ng
+      ph\u1EA3i CO<sub>2</sub>."
   Hints: {fileID: 11400000, guid: 997914db7e6bba74dbf6cdcb1a25e70b, type: 2}
   ThreeStarBlockingTraps:
   - TrapId: WrongMetal
     TriggerProduct: {fileID: 11400000, guid: 3a8209c71fc0a4748a26fb5139494837, type: 2}
-    ExplanationVi: "B\u1EA1n d\xF9ng Zn \u2014 sinh H\u2082 ch\u1EE9 kh\xF4ng ph\u1EA3i
-      CO\u2082."
+    ExplanationVi: "B\u1EA1n d\xF9ng Zn \u2014 sinh H<sub>2</sub> ch\u1EE9 kh\xF4ng
+      ph\u1EA3i CO<sub>2</sub>."

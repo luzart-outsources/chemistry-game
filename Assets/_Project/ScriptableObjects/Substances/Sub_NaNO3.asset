@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_NaNO3
   m_EditorClassIdentifier: 
   Id: NaNO3
-  Formula: "NaNO\u2083"
+  Formula: NaNO<sub>3</sub>
   DisplayName: Natri nitrat
   Category: 2
   Phase: 3

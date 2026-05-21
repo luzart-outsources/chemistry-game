@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bac70751ef23ea49930cc7a4b32d5cb, type: 3}
   m_Name: Hint_Lv4
   m_EditorClassIdentifier: 
-  Tier1_Reagent: "H\u2082SO\u2084 l\xE0 acid sunfat \u2014 ch\u1EC9 acid n\xE0y t\u1EA1o
-    mu\u1ED1i sunfat \u0111\xFAng."
-  Tier2_Order: "\u0110\u01B0\u1EDDng ng\u1EAFn: CuO + H\u2082SO\u2084. \u0110\u01B0\u1EDDng
-    kh\xF3 (3\u2B50): Cu \u2192 CuO \u2192 CuSO\u2084."
-  Tier3_Formula: "CuO + H\u2082SO\u2084 \u2192 CuSO\u2084 + H\u2082O. Tr\xE1nh NaOH
-    (t\u1EA1o Cu(OH)\u2082)."
+  Tier1_Reagent: "H<sub>2</sub>SO<sub>4</sub> l\xE0 acid sunfat \u2014 ch\u1EC9 acid
+    n\xE0y t\u1EA1o mu\u1ED1i sunfat \u0111\xFAng."
+  Tier2_Order: "\u0110\u01B0\u1EDDng ng\u1EAFn: CuO + H<sub>2</sub>SO<sub>4</sub>.
+    \u0110\u01B0\u1EDDng kh\xF3 (3\u2B50): Cu \u2192 CuO \u2192 CuSO<sub>4</sub>."
+  Tier3_Formula: "CuO + H<sub>2</sub>SO<sub>4</sub> \u2192 CuSO<sub>4</sub> + H<sub>2</sub>O.
+    Tr\xE1nh NaOH (t\u1EA1o Cu(OH)<sub>2</sub>)."

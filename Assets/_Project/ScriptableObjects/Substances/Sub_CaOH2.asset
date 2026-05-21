@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_CaOH2
   m_EditorClassIdentifier: 
   Id: CaOH2
-  Formula: "Ca(OH)\u2082"
+  Formula: Ca(OH)<sub>2</sub>
   DisplayName: "Canxi hidroxit (n\u01B0\u1EDBc v\xF4i)"
   Category: 1
   Phase: 3

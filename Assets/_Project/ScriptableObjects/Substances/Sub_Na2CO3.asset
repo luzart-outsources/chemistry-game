@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_Na2CO3
   m_EditorClassIdentifier: 
   Id: Na2CO3
-  Formula: "Na\u2082CO\u2083"
+  Formula: Na<sub>2</sub>CO<sub>3</sub>
   DisplayName: Natri cacbonat
   Category: 1
   Phase: 3

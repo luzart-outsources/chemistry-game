@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rx_FeCl3_NaOH
   m_EditorClassIdentifier: 
   Id: FeCl3_NaOH
-  Description: "FeCl\u2083 + 3NaOH \u2192 Fe(OH)\u2083\u2193 + 3NaCl"
+  Description: "FeCl<sub>3</sub> + 3NaOH \u2192 Fe(OH)<sub>3</sub>\u2193 + 3NaCl"
   Inputs:
   - Substance: {fileID: 11400000, guid: b3fe2c63b32453f4eb84e71f49f4d09c, type: 2}
     Ratio: 1
@@ -27,6 +27,7 @@ MonoBehaviour:
     Ratio: 3
   PrimarySideEffect: 8
   FlashColor: {r: 1, g: 1, b: 1, a: 1}
-  ReactionEquation: "FeCl\u2083 + 3NaOH \u2192 Fe(OH)\u2083 + 3NaCl (n\xE2u \u0111\u1ECF)"
+  ReactionEquation: "FeCl<sub>3</sub> + 3NaOH \u2192 Fe(OH)<sub>3</sub> + 3NaCl (n\xE2u
+    \u0111\u1ECF)"
   LimitedByLowestInput: 1
   SlowReaction: 0

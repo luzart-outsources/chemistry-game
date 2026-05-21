@@ -17,4 +17,4 @@ MonoBehaviour:
   FunctionType: 5
   IconSprite: {fileID: 0}
   AssociatedSubstance: {fileID: 11400000, guid: 40139dbb41582d543ba60b7d0211b05f, type: 2}
-  ShortDescription: "Test Fe\xB3\u207A \u2192 \u0111\u1ECF m\xE1u"
+  ShortDescription: "Test Fe<sup>3+</sup> \u2192 \u0111\u1ECF m\xE1u"

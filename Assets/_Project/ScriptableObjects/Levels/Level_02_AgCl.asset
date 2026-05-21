@@ -56,17 +56,17 @@ MonoBehaviour:
   Traps:
   - TrapId: Ag2O_trap
     TriggerProduct: {fileID: 11400000, guid: 8ab66a22517eee847921a385116b880c, type: 2}
-    ExplanationVi: "B\u1EA1n t\u1EA1o Ag\u2082O (\u0111en) thay v\xEC AgCl."
+    ExplanationVi: "B\u1EA1n t\u1EA1o Ag<sub>2</sub>O (\u0111en) thay v\xEC AgCl."
   - TrapId: Ag2CO3_trap
     TriggerProduct: {fileID: 11400000, guid: 08a23fa509458cb4bb7d9e4b92748df9, type: 2}
-    ExplanationVi: "B\u1EA1n t\u1EA1o Ag\u2082CO\u2083 (v\xE0ng nh\u1EA1t) thay v\xEC
-      AgCl."
+    ExplanationVi: "B\u1EA1n t\u1EA1o Ag<sub>2</sub>CO<sub>3</sub> (v\xE0ng nh\u1EA1t)
+      thay v\xEC AgCl."
   Hints: {fileID: 11400000, guid: bfb0ee25cb4261540a02b89a5435c27a, type: 2}
   ThreeStarBlockingTraps:
   - TrapId: Ag2O_trap
     TriggerProduct: {fileID: 11400000, guid: 8ab66a22517eee847921a385116b880c, type: 2}
-    ExplanationVi: "B\u1EA1n t\u1EA1o Ag\u2082O (\u0111en) thay v\xEC AgCl."
+    ExplanationVi: "B\u1EA1n t\u1EA1o Ag<sub>2</sub>O (\u0111en) thay v\xEC AgCl."
   - TrapId: Ag2CO3_trap
     TriggerProduct: {fileID: 11400000, guid: 08a23fa509458cb4bb7d9e4b92748df9, type: 2}
-    ExplanationVi: "B\u1EA1n t\u1EA1o Ag\u2082CO\u2083 (v\xE0ng nh\u1EA1t) thay v\xEC
-      AgCl."
+    ExplanationVi: "B\u1EA1n t\u1EA1o Ag<sub>2</sub>CO<sub>3</sub> (v\xE0ng nh\u1EA1t)
+      thay v\xEC AgCl."

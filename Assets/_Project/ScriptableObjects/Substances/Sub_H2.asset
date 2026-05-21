@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_H2
   m_EditorClassIdentifier: 
   Id: H2
-  Formula: "H\u2082"
+  Formula: H<sub>2</sub>
   DisplayName: "Kh\xED hidro"
   Category: 6
   Phase: 2

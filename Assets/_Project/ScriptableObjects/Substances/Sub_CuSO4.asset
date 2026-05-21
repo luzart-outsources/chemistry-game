@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_CuSO4
   m_EditorClassIdentifier: 
   Id: CuSO4
-  Formula: "CuSO\u2084"
+  Formula: CuSO<sub>4</sub>
   DisplayName: "\u0110\u1ED3ng sunfat"
   Category: 2
   Phase: 3

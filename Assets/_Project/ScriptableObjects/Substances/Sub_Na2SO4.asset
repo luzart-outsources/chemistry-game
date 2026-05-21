@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_Na2SO4
   m_EditorClassIdentifier: 
   Id: Na2SO4
-  Formula: "Na\u2082SO\u2084"
+  Formula: Na<sub>2</sub>SO<sub>4</sub>
   DisplayName: Natri sunfat
   Category: 2
   Phase: 3

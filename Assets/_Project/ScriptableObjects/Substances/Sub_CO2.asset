@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_CO2
   m_EditorClassIdentifier: 
   Id: CO2
-  Formula: "CO\u2082"
+  Formula: CO<sub>2</sub>
   DisplayName: "Kh\xED cacbonic"
   Category: 6
   Phase: 2

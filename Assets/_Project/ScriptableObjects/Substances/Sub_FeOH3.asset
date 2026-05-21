@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_FeOH3
   m_EditorClassIdentifier: 
   Id: FeOH3
-  Formula: "Fe(OH)\u2083"
+  Formula: Fe(OH)<sub>3</sub>
   DisplayName: "S\u1EAFt(III) hidroxit"
   Category: 1
   Phase: 4

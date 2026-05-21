@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_H2O
   m_EditorClassIdentifier: 
   Id: H2O
-  Formula: "H\u2082O"
+  Formula: H<sub>2</sub>O
   DisplayName: "N\u01B0\u1EDBc"
   Category: 8
   Phase: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_CaCl2
   m_EditorClassIdentifier: 
   Id: CaCl2
-  Formula: "CaCl\u2082"
+  Formula: CaCl<sub>2</sub>
   DisplayName: Canxi clorua
   Category: 2
   Phase: 3

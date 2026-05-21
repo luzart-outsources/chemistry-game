@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rx_HCl_NaOH
   m_EditorClassIdentifier: 
   Id: HCl_NaOH
-  Description: "HCl + NaOH \u2192 NaCl + H\u2082O"
+  Description: "HCl + NaOH \u2192 NaCl + H<sub>2</sub>O"
   Inputs:
   - Substance: {fileID: 11400000, guid: 0b0559bcb48b4bf45a7f59fddf390784, type: 2}
     Ratio: 1
@@ -27,6 +27,6 @@ MonoBehaviour:
     Ratio: 1
   PrimarySideEffect: 7
   FlashColor: {r: 1, g: 1, b: 1, a: 1}
-  ReactionEquation: "HCl + NaOH \u2192 NaCl + H\u2082O"
+  ReactionEquation: "HCl + NaOH \u2192 NaCl + H<sub>2</sub>O"
   LimitedByLowestInput: 1
   SlowReaction: 0

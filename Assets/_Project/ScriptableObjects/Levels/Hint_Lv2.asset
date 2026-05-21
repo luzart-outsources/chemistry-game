@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tier1_Reagent: "Ch\u1EC9 1 l\u1ECD t\u1EA1o AgCl tr\u1EAFng. Hai l\u1ECD kh\xE1c
     cho k\u1EBFt t\u1EE7a m\xE0u kh\xE1c."
-  Tier2_Order: "Tr\u1ED9n AgNO\u2083 v\u1EDBi NaCl, sau \u0111\xF3 l\u1ECDc."
-  Tier3_Formula: "AgNO\u2083 + NaCl \u2192 AgCl\u2193 + NaNO\u2083. \u0110\u1EEBng
-    d\xF9ng NaOH/Na\u2082CO\u2083."
+  Tier2_Order: "Tr\u1ED9n AgNO<sub>3</sub> v\u1EDBi NaCl, sau \u0111\xF3 l\u1ECDc."
+  Tier3_Formula: "AgNO<sub>3</sub> + NaCl \u2192 AgCl\u2193 + NaNO<sub>3</sub>. \u0110\u1EEBng
+    d\xF9ng NaOH/Na<sub>2</sub>CO<sub>3</sub>."

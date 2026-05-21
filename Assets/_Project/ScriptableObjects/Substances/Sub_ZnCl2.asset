@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sub_ZnCl2
   m_EditorClassIdentifier: 
   Id: ZnCl2
-  Formula: "ZnCl\u2082"
+  Formula: ZnCl<sub>2</sub>
   DisplayName: "K\u1EBDm clorua"
   Category: 2
   Phase: 3
