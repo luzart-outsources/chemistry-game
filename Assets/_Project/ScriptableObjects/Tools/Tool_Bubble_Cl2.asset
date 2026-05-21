@@ -15,6 +15,6 @@ MonoBehaviour:
   Id: Bubble_Cl2
   DisplayName: "S\u1EE5c Cl<sub>2</sub>"
   FunctionType: 6
-  IconSprite: {fileID: 0}
+  IconSprite: {fileID: 21300000, guid: cba09f474a84b1e488598392ff398d22, type: 3}
   AssociatedSubstance: {fileID: 11400000, guid: 06d355f1cd1342f4db4f7af805addaff, type: 2}
   ShortDescription: "S\u1EE5c kh\xED clo"

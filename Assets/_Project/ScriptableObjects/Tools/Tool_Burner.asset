@@ -15,6 +15,6 @@ MonoBehaviour:
   Id: Burner
   DisplayName: "\u0110\xE8n kh\xF2"
   FunctionType: 1
-  IconSprite: {fileID: 0}
+  IconSprite: {fileID: 21300000, guid: f676f2c5f18a602488db52ff341b81c7, type: 2}
   AssociatedSubstance: {fileID: 0}
   ShortDescription: "\u0110un n\xF3ng, l\xE0m bay h\u01A1i"

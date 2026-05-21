@@ -15,6 +15,6 @@ MonoBehaviour:
   Id: Bubble_O2
   DisplayName: "S\u1EE5c O<sub>2</sub>"
   FunctionType: 6
-  IconSprite: {fileID: 0}
+  IconSprite: {fileID: 21300000, guid: 2ca9c1f49435b0448b1364bbda55ec4e, type: 3}
   AssociatedSubstance: {fileID: 11400000, guid: 54fb3820fa51fb340936b6b72903822b, type: 2}
   ShortDescription: "S\u1EE5c kh\xED oxi"

@@ -15,6 +15,6 @@ MonoBehaviour:
   Id: GasCollector
   DisplayName: "B\xECnh thu kh\xED"
   FunctionType: 4
-  IconSprite: {fileID: 0}
+  IconSprite: {fileID: 21300000, guid: 685627333f7a3b3458ff207a8007f213, type: 3}
   AssociatedSubstance: {fileID: 0}
   ShortDescription: "Thu kh\xED tho\xE1t ra"

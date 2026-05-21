@@ -15,6 +15,6 @@ MonoBehaviour:
   Id: Litmus
   DisplayName: "Qu\u1EF3 t\xEDm"
   FunctionType: 0
-  IconSprite: {fileID: 0}
+  IconSprite: {fileID: 21300000, guid: 7d736195098af1d439e74e6443ba0f51, type: 2}
   AssociatedSubstance: {fileID: 0}
   ShortDescription: "Test acid/baz\u01A1 qua \u0111\u1ED5i m\xE0u"

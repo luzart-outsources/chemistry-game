@@ -15,6 +15,6 @@ MonoBehaviour:
   Id: HNO3_drop
   DisplayName: "HNO<sub>3</sub> pha lo\xE3ng"
   FunctionType: 5
-  IconSprite: {fileID: 0}
+  IconSprite: {fileID: 21300000, guid: 7dda28e8eab937540b25a47c3e5a6150, type: 2}
   AssociatedSubstance: {fileID: 11400000, guid: 766b27aae5e19ec4a9da0ccfd9f21aaa, type: 2}
   ShortDescription: "Acid ho\xE1 nh\u1EB9"

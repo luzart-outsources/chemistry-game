@@ -15,6 +15,6 @@ MonoBehaviour:
   Id: KSCN
   DisplayName: "Thu\u1ED1c th\u1EED KSCN"
   FunctionType: 5
-  IconSprite: {fileID: 0}
+  IconSprite: {fileID: 21300000, guid: bc26a2d7f3f23be43a146c49eb16cfb7, type: 3}
   AssociatedSubstance: {fileID: 11400000, guid: 40139dbb41582d543ba60b7d0211b05f, type: 2}
   ShortDescription: "Test Fe<sup>3+</sup> \u2192 \u0111\u1ECF m\xE1u"

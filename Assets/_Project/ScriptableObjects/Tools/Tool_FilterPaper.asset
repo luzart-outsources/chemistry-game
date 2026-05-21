@@ -15,6 +15,6 @@ MonoBehaviour:
   Id: FilterPaper
   DisplayName: "Gi\u1EA5y l\u1ECDc"
   FunctionType: 2
-  IconSprite: {fileID: 0}
+  IconSprite: {fileID: 21300000, guid: 7de6e407814d952488d58ce4bd1f41de, type: 2}
   AssociatedSubstance: {fileID: 0}
   ShortDescription: "T\xE1ch k\u1EBFt t\u1EE7a kh\u1ECFi dung d\u1ECBch"
