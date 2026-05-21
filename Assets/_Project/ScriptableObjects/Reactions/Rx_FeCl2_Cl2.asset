@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ff0fb2345ce784ba55beceb108ecf3, type: 3}
+  m_Name: Rx_FeCl2_Cl2
+  m_EditorClassIdentifier: 
+  Id: FeCl2_Cl2
+  Description: "2FeCl\u2082 + Cl\u2082 \u2192 2FeCl\u2083"
+  Inputs:
+  - Substance: {fileID: 11400000, guid: 3767135d72b31e643b623d57d43dc572, type: 2}
+    Ratio: 2
+  - Substance: {fileID: 11400000, guid: 06d355f1cd1342f4db4f7af805addaff, type: 2}
+    Ratio: 1
+  Conditions: []
+  Outputs:
+  - Substance: {fileID: 11400000, guid: b3fe2c63b32453f4eb84e71f49f4d09c, type: 2}
+    Ratio: 2
+  PrimarySideEffect: 7
+  FlashColor: {r: 1, g: 1, b: 1, a: 1}
+  ReactionEquation: "2FeCl\u2082 + Cl\u2082 \u2192 2FeCl\u2083 (oxi ho\xE1)"
+  LimitedByLowestInput: 1
+  SlowReaction: 0

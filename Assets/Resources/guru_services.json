@@ -1,0 +1,144 @@
+
+{
+    "version" : 1732605338153,
+    "app_settings" : {
+        "app_id" : "watersortpuzzle",
+        "product_name" : "Water Sort Puzzle",
+        "bundle_id"    : "water.sort.puzzle.game.color.sorting.free",
+        "support_email" : "watersort@fungame.studio",
+        "privacy_url"   : "https://watersort.gurugame.fun/policy.html",
+        "terms_url"     : "https://watersort.gurugame.fun/termsofservice.html",
+        "android_store" : "https://play.google.com/store/apps/details?id=water.sort.puzzle.game.color.sorting.free",
+        "ios_store"     : "https://apps.apple.com/us/app/water-sort-puzzle-sort-color/id1597897013",
+        "enable_firebase" : true,
+        "enable_facebook" : true,
+        "enable_adjust"   : true,
+        "enable_iap"      : true,
+        "custom_keystore" : false
+    },
+    "parameters"   : {
+        "token_valid_time" : 604800,
+        "level_end_success_num" : 50,
+        "enable_keywords"       : false,
+        "tch_020"               : 0.0,
+        "using_uuid"            : false,
+        "dma_map_rule"          : "",
+        "dma_country_check"     : false,
+        "apple_review"          : false,
+        "enable_errorlog"       : false,
+        "ads_compliance"        : false,
+        "cdn_host"              : ""
+    },
+    "adjust_settings" : {
+        "app_token" : [
+            "fk8i5vwe6pz4",
+            "rvqned0mn3ls"
+        ],
+        "events"    : [
+            "iap_purchase,c7vbua,kcooor",
+            "iap_ret_true,5av8rv,lmw2dy",
+            "skin_clk,xzisfc,xy1rsy",
+            "luckyspin_clk,36hqmg,rzt1dx",
+            "dailychallenge_clk,sexlky,mqhlqx",
+            "dailychallenge_start,nhhie1,odc5xf",
+            "level_end_success_1,hk8d51,i79nhi",
+            "level_end_success_2,64shh2,frt7y5",
+            "level_end_success_3,lk4ksp,i81cwd",
+            "level_end_success_4,m85hx0,n1sjya",
+            "level_end_success_5,6f639g,wsrwrs",
+            "level_end_success_10,ayuamt,1n6hju",
+            "level_end_success_15,fttmyz,hml02i",
+            "level_end_success_20,otzwab,7wupzi",
+            "level_end_success_25,mn4e9y,fc1ok9",
+            "level_end_success_30,1pfdwt,le9c14",
+            "level_end_success_35,eo6qax,7a4wgv",
+            "level_end_success_40,re72zi,g47tyk",
+            "level_end_success_45,q4rfhb,ccsc7e",
+            "level_end_success_50,mtpja5,8p0ioo",
+            "level_end_success_100,bucmlo,vnslfo",
+            "level_end_success_200,f3b6pk,9cxunx",
+            "level_end_success_300,pfphmm,vnyg1n",
+            "level_end_success_400,dqkf51,svy2ng",
+            "level_end_success_500,o9ya6k,kkrfas",
+            "level_end_success_800,s4oi5e,sgd2ih",
+            "rads_imp_3times,45cgoq,yyk746",
+            "rads_imp_5times,ib4njr,oklotb",
+            "rads_imp_10times,nx5n96,erjj7x",
+            "rads_imp_15times,w0vxcu,ly2epa",
+            "rads_imp_20times,yf68tw,unkxil",
+            "rads_imp_30times,97mjqn,l1fys4",
+            "iads_imp_3times,c2j9g3,pqkuhy",
+            "iads_imp_5times,huy5cb,mrg34f",
+            "iads_imp_10times,qvx0us,v89fg8",
+            "iads_imp_15times,jjxu5g,pp98we",
+            "iads_imp_20times,wn746c,93osyy",
+            "iads_imp_30times,wbrle5,ywax52"
+        ]
+    },
+    "fb_settings"     : {
+        "fb_app_id" : "1248885278856956",
+        "fb_client_token" : "2414c9079473645856a5ef6b8ac95cf6"
+    },
+    "ad_settings"     : {
+        "sdk_key" : "V5I0i-vOTXkc_HEyqLg0lNm_ivlzp1wPVF3Vs7Jk4ix6WMAwEKGHMpugavZp_7xgss186Frvss23NGSWZXSago",
+        "admob_app_id" : [
+            "ca-app-pub-2436733915645843~8630766153",
+            "ca-app-pub-2436733915645843~7788635385"
+        ],
+        "max_ids_android" : [
+            "d03a9af0a090504b",
+            "eaf11fdeca26d601",
+            "0717615bc5f4d76e"
+        ],
+        "max_ids_ios"     : [
+            "f5d657bea004caed",
+            "6420e6695a57483b",
+            "6f4f31a4dd7d6e35"
+        ],
+        "amazon_ids_android" : [
+            "fe6ab3b9-cb25-4b79-b464-8d7db349c345",
+            "c81fc7df-d87a-44ad-875a-ea33bea22cbe",
+            "285f111e-2922-4bd3-9dea-d93c5100bfd4",
+            "803fa0da-c23c-4339-b1d0-23296d501840"
+        ],
+        "amazon_ids_ios"     : [
+            "d1ce7ea9-e507-4cb4-a7f6-4f97db9291e6",
+            "07d076c9-b459-4de8-a131-bef565bede55",
+            "b6613aea-377a-48ae-a756-0cbe47d89a7e",
+            "09238c50-a99c-4d61-9dbe-1e769d51d90e"
+        ],
+        "pubmatic_ids_android" : [
+            "c920883f44c6461e",
+            "60a6fffb11a93cc9",
+            "4dd1d6e6c5b3bc05"
+        ],
+        "pubmatic_ids_ios"     : [
+            "ff9e1039a5b80d28",
+            "b2c59acee543246d",
+            "6eff6afac1aec99b"
+        ],
+        "moloco_ids_android"   : [
+            "399da2f3ed033417",
+            "e037cbd4e63db6ff",
+            "24a2e6236cabad35"
+        ],
+        "moloco_ids_ios"       : [
+            "c79bd4ea0ceac10e",
+            "92ca28652f361452",
+            "398e2b37b6737cef"
+        ],
+        "tradplus_ids_android" : [
+            "31d069d44fe9b746",
+            "bcd014f501291e2e",
+            "767d4ff8129261cc"
+        ],
+        "tradplus_ids_ios"     : [
+            "1dcb1e9dc83a52f6",
+            "7247fc2bfba0ebc9",
+            "acbf198e2a8f9b69"
+        ]
+    },
+    "products"        : [
+        "remove_ads,wsp.a.iap.ads,wsp.i.iap.ads,7.99,1,Store,0"
+    ]
+}

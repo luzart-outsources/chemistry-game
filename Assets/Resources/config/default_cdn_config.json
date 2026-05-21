@@ -1,0 +1,9 @@
+{
+    "replace": [
+        "https://firebasestorage.googleapis.com/v0/b/water-sort-e9de0.appspot.com/o/"
+    ],
+    "main":"https://cdn3.watersort.fungame.studio/",
+    "fallback":"https://cdn2.watersort.fungame.studio/",
+    "retry": 3,
+    "timeout": 90
+}

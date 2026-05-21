@@ -1,0 +1,156 @@
+	Màn 1: Điều Chế NaCl Tinh Khiết Từ Lọ Mất Nhãn
+
+Mức độ: trung bình.
+
+Mục tiêu không chỉ là tạo NaCl, mà là thu NaCl rắn tinh khiết.
+
+Chất cho sẵn:
+
+Lọ A, B, C mất nhãn: HCl, NaOH, Na2CO3
+Nước cất
+Quỳ tím
+Đèn khò
+Cách giải:
+
+Dùng quỳ tím tìm axit và bazơ.
+Trộn HCl + NaOH vừa đủ.
+Kiểm tra lại bằng quỳ tím: dung dịch trung tính.
+Cô cạn bằng đèn khò để thu NaCl.
+HCl + NaOH -> NaCl + H2O
+Bẫy:
+
+Na2CO3 + 2HCl -> 2NaCl + CO2 + H2O
+Cách này cũng tạo NaCl, nhưng nếu còn dư Na2CO3 hoặc HCl, sản phẩm không tinh khiết. Đây là điểm hay: người chơi thấy có nhiều đường, nhưng phải kiểm soát dung dịch.
+
+	Màn 2: Điều Chế Và Lọc AgCl Không Lẫn Kết Tủa Khác
+
+Mức độ: trung bình khá.
+
+Mục tiêu: thu AgCl tinh khiết.
+
+Chất cho sẵn:
+
+AgNO3
+NaCl
+NaOH
+Na2CO3
+HNO3
+Nước cất
+Giấy lọc
+Cách giải chính:
+
+AgNO3 + NaCl -> AgCl↓ + NaNO3
+Sau đó lọc lấy kết tủa.
+
+Bẫy:
+
+AgNO3 + NaOH -> AgOH/Ag2O↓
+AgNO3 + Na2CO3 -> Ag2CO3↓
+Nếu người chơi cho nhầm NaOH hoặc Na2CO3, vẫn thấy kết tủa nhưng sai sản phẩm.
+
+Cơ chế nâng độ khó:
+
+Game không hiện tên sản phẩm ngay, chỉ hiện “kết tủa trắng/vàng/nâu”.
+Người chơi phải dựa vào màu sắc/thuốc thử.
+Có thể dùng HNO3 để loại carbonate/hydroxide trước, nhưng không làm tan AgCl trong phạm vi THPT.
+	Màn 3: Điều Chế CO2 Và Chứng Minh Khí Thu Được
+
+Mức độ: khá.
+
+Mục tiêu: thu CO2 và xác nhận bằng nước vôi trong.
+
+Chất cho sẵn:
+
+CaCO3
+Na2CO3
+HCl
+H2SO4
+Ca(OH)2
+Zn
+Nước cất
+Bình thu khí
+Cách giải:
+
+CaCO3 + 2HCl -> CaCl2 + CO2 + H2O
+Sau đó dẫn khí vào nước vôi trong:
+
+CO2 + Ca(OH)2 -> CaCO3↓ + H2O
+Bẫy:
+
+Zn + 2HCl -> ZnCl2 + H2
+Người chơi cũng thấy khí thoát ra, nhưng đó là H2, không phải CO2.
+
+Cơ chế nâng độ khó:
+
+Sinh khí chưa đủ để thắng.
+Phải thu khí đúng và kiểm chứng bằng thuốc thử.
+Nếu dùng H2SO4 với CaCO3, có thể tạo lớp CaSO4 ít tan làm phản ứng chậm/ngừng, điểm thấp hơn hoặc thất bại.
+	Màn 4: Điều Chế CuSO4 Tinh Khiết, Tránh Tạo Cu(OH)2
+
+Mức độ: khá đến khó.
+
+Mục tiêu: thu dung dịch CuSO4 màu xanh lam, không lẫn kết tủa.
+
+Chất cho sẵn:
+
+Cu
+CuO
+O2
+H2SO4 loãng
+NaOH
+HCl
+Đèn khò
+Giấy lọc
+Có 2 đường đúng:
+
+Đường dễ:
+
+CuO + H2SO4 -> CuSO4 + H2O
+Đường khó:
+
+2Cu + O2 --nhiệt--> 2CuO
+CuO + H2SO4 -> CuSO4 + H2O
+Bẫy:
+
+CuSO4 + 2NaOH -> Cu(OH)2↓ + Na2SO4
+Nếu người chơi cho NaOH, dung dịch xanh biến thành kết tủa xanh, mất mục tiêu.
+
+Cơ chế nâng độ khó:
+
+Nếu dùng Cu trực tiếp với H2SO4 loãng: không phản ứng.
+Nếu dùng HCl: tạo sai muối CuCl2.
+Nếu dùng quá nhiều CuO, cần lọc chất rắn dư.
+Nếu dùng quá nhiều axit, sản phẩm bị tính là chưa tinh khiết.
+	Màn 5: Điều Chế FeCl3 Trong Dung Dịch Và Loại Tạp FeCl2
+
+Mức độ: khó nhất.
+
+Mục tiêu: thu dung dịch FeCl3, không còn FeCl2 dư.
+
+Chất cho sẵn:
+
+Fe
+HCl
+Cl2
+NaOH
+KSCN
+Nước cất
+Quỳ tím
+Cách giải:
+
+Fe + 2HCl -> FeCl2 + H2
+Sau đó:
+
+2FeCl2 + Cl2 -> 2FeCl3
+Dùng KSCN kiểm tra ion Fe3+: xuất hiện màu đỏ máu.
+
+Bẫy:
+
+FeCl2 + 2NaOH -> Fe(OH)2↓ + 2NaCl
+FeCl3 + 3NaOH -> Fe(OH)3↓ + 3NaCl
+Cơ chế nâng độ khó:
+
+Nếu thêm thiếu Cl2, dung dịch còn FeCl2, chưa đạt.
+Nếu thêm NaOH, tạo kết tủa và mất sản phẩm.
+Nếu dùng KSCN quá sớm, chưa có màu đỏ rõ.
+Có thể dùng quỳ tím kiểm tra môi trường axit nhẹ để ổn định dung dịch.

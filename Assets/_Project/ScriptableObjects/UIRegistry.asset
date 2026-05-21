@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fb20ab820c362e4988d639ef65e84e6, type: 3}
+  m_Name: UIRegistry
+  m_EditorClassIdentifier: 
+  entries:
+  - Id: 7000
+    StringId: CG_MainMenu
+    AssetRef: {fileID: 4634206473062349439, guid: e55eb648105d0164fbaa1f65b32aedd5, type: 3}
+    Lane: 1
+    CachePolicy: 1
+    PreloadOnBoot: 0
+    AllowMultiInstance: 0
+    DismissByEscape: 1
+    PausableWhenOverlaid: 1
+  - Id: 7001
+    StringId: CG_LevelSelect
+    AssetRef: {fileID: 28034342216824399, guid: d3d6847b247f32148876f9eea51d0959, type: 3}
+    Lane: 1
+    CachePolicy: 1
+    PreloadOnBoot: 0
+    AllowMultiInstance: 0
+    DismissByEscape: 1
+    PausableWhenOverlaid: 1
+  - Id: 7002
+    StringId: CG_Gameplay
+    AssetRef: {fileID: 750599415134730724, guid: 9af762d317a1b0946b52c226280918f2, type: 3}
+    Lane: 1
+    CachePolicy: 1
+    PreloadOnBoot: 0
+    AllowMultiInstance: 0
+    DismissByEscape: 1
+    PausableWhenOverlaid: 1
+  - Id: 7100
+    StringId: CG_PausePopup
+    AssetRef: {fileID: 8458143718699743904, guid: d142bca6759445441b6466d7b5f08583, type: 3}
+    Lane: 3
+    CachePolicy: 1
+    PreloadOnBoot: 0
+    AllowMultiInstance: 0
+    DismissByEscape: 1
+    PausableWhenOverlaid: 1
+  - Id: 7101
+    StringId: CG_ResultPopup
+    AssetRef: {fileID: 2444487501673030285, guid: 29bd8a960c3fafb4286763a2ff7724cc, type: 3}
+    Lane: 3
+    CachePolicy: 1
+    PreloadOnBoot: 0
+    AllowMultiInstance: 0
+    DismissByEscape: 1
+    PausableWhenOverlaid: 1
+  - Id: 7102
+    StringId: CG_WrongProductPopup
+    AssetRef: {fileID: 5551281761681358614, guid: 05be5c4376fa79c4b8de9485de04f1f7, type: 3}
+    Lane: 3
+    CachePolicy: 1
+    PreloadOnBoot: 0
+    AllowMultiInstance: 0
+    DismissByEscape: 1
+    PausableWhenOverlaid: 1
+  - Id: 7103
+    StringId: CG_HintPopup
+    AssetRef: {fileID: 1683203053755982850, guid: ea984e28924490644976fed2124aae98, type: 3}
+    Lane: 3
+    CachePolicy: 1
+    PreloadOnBoot: 0
+    AllowMultiInstance: 0
+    DismissByEscape: 1
+    PausableWhenOverlaid: 1
+  - Id: 7104
+    StringId: CG_SettingsPopup
+    AssetRef: {fileID: 7369527261413355349, guid: 96758bfb46adc9f468d5bec534607aa9, type: 3}
+    Lane: 3
+    CachePolicy: 1
+    PreloadOnBoot: 0
+    AllowMultiInstance: 0
+    DismissByEscape: 1
+    PausableWhenOverlaid: 1
+  - Id: 4000
+    StringId: Toast
+    AssetRef: {fileID: 7881821797757680711, guid: a259bc11b10c5b24caddd21f41158c7d, type: 3}
+    Lane: 5
+    CachePolicy: 2
+    PreloadOnBoot: 0
+    AllowMultiInstance: 0
+    DismissByEscape: 0
+    PausableWhenOverlaid: 1
+  - Id: 7200
+    StringId: CG_TutorialOverlay
+    AssetRef: {fileID: 3966705533511524110, guid: 5c45e9f223445fb4f8819730ff12bef3, type: 3}
+    Lane: 4
+    CachePolicy: 1
+    PreloadOnBoot: 0
+    AllowMultiInstance: 0
+    DismissByEscape: 1
+    PausableWhenOverlaid: 1

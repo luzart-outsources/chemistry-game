@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ff0fb2345ce784ba55beceb108ecf3, type: 3}
+  m_Name: Rx_FeCl2_NaOH
+  m_EditorClassIdentifier: 
+  Id: FeCl2_NaOH
+  Description: "FeCl\u2082 + 2NaOH \u2192 Fe(OH)\u2082\u2193 + 2NaCl"
+  Inputs:
+  - Substance: {fileID: 11400000, guid: 3767135d72b31e643b623d57d43dc572, type: 2}
+    Ratio: 1
+  - Substance: {fileID: 11400000, guid: 64492594753d7a449b32c680971ad377, type: 2}
+    Ratio: 2
+  Conditions: []
+  Outputs:
+  - Substance: {fileID: 11400000, guid: 672db9b35c2a18b44b20bd22fc73f658, type: 2}
+    Ratio: 1
+  - Substance: {fileID: 11400000, guid: f6617fedbf704f14f9ce687f47c4ce50, type: 2}
+    Ratio: 2
+  PrimarySideEffect: 8
+  FlashColor: {r: 1, g: 1, b: 1, a: 1}
+  ReactionEquation: "FeCl\u2082 + 2NaOH \u2192 Fe(OH)\u2082 + 2NaCl (xanh l\xE1)"
+  LimitedByLowestInput: 1
+  SlowReaction: 0

@@ -1,0 +1,2208 @@
+{
+    "gurusdk": "v3.2.1",
+    "event_rules": {
+        "explicit": {
+            "level_start": {
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "main",
+                        "daily"
+                    ]
+                },
+                "level_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "level": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 1
+                    }
+                },
+                "start_type": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "play",
+                        "continue",
+                        "replay"
+                    ]
+                },
+                "play_count": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 1
+                    }
+                },
+                "item_id": {
+                    "option": "conditional",
+                    "field_type": "date"
+                }
+            },
+            "level_end": {
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "main",
+                        "daily"
+                    ]
+                },
+                "level_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "level": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 1
+                    }
+                },
+                "result": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "success",
+                        "fail",
+                        "exit"
+                    ]
+                },
+                "duration": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "gt",
+                        "value": 0
+                    }
+                },
+                "level_duration": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "gt",
+                        "value": 0
+                    }
+                },
+                "revive": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                },
+                "item_id": {
+                    "option": "conditional",
+                    "field_type": "date"
+                },
+                "step": {
+                    "option": "conditional",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "gt",
+                        "value": 0
+                    }
+                },
+                "score": {
+                    "option": "conditional",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                },
+                "stage": {
+                    "option": "conditional",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 1
+                    }
+                }
+            },
+            "earn_virtual_currency": {
+                "virtual_currency_name": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "coin"
+                    ]
+                },
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "iap_buy"
+                    ]
+                },
+                "level_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "value": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "gt",
+                        "value": 0
+                    }
+                },
+                "balance": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                },
+                "item_name": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "scene": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "stage": {
+                    "option": "optional",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                }
+            },
+            "spend_virtual_currency": {
+                "virtual_currency_name": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "coin"
+                    ]
+                },
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "level_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "value": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "gt",
+                        "value": 0
+                    }
+                },
+                "balance": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                },
+                "item_name": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "scene": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "stage": {
+                    "option": "optional",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                }
+            },
+            "level_up": {
+                "level": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "gt",
+                        "value": 0
+                    }
+                },
+                "character": {
+                    "option": "conditional",
+                    "field_type": "string"
+                }
+            },
+            "unlock_achievement": {
+                "achievement_id": {
+                    "option": "conditional",
+                    "field_type": "string"
+                }
+            },
+            "hp_points": {
+                "change_type": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "spend",
+                        "earn"
+                    ]
+                },
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "coin",
+                        "rads"
+                    ]
+                },
+                "before": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                },
+                "num": {
+                    "option": "required",
+                    "field_type": "int"
+                },
+                "after": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                }
+            },
+            "iap_imp": {
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                }
+            },
+            "iap_clk": {
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "product_id": {
+                    "option": "required",
+                    "field_type": "string",
+                    "pattern": "^[^:]+(?::[^:]+(?::[^:]+)?)?$"
+                }
+            },
+            "iap_close": {
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                }
+            },
+            "iap_ret_true": {
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "product_id": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "value": {
+                    "option": "required",
+                    "field_type": "double",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                },
+                "currency": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "order_id": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "type": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "subscription",
+                        "product"
+                    ]
+                },
+                "isfree": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "1",
+                        "0"
+                    ]
+                }
+            },
+            "iap_ret_false": {
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "product_id": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "reason": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "cancel"
+                    ]
+                }
+            },
+            "iap_purchase": {
+                "platform": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "google_play",
+                        "appstore",
+                        "thirdparty"
+                    ]
+                },
+                "product_id": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "value": {
+                    "option": "required",
+                    "field_type": "double",
+                    "comparison": {
+                        "operator": "gt",
+                        "value": 0
+                    }
+                },
+                "currency": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "USD"
+                    ]
+                },
+                "order_id": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "order_type": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "IAP"
+                    ]
+                },
+                "trans_ts": {
+                    "option": "required",
+                    "field_type": "timestamp"
+                },
+                "sandbox": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "true",
+                        "false"
+                    ]
+                }
+            },
+            "sub_purchase": {
+                "platform": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "google_play",
+                        "appstore",
+                        "facebook"
+                    ]
+                },
+                "product_id": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "value": {
+                    "option": "required",
+                    "field_type": "double",
+                    "comparison": {
+                        "operator": "gt",
+                        "value": 0
+                    }
+                },
+                "currency": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "USD"
+                    ]
+                },
+                "order_id": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "order_type": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "SUB"
+                    ]
+                },
+                "trans_ts": {
+                    "option": "required",
+                    "field_type": "timestamp"
+                },
+                "sandbox": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "true",
+                        "false"
+                    ]
+                },
+                "tracking_source": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "sever"
+                    ]
+                },
+                "is_renew": {
+                    "option": "required",
+                    "field_type": "int",
+                    "valid_values": [
+                        "0",
+                        "1"
+                    ]
+                }
+            },
+            "tch_ad_rev_roas_001": {
+                "ad_platform": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "google_play",
+                        "appstore",
+                        "thirdparty",
+                        "MAX",
+                        "ADMOB",
+                        "IRONSOURCE",
+                        "FUSION"
+                    ]
+                },
+                "value": {
+                    "option": "required",
+                    "field_type": "double",
+                    "comparison": {
+                        "operator": "gt",
+                        "value": 0
+                    }
+                },
+                "currency": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "USD"
+                    ]
+                },
+                "order_id": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "google_play",
+                                "appstore",
+                                "thirdparty"
+                            ]
+                        }
+                    }
+                },
+                "product_id": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "google_play",
+                                "appstore",
+                                "thirdparty"
+                            ]
+                        }
+                    }
+                },
+                "order_type": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "valid_values": [
+                        "IAP",
+                        "SUB"
+                    ],
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "google_play",
+                                "appstore",
+                                "thirdparty"
+                            ]
+                        }
+                    }
+                },
+                "trans_ts": {
+                    "option": "conditional",
+                    "field_type": "timestamp",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "google_play",
+                                "appstore",
+                                "thirdparty"
+                            ]
+                        }
+                    }
+                },
+                "sandbox": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "valid_values": [
+                        "true",
+                        "false"
+                    ],
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "google_play",
+                                "appstore",
+                                "thirdparty"
+                            ]
+                        }
+                    }
+                },
+                "tracking_source": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "valid_values": [
+                        "sever"
+                    ],
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "google_play",
+                                "appstore",
+                                "thirdparty"
+                            ]
+                        }
+                    }
+                },
+                "is_renew": {
+                    "option": "conditional",
+                    "field_type": "int",
+                    "valid_values": [
+                        "0",
+                        "1"
+                    ],
+                    "condition": {
+                        "params_match": {
+                            "target_params": "order_type",
+                            "valid_values": [
+                                "SUB"
+                            ]
+                        }
+                    }
+                }
+            },
+            "tch_ad_rev_roas_02": {
+                "ad_platform": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "google_play",
+                        "appstore",
+                        "thirdparty",
+                        "MAX",
+                        "ADMOB",
+                        "IRONSOURCE",
+                        "FUSION"
+                    ]
+                },
+                "value": {
+                    "option": "required",
+                    "field_type": "double",
+                    "comparison": {
+                        "operator": "gt",
+                        "value": 0
+                    }
+                },
+                "currency": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "USD"
+                    ]
+                },
+                "product_id": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "google_play",
+                                "appstore",
+                                "thirdparty"
+                            ]
+                        }
+                    }
+                },
+                "order_id": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "google_play",
+                                "appstore",
+                                "thirdparty"
+                            ]
+                        }
+                    }
+                },
+                "order_type": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "valid_values": [
+                        "IAP",
+                        "SUB"
+                    ],
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "google_play",
+                                "appstore",
+                                "thirdparty"
+                            ]
+                        }
+                    }
+                },
+                "trans_ts": {
+                    "option": "conditional",
+                    "field_type": "timestamp",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "google_play",
+                                "appstore",
+                                "thirdparty"
+                            ]
+                        }
+                    }
+                },
+                "sandbox": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "valid_values": [
+                        "true",
+                        "false"
+                    ],
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "google_play",
+                                "appstore",
+                                "thirdparty"
+                            ]
+                        }
+                    }
+                }
+            },
+            "ad_impression": {
+                "value": {
+                    "option": "required",
+                    "field_type": "double",
+                    "comparison": {
+                        "operator": "gt",
+                        "value": 0
+                    }
+                },
+                "currency": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "USD"
+                    ]
+                },
+                "ad_platform": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "MAX",
+                        "ADMOB"
+                    ]
+                },
+                "ad_unit_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_creative_id": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_format": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_source": {
+                    "option": "required",
+                    "field_type": "string"
+                }
+            },
+            "iads_imp": {
+                "ad_platform": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "MAX",
+                        "ADMOB"
+                    ]
+                },
+                "ad_source": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_unit_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_placement": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_creative_id": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "MAX"
+                            ]
+                        }
+                    }
+                },
+                "review_creative_id": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "MAX"
+                            ]
+                        }
+                    }
+                },
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                }
+            },
+            "iads_clk": {
+                "value": {
+                    "option": "required",
+                    "field_type": "double",
+                    "comparison": {
+                        "operator": "gt",
+                        "value": 0
+                    }
+                },
+                "currency": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "USD"
+                    ]
+                },
+                "ad_platform": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "MAX",
+                        "ADMOB"
+                    ]
+                },
+                "ad_source": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_unit_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_placement": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_creative_id": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "MAX"
+                            ]
+                        }
+                    }
+                },
+                "review_creative_id": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "MAX"
+                            ]
+                        }
+                    }
+                },
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                }
+            },
+            "iads_paid": {
+                "value": {
+                    "option": "required",
+                    "field_type": "double",
+                    "comparison": {
+                        "operator": "gt",
+                        "value": 0
+                    }
+                },
+                "currency": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "USD"
+                    ]
+                },
+                "ad_platform": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "MAX",
+                        "ADMOB"
+                    ]
+                },
+                "ad_source": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_unit_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_placement": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_creative_id": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "MAX"
+                            ]
+                        }
+                    }
+                },
+                "review_creative_id": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "MAX"
+                            ]
+                        }
+                    }
+                },
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                }
+            },
+            "iads_close": {
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "duration": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                }
+            },
+            "iads_load": {
+                "item_category": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "optional",
+                    "field_type": "string"
+                }
+            },
+            "iads_loaded": {
+                "duration": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                }
+            },
+            "iads_failed": {
+                "error_code": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "duration": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                }
+            },
+            "rads_imp": {
+                "ad_platform": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "MAX",
+                        "ADMOB"
+                    ]
+                },
+                "ad_source": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_unit_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_placement": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_creative_id": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "MAX"
+                            ]
+                        }
+                    }
+                },
+                "review_creative_id": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "MAX"
+                            ]
+                        }
+                    }
+                },
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                }
+            },
+            "rads_clk": {
+                "value": {
+                    "option": "required",
+                    "field_type": "double",
+                    "comparison": {
+                        "operator": "gt",
+                        "value": 0
+                    }
+                },
+                "currency": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "USD"
+                    ]
+                },
+                "ad_platform": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "MAX",
+                        "ADMOB"
+                    ]
+                },
+                "ad_source": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_unit_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_placement": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_creative_id": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "MAX"
+                            ]
+                        }
+                    }
+                },
+                "review_creative_id": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "MAX"
+                            ]
+                        }
+                    }
+                },
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                }
+            },
+            "rads_rewarded": {
+                "value": {
+                    "option": "required",
+                    "field_type": "double",
+                    "comparison": {
+                        "operator": "gt",
+                        "value": 0
+                    }
+                },
+                "currency": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "USD"
+                    ]
+                },
+                "ad_platform": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "MAX",
+                        "ADMOB"
+                    ]
+                },
+                "ad_source": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_unit_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_placement": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_creative_id": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "MAX"
+                            ]
+                        }
+                    }
+                },
+                "review_creative_id": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "MAX"
+                            ]
+                        }
+                    }
+                },
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                }
+            },
+            "rads_paid": {
+                "value": {
+                    "option": "required",
+                    "field_type": "double",
+                    "comparison": {
+                        "operator": "gt",
+                        "value": 0
+                    }
+                },
+                "currency": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "USD"
+                    ]
+                },
+                "ad_platform": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "MAX",
+                        "ADMOB"
+                    ]
+                },
+                "ad_source": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_unit_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_placement": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_creative_id": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "MAX"
+                            ]
+                        }
+                    }
+                },
+                "review_creative_id": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "condition": {
+                        "params_match": {
+                            "target_params": "ad_platform",
+                            "valid_values": [
+                                "MAX"
+                            ]
+                        }
+                    }
+                },
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                }
+            },
+            "rads_close": {
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "duration": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                }
+            },
+            "rads_load": {
+                "item_category": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "optional",
+                    "field_type": "string"
+                }
+            },
+            "rads_loaded": {
+                "duration": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                }
+            },
+            "rads_failed": {
+                "error_code": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "duration": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                }
+            },
+            "bads_load": {
+                "item_category": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "optional",
+                    "field_type": "string"
+                }
+            },
+            "bads_imp": {
+                "item_category": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "optional",
+                    "field_type": "string"
+                }
+            },
+            "bads_hide": {
+                "loaded_times": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                },
+                "failed_times": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                }
+            },
+            "bads_clk": {
+                "item_category": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "optional",
+                    "field_type": "string"
+                }
+            },
+            "fa_load": {
+                "fa_unitid": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "aggregator_id": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "req_type": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "init",
+                        "fail",
+                        "show",
+                        "exp"
+                    ]
+                },
+                "ad_format": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "banner",
+                        "mrect",
+                        "interstitial",
+                        "rewarded",
+                        "native",
+                        "appopen"
+                    ]
+                }
+            },
+            "fa_loaded": {
+                "fa_unitid": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "duration": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                },
+                "aggregator_id": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_unit_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_format": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "banner",
+                        "mrect",
+                        "interstitial",
+                        "rewarded",
+                        "native",
+                        "appopen"
+                    ]
+                }
+            },
+            "fa_failed": {
+                "fa_unitid": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "error_code": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "duration": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                },
+                "aggregator_id": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_unit_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "ad_format": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "banner",
+                        "mrect",
+                        "interstitial",
+                        "rewarded",
+                        "native",
+                        "appopen"
+                    ]
+                }
+            },
+            "first_rads_rewarded": {
+                "item_category": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "optional",
+                    "field_type": "string"
+                }
+            },
+            "nads_close": {
+                "item_category": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "optional",
+                    "field_type": "string"
+                }
+            },
+            "nads_failed": {
+                "item_category": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "error_code": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "duration": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                }
+            },
+            "nads_imp": {
+                "item_category": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "optional",
+                    "field_type": "string"
+                }
+            },
+            "nads_load": {
+                "item_category": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "optional",
+                    "field_type": "string"
+                }
+            },
+            "nads_loaded": {
+                "item_category": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "duration": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                }
+            },
+            "oads_close": {
+                "item_category": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "optional",
+                    "field_type": "string"
+                }
+            },
+            "oads_failed": {
+                "item_category": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "error_code": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "duration": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                }
+            },
+            "oads_imp": {
+                "item_category": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "optional",
+                    "field_type": "string"
+                }
+            },
+            "oads_load": {
+                "item_category": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "optional",
+                    "field_type": "string"
+                }
+            },
+            "oads_loaded": {
+                "item_category": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "duration": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                }
+            },
+            "activity_imp": {
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "item_id": {
+                    "option": "required",
+                    "field_type": "date"
+                },
+                "scene": {
+                    "option": "required",
+                    "field_type": "string"
+                }
+            },
+            "activity_end": {
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "item_id": {
+                    "option": "required",
+                    "field_type": "date"
+                },
+                "result": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "success",
+                        "fail"
+                    ]
+                },
+                "score": {
+                    "option": "conditional",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                },
+                "rank": {
+                    "option": "conditional",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                },
+                "reward": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "pattern": "^(?:[^,-]+-\\d+(?:,[^,-]+-\\d+)*)?$"
+                }
+            },
+            "activity_guide_begin": {
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "item_id": {
+                    "option": "required",
+                    "field_type": "date"
+                }
+            },
+            "activity_guide_clk": {
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "item_id": {
+                    "option": "required",
+                    "field_type": "date"
+                },
+                "step": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 1
+                    }
+                }
+            },
+            "activity_guide_complete": {
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "item_id": {
+                    "option": "required",
+                    "field_type": "date"
+                },
+                "step": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 1
+                    }
+                },
+                "result": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "finished",
+                        "close"
+                    ]
+                }
+            },
+            "activity_stage_end": {
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "item_id": {
+                    "option": "required",
+                    "field_type": "date"
+                },
+                "stage": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 1
+                    }
+                },
+                "duration": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                },
+                "reward": {
+                    "option": "required",
+                    "field_type": "string",
+                    "pattern": "^(?:[^,-]+-\\d+(?:,[^,-]+-\\d+)*)?$"
+                },
+                "result": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "success",
+                        "fail"
+                    ]
+                },
+                "fail_reason": {
+                    "option": "conditional",
+                    "field_type": "string",
+                    "valid_values": [
+                        "timeout",
+                        "score_not_reached"
+                    ]
+                },
+                "score": {
+                    "option": "conditional",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                },
+                "rank": {
+                    "option": "conditional",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                },
+                "progress": {
+                    "option": "optional",
+                    "field_type": "double",
+                    "range": {
+                        "min": 0.1,
+                        "max": 1.0
+                    }
+                }
+            },
+            "activity_stage_start": {
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "item_id": {
+                    "option": "required",
+                    "field_type": "date"
+                },
+                "stage": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 1
+                    }
+                },
+                "play_count": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 1
+                    }
+                }
+            },
+            "activity_start": {
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "item_name": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "item_id": {
+                    "option": "required",
+                    "field_type": "date"
+                }
+            },
+            "tutorial_begin": {},
+            "tutorial_complete": {},
+            "guru_offline": {
+                "from": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "not_set",
+                        "wifi",
+                        "mobile",
+                        "none"
+                    ]
+                }
+            },
+            "att_reguide_clk": {
+                "type": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "show_times": {
+                    "option": "optional",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 1
+                    }
+                },
+                "install_days": {
+                    "option": "optional",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                },
+                "action": {
+                    "option": "optional",
+                    "field_type": "string",
+                    "valid_values": [
+                        "dismiss",
+                        "go"
+                    ]
+                }
+            },
+            "att_reguide_imp": {
+                "type": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "show_times": {
+                    "option": "optional",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 1
+                    }
+                },
+                "install_days": {
+                    "option": "optional",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                }
+            },
+            "att_reguide_result": {
+                "item_category": {
+                    "option": "optional",
+                    "field_type": "string",
+                    "valid_values": [
+                        "authorized",
+                        "denied",
+                        "restricted",
+                        "notDetermined"
+                    ]
+                },
+                "action": {
+                    "option": "optional",
+                    "field_type": "string",
+                    "valid_values": [
+                        "dismiss",
+                        "go"
+                    ]
+                },
+                "type": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "show_times": {
+                    "option": "optional",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 1
+                    }
+                },
+                "install_days": {
+                    "option": "optional",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                }
+            },
+            "att_result": {
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "authorized",
+                        "denied",
+                        "restricted",
+                        "notDetermined"
+                    ]
+                },
+                "type": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "custom1",
+                        "custom2",
+                        "custom3",
+                        "admob",
+                        "max"
+                    ]
+                }
+            },
+            "dma_gg": {
+                "purpose": {
+                    "option": "required",
+                    "field_type": "string"
+                },
+                "result": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "0000",
+                        "0001",
+                        "0010",
+                        "0011",
+                        "0100",
+                        "0101",
+                        "0110",
+                        "0111",
+                        "1000",
+                        "1001",
+                        "1010",
+                        "1011",
+                        "1100",
+                        "1101",
+                        "1110",
+                        "1111"
+                    ]
+                }
+            },
+            "noti_perm_imp": {
+                "request_times": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 1
+                    }
+                },
+                "show_times": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 1
+                    }
+                },
+                "denied_times": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                },
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "default"
+                    ]
+                },
+                "prompt_trigger": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "a",
+                        "b"
+                    ]
+                }
+            },
+            "noti_perm_rationale_imp": {
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                }
+            },
+            "noti_perm_rationale_result": {
+                "result": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "skip",
+                        "allow"
+                    ]
+                },
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string"
+                }
+            },
+            "noti_perm_result": {
+                "request_times": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 1
+                    }
+                },
+                "show_times": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 1
+                    }
+                },
+                "denied_times": {
+                    "option": "required",
+                    "field_type": "int",
+                    "comparison": {
+                        "operator": "ge",
+                        "value": 0
+                    }
+                },
+                "result": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "granted",
+                        "denied",
+                        "provisional",
+                        "not_determined"
+                    ]
+                },
+                "item_category": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "default"
+                    ]
+                },
+                "prompt_trigger": {
+                    "option": "required",
+                    "field_type": "string",
+                    "valid_values": [
+                        "a",
+                        "b"
+                    ]
+                }
+            },
+            "tutorial_close": {},
+            "dev_audit": {
+                "item_category": {
+                    "option": "optional",
+                    "field_type": "string",
+                    "valid_values": [
+                        "error_event"
+                    ]
+                },
+                "item_name": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "err": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "country": {
+                    "option": "optional",
+                    "field_type": "string"
+                },
+                "network": {
+                    "option": "optional",
+                    "field_type": "string",
+                    "valid_values": [
+                        "wifi",
+                        "mobile",
+                        "none",
+                        "vpn"
+                    ]
+                }
+            }
+        },
+        "patterns": [
+            {
+                "event_pattern": "level_end_success_{num}",
+                "variables": {
+                    "num": {
+                        "type": "int",
+                        "match": "\\d+"
+                    }
+                },
+                "rules": {
+                    "num": {
+                        "option": "required",
+                        "field_type": "int",
+                        "property_match": {
+                            "target_key": "b_play",
+                            "target_value": "{num}"
+                        }
+                    }
+                }
+            },
+            {
+                "event_pattern": "tutorial_{num}_imp",
+                "variables": {
+                    "num": {
+                        "type": "int",
+                        "match": "\\d+"
+                    }
+                },
+                "rules": {}
+            },
+            {
+                "event_pattern": "tutorial_{num}_next_clk",
+                "variables": {
+                    "num": {
+                        "type": "int",
+                        "match": "\\d+"
+                    }
+                },
+                "rules": {}
+            }
+        ]
+    }
+}

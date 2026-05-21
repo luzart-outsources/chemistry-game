@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8116506dfe28e247bfb2dcd7b37106b, type: 3}
+  m_Name: Level_02_AgCl
+  m_EditorClassIdentifier: 
+  LevelIndex: 2
+  DisplayName: "L\u1ECDc AgCl tinh khi\u1EBFt"
+  ObjectiveText: "Thu AgCl kh\xF4ng l\u1EABn k\u1EBFt t\u1EE7a kh\xE1c."
+  Bottles:
+  - Substance: {fileID: 11400000, guid: 7c240929f8ff0834cb605e9e1233f280, type: 2}
+    InitialAmount: 60
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: f6617fedbf704f14f9ce687f47c4ce50, type: 2}
+    InitialAmount: 60
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: 64492594753d7a449b32c680971ad377, type: 2}
+    InitialAmount: 40
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: 5dbc919d17dc2884fa09d562525c2642, type: 2}
+    InitialAmount: 40
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: 766b27aae5e19ec4a9da0ccfd9f21aaa, type: 2}
+    InitialAmount: 30
+    MaskLabel: 0
+    MaskedLabel: '?'
+  Tools:
+  - Tool: {fileID: 11400000, guid: 6d8ef94d45a5d74438318f84f09d9604, type: 2}
+  - Tool: {fileID: 11400000, guid: 360a58a9de64bd24aa8bf25a20e07253, type: 2}
+  - Tool: {fileID: 11400000, guid: 7afc6bbfbf362f044a644c7597555948, type: 2}
+  AvailableReactions:
+  - {fileID: 11400000, guid: ed5202bc00a58ec42852a8ffaf10f47c, type: 2}
+  - {fileID: 11400000, guid: 21883bdbb0e561e4dba6ba90513c53a8, type: 2}
+  - {fileID: 11400000, guid: 60ab0bd1d626f814cb40c441d25b1a77, type: 2}
+  PurityRule:
+    TargetProduct: {fileID: 11400000, guid: 10429c29f2770274cafd9f5e944bcc1a, type: 2}
+    MinTargetAmount: 5
+    ForbiddenSubstances:
+    - {fileID: 11400000, guid: 8ab66a22517eee847921a385116b880c, type: 2}
+    - {fileID: 11400000, guid: 08a23fa509458cb4bb7d9e4b92748df9, type: 2}
+    - {fileID: 11400000, guid: 7c240929f8ff0834cb605e9e1233f280, type: 2}
+    ForbiddenTolerance: 0.5
+    RejectAnyPrecipitate: 0
+  Traps:
+  - TrapId: Ag2O_trap
+    TriggerProduct: {fileID: 11400000, guid: 8ab66a22517eee847921a385116b880c, type: 2}
+    ExplanationVi: "B\u1EA1n t\u1EA1o Ag\u2082O (\u0111en) thay v\xEC AgCl."
+  - TrapId: Ag2CO3_trap
+    TriggerProduct: {fileID: 11400000, guid: 08a23fa509458cb4bb7d9e4b92748df9, type: 2}
+    ExplanationVi: "B\u1EA1n t\u1EA1o Ag\u2082CO\u2083 (v\xE0ng nh\u1EA1t) thay v\xEC
+      AgCl."
+  Hints: {fileID: 11400000, guid: bfb0ee25cb4261540a02b89a5435c27a, type: 2}
+  ThreeStarBlockingTraps:
+  - TrapId: Ag2O_trap
+    TriggerProduct: {fileID: 11400000, guid: 8ab66a22517eee847921a385116b880c, type: 2}
+    ExplanationVi: "B\u1EA1n t\u1EA1o Ag\u2082O (\u0111en) thay v\xEC AgCl."
+  - TrapId: Ag2CO3_trap
+    TriggerProduct: {fileID: 11400000, guid: 08a23fa509458cb4bb7d9e4b92748df9, type: 2}
+    ExplanationVi: "B\u1EA1n t\u1EA1o Ag\u2082CO\u2083 (v\xE0ng nh\u1EA1t) thay v\xEC
+      AgCl."

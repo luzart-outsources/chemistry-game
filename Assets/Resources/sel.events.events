@@ -1,0 +1,907 @@
+{
+  "analytics_events": [
+    {
+      "event_name": "level_start",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "game",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "level_end",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "game",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "level_end_success_{num}",
+      "option": "required",
+      "capabilities": [
+        "Firebase"
+      ],
+      "tag": [
+        "game",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "earn_virtual_currency",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "game",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "spend_virtual_currency",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "game",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "level_up",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "game",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "unlock_achievement",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "game",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "hp_points",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "game",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "iap_imp",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "iap",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "iap_clk",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "iap",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "iap_close",
+      "option": "conditional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "iap",
+        "client_tracking"
+      ],
+      "conditional": {
+        "operator": "spec_have",
+        "value": ""
+      }
+    },
+    {
+      "event_name": "iap_ret_true",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "iap",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "iap_ret_false",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "iap",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "iap_purchase",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "iap",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "sub_purchase",
+      "option": "conditional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "iap",
+        "server_tracking"
+      ],
+      "conditional": {
+        "operator": "spec_have",
+        "value": ""
+      }
+    },
+    {
+      "event_name": "tch_ad_rev_roas_001",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "revenue",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "tch_ad_rev_roas_02",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "revenue",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "ad_impression",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "iads_imp",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "iads_clk",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "iads_paid",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "iads_close",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "iads_load",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "iads_loaded",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "iads_failed",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "rads_imp",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "rads_clk",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "rads_rewarded",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "rads_paid",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "rads_close",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "rads_load",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "rads_loaded",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "rads_failed",
+      "option": "required",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "bads_load",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "bads_imp",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "bads_hide",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "bads_clk",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "fa_load",
+      "option": "required",
+      "capabilities": [
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "fa_loaded",
+      "option": "required",
+      "capabilities": [
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "fa_failed",
+      "option": "required",
+      "capabilities": [
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "first_rads_rewarded",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "nads_close",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "nads_failed",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "nads_imp",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "nads_load",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "nads_loaded",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "oads_close",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "oads_failed",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "oads_imp",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "oads_load",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "oads_loaded",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "ad",
+        "middleware_tracking"
+      ]
+    },
+    {
+      "event_name": "activity_imp",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "activity",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "activity_end",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "activity",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "activity_guide_begin",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "activity",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "activity_guide_clk",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "activity",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "activity_guide_complete",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "activity",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "activity_stage_end",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "activity",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "activity_stage_start",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "activity",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "activity_start",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "activity",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "tutorial_begin",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "user_behavior",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "tutorial_complete",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "user_behavior",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "guru_offline",
+      "option": "optional",
+      "capabilities": [
+        "Firebase"
+      ],
+      "tag": [
+        "user_behavior",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "att_reguide_clk",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "user_behavior",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "att_reguide_imp",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "user_behavior",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "att_reguide_result",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "user_behavior",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "att_result",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "user_behavior",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "dma_gg",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "user_behavior",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "noti_perm_imp",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "user_behavior",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "noti_perm_rationale_imp",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "user_behavior",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "noti_perm_rationale_result",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "user_behavior",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "noti_perm_result",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "user_behavior",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "tutorial_close",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "user_behavior",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "dev_audit",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "user_behavior",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "tutorial_{num}_imp",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "user_behavior",
+        "client_tracking"
+      ]
+    },
+    {
+      "event_name": "tutorial_{num}_next_clk",
+      "option": "optional",
+      "capabilities": [
+        "Guru",
+        "Firebase"
+      ],
+      "tag": [
+        "user_behavior",
+        "client_tracking"
+      ]
+    }
+  ]
+}

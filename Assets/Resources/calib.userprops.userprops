@@ -1,0 +1,188 @@
+{
+    "gurusdk": "v3.2.1",
+    "user_property_rules": {
+        "explicit": {
+            "first_open_time": {
+                "field_type": "timestamp"
+            },
+            "is_iap_user": {
+                "field_type": "boolean",
+                "valid_values": [
+                    true,
+                    false
+                ]
+            },
+            "user_id": {
+                "field_type": "string"
+            },
+            "device_id": {
+                "field_type": "string"
+            },
+            "network": {
+                "field_type": "string",
+                "valid_values": [
+                    "wifi",
+                    "mobile",
+                    "none",
+                    "wifi-vpn",
+                    "mobile-vpn"
+                ]
+            },
+            "adjust_id": {
+                "field_type": "string"
+            },
+            "appsflyer_id": {
+                "field_type": "string"
+            },
+            "af_media_source": {
+                "field_type": "string",
+                "valid_values": [
+                    "organic",
+                    "unknown"
+                ]
+            },
+            "af_campaign": {
+                "field_type": "string"
+            },
+            "att_status": {
+                "field_type": "string",
+                "valid_values": [
+                    "authorized",
+                    "denied",
+                    "restricted",
+                    "notDetermined",
+                    "notApplicable"
+                ],
+                "condition": {
+                    "platform_match": "ios"
+                }
+            },
+            "noti_perm": {
+                "field_type": "string",
+                "platform_valid_values": {
+                    "ios": [
+                        "granted",
+                        "denied",
+                        "provisional",
+                        "not_determined"
+                    ],
+                    "android": [
+                        "granted",
+                        "denied"
+                    ]
+                }
+            },
+            "game_center_id": {
+                "field_type": "string",
+                "condition": {
+                    "platform_match": "ios"
+                }
+            },
+            "play_game_id": {
+                "field_type": "string",
+                "pattern": "^[a-z]_[0-9]+$",
+                "condition": {
+                    "platform_match": "android"
+                }
+            },
+            "b_level": {
+                "field_type": "int",
+                "comparison": {
+                    "operator": "ge",
+                    "value": 0
+                }
+            },
+            "b_play": {
+                "field_type": "int",
+                "comparison": {
+                    "operator": "ge",
+                    "value": 0
+                }
+            },
+            "iap_coin": {
+                "field_type": "int",
+                "comparison": {
+                    "operator": "ge",
+                    "value": 0
+                },
+                "condition": {
+                    "property_match": {
+                        "target_key": "is_iap_user",
+                        "target_value": "true"
+                    }
+                }
+            },
+            "noniap_coin": {
+                "field_type": "int",
+                "comparison": {
+                    "operator": "ge",
+                    "value": 0
+                }
+            },
+            "coin": {
+                "field_type": "int",
+                "comparison": {
+                    "operator": "ge",
+                    "value": 0
+                }
+            },
+            "grade": {
+                "field_type": "int",
+                "comparison": {
+                    "operator": "gt",
+                    "value": 0
+                }
+            },
+            "exp": {
+                "field_type": "double",
+                "comparison": {
+                    "operator": "ge",
+                    "value": 0
+                }
+            },
+            "hp": {
+                "field_type": "double",
+                "comparison": {
+                    "operator": "ge",
+                    "value": 0
+                }
+            },
+            "hp_status": {
+                "field_type": "string",
+                "valid_values": [
+                    "normal",
+                    "infinite"
+                ]
+            },
+            "info.deviceId": {
+                "field_type": "string",
+                "coverage_requirement": 100
+            },
+            "info.uid": {
+                "field_type": "string",
+                "coverage_requirement": 95
+            },
+            "info.adjustId": {
+                "field_type": "string",
+                "coverage_requirement": 95
+            },
+            "info.adId": {
+                "field_type": "string",
+                "coverage_requirement": 95
+            },
+            "info.firebaseId": {
+                "field_type": "string",
+                "coverage_requirement": 100
+            },
+            "info.appsflyerId": {
+                "field_type": "string"
+            },
+            "info.vendorId": {
+                "field_type": "string",
+                "condition": {
+                    "platform_match": "ios"
+                }
+            }
+        }
+    }
+}

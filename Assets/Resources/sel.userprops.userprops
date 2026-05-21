@@ -1,0 +1,184 @@
+{
+  "user_properties": [
+    {
+      "property_key": "first_open_time",
+      "option": "required",
+      "capabilities": ["Guru", "Firebase"],
+      "tag": ["basic", "middleware_tracking"]
+    },
+    {
+      "property_key": "is_iap_user",
+      "option": "required",
+      "capabilities": ["Guru", "Firebase"],
+      "tag": ["basic", "middleware_tracking"]
+    },
+    {
+      "property_key": "user_id",
+      "option": "required",
+      "capabilities": ["Firebase"],
+      "tag": ["basic", "middleware_tracking"]
+    },
+    {
+      "property_key": "device_id",
+      "option": "required",
+      "capabilities": ["Firebase"],
+      "tag": ["basic", "middleware_tracking"]
+    },
+    {
+      "property_key": "network",
+      "option": "required",
+      "capabilities": ["Firebase"],
+      "tag": ["basic", "middleware_tracking"]
+    },
+    {
+      "property_key": "adjust_id",
+      "option": "required",
+      "capabilities": ["Firebase"],
+      "tag": ["attribution", "middleware_tracking"]
+    },
+    {
+      "property_key": "appsflyer_id",
+      "option": "required",
+      "capabilities": ["Firebase"],
+      "tag": ["attribution", "middleware_tracking"]
+    },
+    {
+      "property_key": "network",
+      "option": "optional",
+      "capabilities": ["Guru"],
+      "tag": ["basic", "middleware_tracking"]
+    },
+    {
+      "property_key": "af_media_source",
+      "option": "required",
+      "capabilities": ["Guru", "Firebase"],
+      "tag": ["attribution", "middleware_tracking"]
+    },
+    {
+      "property_key": "af_campaign",
+      "option": "required",
+      "capabilities": ["Guru", "Firebase"],
+      "tag": ["attribution", "middleware_tracking"]
+    },
+    {
+      "property_key": "att_status",
+      "option": "required",
+      "capabilities": ["Guru", "Firebase"],
+      "tag": ["permission", "middleware_tracking"]
+    },
+    {
+      "property_key": "noti_perm",
+      "option": "optional",
+      "capabilities": ["Guru", "Firebase"],
+      "tag": ["permission", "middleware_tracking"]
+    },
+    {
+      "property_key": "game_center_id",
+      "option": "optional",
+      "capabilities": ["Guru", "Firebase"],
+      "tag": ["platform", "middleware_tracking"]
+    },
+    {
+      "property_key": "play_game_id",
+      "option": "optional",
+      "capabilities": ["Guru", "Firebase"],
+      "tag": ["platform", "middleware_tracking"]
+    },
+    {
+      "property_key": "b_level",
+      "option": "required",
+      "capabilities": ["Guru", "Firebase"],
+      "tag": ["game_progress", "client_tracking"]
+    },
+    {
+      "property_key": "b_play",
+      "option": "required",
+      "capabilities": ["Guru", "Firebase"],
+      "tag": ["game_progress", "client_tracking"]
+    },
+    {
+      "property_key": "iap_coin",
+      "option": "conditional",
+      "capabilities": ["Guru", "Firebase"],
+      "tag": ["currency", "client_tracking"]
+    },
+    {
+      "property_key": "noniap_coin",
+      "option": "conditional",
+      "capabilities": ["Guru", "Firebase"],
+      "tag": ["currency", "client_tracking"]
+    },
+    {
+      "property_key": "coin",
+      "option": "conditional",
+      "capabilities": ["Guru", "Firebase"],
+      "tag": ["currency", "client_tracking"]
+    },
+    {
+      "property_key": "grade",
+      "option": "optional",
+      "capabilities": ["Guru", "Firebase"],
+      "tag": ["character", "client_tracking"]
+    },
+    {
+      "property_key": "exp",
+      "option": "optional",
+      "capabilities": ["Guru", "Firebase"],
+      "tag": ["character", "client_tracking"]
+    },
+    {
+      "property_key": "hp",
+      "option": "optional",
+      "capabilities": ["Guru", "Firebase"],
+      "tag": ["character", "client_tracking"]
+    },
+    {
+      "property_key": "hp_status",
+      "option": "optional",
+      "capabilities": ["Guru", "Firebase"],
+      "tag": ["character", "client_tracking"]
+    },
+    {
+      "property_key": "info.deviceId",
+      "option": "required",
+      "capabilities": ["Guru"],
+      "tag": ["device_info", "middleware_tracking"]
+    },
+    {
+      "property_key": "info.uid",
+      "option": "required",
+      "capabilities": ["Guru"],
+      "tag": ["device_info", "middleware_tracking"]
+    },
+    {
+      "property_key": "info.adjustId",
+      "option": "required",
+      "capabilities": ["Guru"],
+      "tag": ["device_info", "middleware_tracking"]
+    },
+    {
+      "property_key": "info.adId",
+      "option": "required",
+      "capabilities": ["Guru"],
+      "tag": ["device_info", "middleware_tracking"]
+    },
+    {
+      "property_key": "info.firebaseId",
+      "option": "required",
+      "capabilities": ["Guru"],
+      "tag": ["device_info", "middleware_tracking"]
+    },
+    {
+      "property_key": "info.appsflyerId",
+      "option": "required",
+      "capabilities": ["Guru"],
+      "tag": ["device_info", "middleware_tracking"]
+    },
+    {
+      "property_key": "info.vendorId",
+      "option": "required",
+      "capabilities": ["Guru"],
+      "tag": ["device_info", "middleware_tracking"]
+    }
+  ]
+}

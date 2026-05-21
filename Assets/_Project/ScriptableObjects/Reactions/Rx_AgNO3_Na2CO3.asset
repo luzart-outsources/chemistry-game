@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ff0fb2345ce784ba55beceb108ecf3, type: 3}
+  m_Name: Rx_AgNO3_Na2CO3
+  m_EditorClassIdentifier: 
+  Id: AgNO3_Na2CO3
+  Description: "2AgNO\u2083 + Na\u2082CO\u2083 \u2192 Ag\u2082CO\u2083\u2193 + 2NaNO\u2083"
+  Inputs:
+  - Substance: {fileID: 11400000, guid: 7c240929f8ff0834cb605e9e1233f280, type: 2}
+    Ratio: 2
+  - Substance: {fileID: 11400000, guid: 5dbc919d17dc2884fa09d562525c2642, type: 2}
+    Ratio: 1
+  Conditions: []
+  Outputs:
+  - Substance: {fileID: 11400000, guid: 08a23fa509458cb4bb7d9e4b92748df9, type: 2}
+    Ratio: 1
+  - Substance: {fileID: 11400000, guid: 51aca04c727a5fd4ab80cd5a31f76bd6, type: 2}
+    Ratio: 2
+  PrimarySideEffect: 8
+  FlashColor: {r: 1, g: 1, b: 1, a: 1}
+  ReactionEquation: "2AgNO\u2083 + Na\u2082CO\u2083 \u2192 Ag\u2082CO\u2083 + 2NaNO\u2083"
+  LimitedByLowestInput: 1
+  SlowReaction: 0

@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8116506dfe28e247bfb2dcd7b37106b, type: 3}
+  m_Name: Level_04_CuSO4
+  m_EditorClassIdentifier: 
+  LevelIndex: 4
+  DisplayName: "CuSO\u2084 tinh khi\u1EBFt"
+  ObjectiveText: "T\u1EA1o dung d\u1ECBch CuSO\u2084 xanh, kh\xF4ng k\u1EBFt t\u1EE7a."
+  Bottles:
+  - Substance: {fileID: 11400000, guid: 25e037b3edc4bb9489b3638084f0f1cd, type: 2}
+    InitialAmount: 30
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: f553b0ea6d96270409b43c52bb821574, type: 2}
+    InitialAmount: 30
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: e1610df9754f85f458c249bc1c7b2d7b, type: 2}
+    InitialAmount: 60
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: 64492594753d7a449b32c680971ad377, type: 2}
+    InitialAmount: 40
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: 0b0559bcb48b4bf45a7f59fddf390784, type: 2}
+    InitialAmount: 40
+    MaskLabel: 0
+    MaskedLabel: '?'
+  Tools:
+  - Tool: {fileID: 11400000, guid: 970fab2bdc46bc046af6b396f019e1d6, type: 2}
+  - Tool: {fileID: 11400000, guid: 360a58a9de64bd24aa8bf25a20e07253, type: 2}
+  - Tool: {fileID: 11400000, guid: 6d8ef94d45a5d74438318f84f09d9604, type: 2}
+  - Tool: {fileID: 11400000, guid: 236d643aa2eeb5943adb397eea7123e7, type: 2}
+  AvailableReactions:
+  - {fileID: 11400000, guid: 747504a8c8d06ee4494774b558eec20a, type: 2}
+  - {fileID: 11400000, guid: 7a3868b023970aa47a216b62e0fba424, type: 2}
+  - {fileID: 11400000, guid: ef94c9a3d24ec484a889ee8e7428b8d3, type: 2}
+  - {fileID: 11400000, guid: efb4e7d4e83333c4f8c3b5509cd99d6e, type: 2}
+  PurityRule:
+    TargetProduct: {fileID: 11400000, guid: 543018d2dd85703469c24322b1210c89, type: 2}
+    MinTargetAmount: 10
+    ForbiddenSubstances:
+    - {fileID: 11400000, guid: 1a63c075124b99546ae8353143a5589d, type: 2}
+    - {fileID: 11400000, guid: 1b9b7a1a38491824e9a7dd279a041447, type: 2}
+    - {fileID: 11400000, guid: 64492594753d7a449b32c680971ad377, type: 2}
+    - {fileID: 11400000, guid: 0b0559bcb48b4bf45a7f59fddf390784, type: 2}
+    ForbiddenTolerance: 0.5
+    RejectAnyPrecipitate: 0
+  Traps:
+  - TrapId: Hydroxide
+    TriggerProduct: {fileID: 11400000, guid: 1a63c075124b99546ae8353143a5589d, type: 2}
+    ExplanationVi: "B\u1EA1n t\u1EA1o Cu(OH)\u2082 \u2014 k\u1EBFt t\u1EE7a xanh."
+  - TrapId: WrongSalt
+    TriggerProduct: {fileID: 11400000, guid: 1b9b7a1a38491824e9a7dd279a041447, type: 2}
+    ExplanationVi: "B\u1EA1n t\u1EA1o CuCl\u2082 thay v\xEC CuSO\u2084."
+  Hints: {fileID: 11400000, guid: 193196020f7c2944996a297f6f9c48f3, type: 2}
+  ThreeStarBlockingTraps:
+  - TrapId: Hydroxide
+    TriggerProduct: {fileID: 11400000, guid: 1a63c075124b99546ae8353143a5589d, type: 2}
+    ExplanationVi: "B\u1EA1n t\u1EA1o Cu(OH)\u2082 \u2014 k\u1EBFt t\u1EE7a xanh."
+  - TrapId: WrongSalt
+    TriggerProduct: {fileID: 11400000, guid: 1b9b7a1a38491824e9a7dd279a041447, type: 2}
+    ExplanationVi: "B\u1EA1n t\u1EA1o CuCl\u2082 thay v\xEC CuSO\u2084."

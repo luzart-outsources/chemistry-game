@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8116506dfe28e247bfb2dcd7b37106b, type: 3}
+  m_Name: Level_03_CO2
+  m_EditorClassIdentifier: 
+  LevelIndex: 3
+  DisplayName: "\u0110i\u1EC1u ch\u1EBF CO\u2082"
+  ObjectiveText: "Thu CO\u2082 v\xE0 ch\u1EE9ng minh b\u1EB1ng n\u01B0\u1EDBc v\xF4i."
+  Bottles:
+  - Substance: {fileID: 11400000, guid: 5b264e4212adf0048a0309b62b7a1899, type: 2}
+    InitialAmount: 40
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: 5dbc919d17dc2884fa09d562525c2642, type: 2}
+    InitialAmount: 40
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: 0b0559bcb48b4bf45a7f59fddf390784, type: 2}
+    InitialAmount: 60
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: e1610df9754f85f458c249bc1c7b2d7b, type: 2}
+    InitialAmount: 60
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: f404f1542721f60468f45722565b3fb6, type: 2}
+    InitialAmount: 50
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: 68c55b3daf52f5943a8a95e27d6f5fc5, type: 2}
+    InitialAmount: 30
+    MaskLabel: 0
+    MaskedLabel: '?'
+  Tools:
+  - Tool: {fileID: 11400000, guid: 07727cf5b0ff1ed4b9e9597641e11b73, type: 2}
+  - Tool: {fileID: 11400000, guid: 6d8ef94d45a5d74438318f84f09d9604, type: 2}
+  AvailableReactions:
+  - {fileID: 11400000, guid: f98c5b9887ecb2a49a8af97262a55a13, type: 2}
+  - {fileID: 11400000, guid: 11e1e5faedac1fa46bf34445f8c6d756, type: 2}
+  - {fileID: 11400000, guid: d80e3c80743a669468f6c65ec3d057cf, type: 2}
+  - {fileID: 11400000, guid: df56e72a514f6924f84e61c36241224c, type: 2}
+  PurityRule:
+    TargetProduct: {fileID: 11400000, guid: 5b264e4212adf0048a0309b62b7a1899, type: 2}
+    MinTargetAmount: 5
+    ForbiddenSubstances:
+    - {fileID: 11400000, guid: 3a8209c71fc0a4748a26fb5139494837, type: 2}
+    ForbiddenTolerance: 0.5
+    RejectAnyPrecipitate: 0
+  Traps:
+  - TrapId: WrongMetal
+    TriggerProduct: {fileID: 11400000, guid: 3a8209c71fc0a4748a26fb5139494837, type: 2}
+    ExplanationVi: "B\u1EA1n d\xF9ng Zn \u2014 sinh H\u2082 ch\u1EE9 kh\xF4ng ph\u1EA3i
+      CO\u2082."
+  Hints: {fileID: 11400000, guid: 997914db7e6bba74dbf6cdcb1a25e70b, type: 2}
+  ThreeStarBlockingTraps:
+  - TrapId: WrongMetal
+    TriggerProduct: {fileID: 11400000, guid: 3a8209c71fc0a4748a26fb5139494837, type: 2}
+    ExplanationVi: "B\u1EA1n d\xF9ng Zn \u2014 sinh H\u2082 ch\u1EE9 kh\xF4ng ph\u1EA3i
+      CO\u2082."

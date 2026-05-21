@@ -1,0 +1,35 @@
+Type	Name	AssetPath	Desc
+1	ButtonClick	Button_Click	按钮点击
+2	WaterFull	WaterFull	倒满水
+3	PourWater1	PourWater3	倒水
+4	Peng	Peng	喷射礼花
+5	Win	Show_Victory	胜利结算
+6	CurtainRight	Checkmark	可打开遮罩
+7	OpenCurtain	Rollup3	遮罩打开
+8	OpenVine	Vine	藤蔓打开
+9	Butterfly	Butterfly	蝴蝶飞走
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

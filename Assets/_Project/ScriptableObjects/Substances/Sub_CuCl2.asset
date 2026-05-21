@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb495a697ab4366459cd9505efeb5b74, type: 3}
+  m_Name: Sub_CuCl2
+  m_EditorClassIdentifier: 
+  Id: CuCl2
+  Formula: "CuCl\u2082"
+  DisplayName: "\u0110\u1ED3ng clorua"
+  Category: 2
+  Phase: 3
+  PH: 6
+  VisualColor: {r: 0.3, g: 0.85, b: 0.4, a: 0.8}
+  IconSprite: {fileID: 0}
+  BottleSprite: {fileID: 0}
+  CrystalForm: {fileID: 0}
+  ShortDescription: 

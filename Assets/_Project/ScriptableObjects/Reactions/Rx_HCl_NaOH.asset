@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ff0fb2345ce784ba55beceb108ecf3, type: 3}
+  m_Name: Rx_HCl_NaOH
+  m_EditorClassIdentifier: 
+  Id: HCl_NaOH
+  Description: "HCl + NaOH \u2192 NaCl + H\u2082O"
+  Inputs:
+  - Substance: {fileID: 11400000, guid: 0b0559bcb48b4bf45a7f59fddf390784, type: 2}
+    Ratio: 1
+  - Substance: {fileID: 11400000, guid: 64492594753d7a449b32c680971ad377, type: 2}
+    Ratio: 1
+  Conditions: []
+  Outputs:
+  - Substance: {fileID: 11400000, guid: f6617fedbf704f14f9ce687f47c4ce50, type: 2}
+    Ratio: 1
+  - Substance: {fileID: 11400000, guid: ca065e137fcf38b47868c132b8e33378, type: 2}
+    Ratio: 1
+  PrimarySideEffect: 7
+  FlashColor: {r: 1, g: 1, b: 1, a: 1}
+  ReactionEquation: "HCl + NaOH \u2192 NaCl + H\u2082O"
+  LimitedByLowestInput: 1
+  SlowReaction: 0

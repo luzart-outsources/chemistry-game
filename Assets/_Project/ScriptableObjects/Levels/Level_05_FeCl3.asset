@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8116506dfe28e247bfb2dcd7b37106b, type: 3}
+  m_Name: Level_05_FeCl3
+  m_EditorClassIdentifier: 
+  LevelIndex: 5
+  DisplayName: "FeCl\u2083 kh\xF4ng l\u1EABn FeCl\u2082"
+  ObjectiveText: "T\u1EA1o FeCl\u2083, ki\u1EC3m b\u1EB1ng KSCN cho \u0111\u1ECF
+    m\xE1u."
+  Bottles:
+  - Substance: {fileID: 11400000, guid: bc789f29091e88b4e842dbaadac03de1, type: 2}
+    InitialAmount: 30
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: 0b0559bcb48b4bf45a7f59fddf390784, type: 2}
+    InitialAmount: 60
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: 64492594753d7a449b32c680971ad377, type: 2}
+    InitialAmount: 30
+    MaskLabel: 0
+    MaskedLabel: '?'
+  Tools:
+  - Tool: {fileID: 11400000, guid: 6d8ef94d45a5d74438318f84f09d9604, type: 2}
+  - Tool: {fileID: 11400000, guid: 9d7282c866189a34fa230215ce3f2bff, type: 2}
+  - Tool: {fileID: 11400000, guid: 8fb042eda25cee94d90e52eddee950c9, type: 2}
+  AvailableReactions:
+  - {fileID: 11400000, guid: bb57e634f2728b84ea71d4999dbbb2fc, type: 2}
+  - {fileID: 11400000, guid: 84b0156a15158264680a96e478599e75, type: 2}
+  - {fileID: 11400000, guid: 19a0ba9fdd9b9804291a4fd5286aae1d, type: 2}
+  - {fileID: 11400000, guid: a488be82c1b56bf4cb184f9413096f94, type: 2}
+  - {fileID: 11400000, guid: 231adfb4b367da2409ad2c3a20d2e209, type: 2}
+  PurityRule:
+    TargetProduct: {fileID: 11400000, guid: b3fe2c63b32453f4eb84e71f49f4d09c, type: 2}
+    MinTargetAmount: 8
+    ForbiddenSubstances:
+    - {fileID: 11400000, guid: 3767135d72b31e643b623d57d43dc572, type: 2}
+    - {fileID: 11400000, guid: 672db9b35c2a18b44b20bd22fc73f658, type: 2}
+    - {fileID: 11400000, guid: fa66ebf3fd6c00046973af664efcf5fd, type: 2}
+    - {fileID: 11400000, guid: 64492594753d7a449b32c680971ad377, type: 2}
+    ForbiddenTolerance: 0.5
+    RejectAnyPrecipitate: 0
+  Traps:
+  - TrapId: LeftOverFe2
+    TriggerProduct: {fileID: 11400000, guid: 3767135d72b31e643b623d57d43dc572, type: 2}
+    ExplanationVi: "C\xF2n FeCl\u2082 \u2014 s\u1EE5c th\xEAm Cl\u2082."
+  - TrapId: Hydroxide_Fe2
+    TriggerProduct: {fileID: 11400000, guid: 672db9b35c2a18b44b20bd22fc73f658, type: 2}
+    ExplanationVi: "B\u1EA1n t\u1EA1o Fe(OH)\u2082 (xanh l\xE1) \u2014 tr\xE1nh NaOH."
+  - TrapId: Hydroxide_Fe3
+    TriggerProduct: {fileID: 11400000, guid: fa66ebf3fd6c00046973af664efcf5fd, type: 2}
+    ExplanationVi: "B\u1EA1n t\u1EA1o Fe(OH)\u2083 (n\xE2u \u0111\u1ECF) \u2014 tr\xE1nh
+      NaOH."
+  Hints: {fileID: 11400000, guid: 4b7e5381e52cec2408a32a3d8ad0209d, type: 2}
+  ThreeStarBlockingTraps:
+  - TrapId: LeftOverFe2
+    TriggerProduct: {fileID: 11400000, guid: 3767135d72b31e643b623d57d43dc572, type: 2}
+    ExplanationVi: "C\xF2n FeCl\u2082 \u2014 s\u1EE5c th\xEAm Cl\u2082."
+  - TrapId: Hydroxide_Fe2
+    TriggerProduct: {fileID: 11400000, guid: 672db9b35c2a18b44b20bd22fc73f658, type: 2}
+    ExplanationVi: "B\u1EA1n t\u1EA1o Fe(OH)\u2082 (xanh l\xE1) \u2014 tr\xE1nh NaOH."
+  - TrapId: Hydroxide_Fe3
+    TriggerProduct: {fileID: 11400000, guid: fa66ebf3fd6c00046973af664efcf5fd, type: 2}
+    ExplanationVi: "B\u1EA1n t\u1EA1o Fe(OH)\u2083 (n\xE2u \u0111\u1ECF) \u2014 tr\xE1nh
+      NaOH."
