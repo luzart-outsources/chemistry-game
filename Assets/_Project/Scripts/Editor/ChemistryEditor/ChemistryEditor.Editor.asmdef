@@ -1,7 +1,10 @@
 {
     "name": "ChemistryGame.EditorTools.ContentEditor",
     "rootNamespace": "ChemistryGame.EditorTools.ContentEditor",
-    "references": [],
+    "references": [
+        "ChemistryGame.Chemistry",
+        "ChemistryGame.Core"
+    ],
     "includePlatforms": ["Editor"],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

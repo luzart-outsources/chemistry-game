@@ -3,6 +3,8 @@
     "rootNamespace": "ChemistryGame.EditorTools.ContentEditor.Tests",
     "references": [
         "ChemistryGame.EditorTools.ContentEditor",
+        "ChemistryGame.Chemistry",
+        "ChemistryGame.Core",
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner"
     ],
