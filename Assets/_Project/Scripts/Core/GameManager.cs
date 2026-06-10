@@ -13,6 +13,15 @@ namespace ChemistryGame.Core
         [Header("Levels (theo thứ tự)")]
         [SerializeField] private List<LevelConfig> levels = new List<LevelConfig>();
 
+        [Header("DEBUG / Test (đặt 0 / false khi build thật)")]
+        [SerializeField, Tooltip("≠ 0: khi bấm Play sẽ vào THẲNG màn này (bỏ qua menu & khoá tuần tự). Để 0 = tắt.")]
+        private int debugPlayLevelIndex = 0;
+        [SerializeField, Tooltip("Bật: mở khoá TẤT CẢ màn ở Level Select để test thoải mái.")]
+        private bool debugUnlockAllLevels = false;
+
+        public int DebugPlayLevelIndex => debugPlayLevelIndex;
+        public bool DebugUnlockAllLevels => debugUnlockAllLevels;
+
         public IReadOnlyList<LevelConfig> Levels => levels;
         public LevelConfig CurrentLevel { get; private set; }
         public int CurrentLevelIndex { get; private set; } = 1;

@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8116506dfe28e247bfb2dcd7b37106b, type: 3}
+  m_Name: Level_07_CuO
+  m_EditorClassIdentifier: 
+  LevelIndex: 7
+  DisplayName: "\u0110i\u1EC1u ch\u1EBF CuO"
+  ObjectiveText: "T\u1EA1o CuO \u0111en: k\u1EBFt t\u1EE7a Cu(OH)<sub>2</sub> r\u1ED3i
+    nung."
+  Bottles:
+  - Substance: {fileID: 11400000, guid: 543018d2dd85703469c24322b1210c89, type: 2}
+    InitialAmount: 40
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: 64492594753d7a449b32c680971ad377, type: 2}
+    InitialAmount: 50
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: 0b0559bcb48b4bf45a7f59fddf390784, type: 2}
+    InitialAmount: 40
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: e1610df9754f85f458c249bc1c7b2d7b, type: 2}
+    InitialAmount: 40
+    MaskLabel: 0
+    MaskedLabel: '?'
+  Tools:
+  - Tool: {fileID: 11400000, guid: 360a58a9de64bd24aa8bf25a20e07253, type: 2}
+  - Tool: {fileID: 11400000, guid: 970fab2bdc46bc046af6b396f019e1d6, type: 2}
+  - Tool: {fileID: 11400000, guid: 6d8ef94d45a5d74438318f84f09d9604, type: 2}
+  - Tool: {fileID: 11400000, guid: 7afc6bbfbf362f044a644c7597555948, type: 2}
+  AvailableReactions:
+  - {fileID: 11400000, guid: ef94c9a3d24ec484a889ee8e7428b8d3, type: 2}
+  - {fileID: 11400000, guid: 55cdeec155506224295721c42285dfc2, type: 2}
+  - {fileID: 11400000, guid: 3dc9300a5a88d344da73c1a09321fc86, type: 2}
+  - {fileID: 11400000, guid: efb4e7d4e83333c4f8c3b5509cd99d6e, type: 2}
+  PurityRule:
+    TargetProduct: {fileID: 11400000, guid: f553b0ea6d96270409b43c52bb821574, type: 2}
+    MinTargetAmount: 5
+    ForbiddenSubstances:
+    - {fileID: 11400000, guid: 1b9b7a1a38491824e9a7dd279a041447, type: 2}
+    - {fileID: 11400000, guid: 64492594753d7a449b32c680971ad377, type: 2}
+    ForbiddenTolerance: 1
+    RejectAnyPrecipitate: 0
+  Traps:
+  - TrapId: HClDissolve
+    TriggerProduct: {fileID: 11400000, guid: 1b9b7a1a38491824e9a7dd279a041447, type: 2}
+    ExplanationVi: "HCl l\xE0m tan Cu(OH)<sub>2</sub> th\xE0nh CuCl<sub>2</sub> \u2014
+      sai m\u1EE5c ti\xEAu."
+  - TrapId: ExcessBase
+    TriggerProduct: {fileID: 11400000, guid: 64492594753d7a449b32c680971ad377, type: 2}
+    ExplanationVi: "D\u01B0 NaOH \u2014 c\xF2n baz\u01A1, s\u1EA3n ph\u1EA9m b\u1EA9n."
+  Hints: {fileID: 11400000, guid: e15770bc48c72fb428c3be8393b85656, type: 2}
+  ThreeStarBlockingTraps:
+  - TrapId: HClDissolve
+    TriggerProduct: {fileID: 11400000, guid: 1b9b7a1a38491824e9a7dd279a041447, type: 2}
+    ExplanationVi: "HCl l\xE0m tan Cu(OH)<sub>2</sub> th\xE0nh CuCl<sub>2</sub> \u2014
+      sai m\u1EE5c ti\xEAu."
+  - TrapId: ExcessBase
+    TriggerProduct: {fileID: 11400000, guid: 64492594753d7a449b32c680971ad377, type: 2}
+    ExplanationVi: "D\u01B0 NaOH \u2014 c\xF2n baz\u01A1, s\u1EA3n ph\u1EA9m b\u1EA9n."

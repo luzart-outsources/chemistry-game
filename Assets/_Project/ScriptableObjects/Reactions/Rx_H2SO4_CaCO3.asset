@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ff0fb2345ce784ba55beceb108ecf3, type: 3}
+  m_Name: Rx_H2SO4_CaCO3
+  m_EditorClassIdentifier: 
+  Id: H2SO4_CaCO3
+  Description: "H<sub>2</sub>SO<sub>4</sub> + CaCO<sub>3</sub> \u2192 CaSO<sub>4</sub>\u2193
+    + CO<sub>2</sub>\u2191 + H<sub>2</sub>O"
+  Inputs:
+  - Substance: {fileID: 11400000, guid: e1610df9754f85f458c249bc1c7b2d7b, type: 2}
+    Ratio: 1
+  - Substance: {fileID: 11400000, guid: 5b264e4212adf0048a0309b62b7a1899, type: 2}
+    Ratio: 1
+  Conditions: []
+  Outputs:
+  - Substance: {fileID: 11400000, guid: ae3b89120a02b674db086100da216f56, type: 2}
+    Ratio: 1
+  - Substance: {fileID: 11400000, guid: c77ad211e2fbccd428fd4dba9aa0c80e, type: 2}
+    Ratio: 1
+  - Substance: {fileID: 11400000, guid: ca065e137fcf38b47868c132b8e33378, type: 2}
+    Ratio: 1
+  PrimarySideEffect: 1
+  FlashColor: {r: 1, g: 1, b: 1, a: 1}
+  ReactionEquation: "H<sub>2</sub>SO<sub>4</sub> + CaCO<sub>3</sub> \u2192 CaSO<sub>4</sub>
+    + CO<sub>2</sub> + H<sub>2</sub>O (CaSO<sub>4</sub> b\xE1m, ch\u1EADm/d\u1EEBng)"
+  LimitedByLowestInput: 1
+  SlowReaction: 1

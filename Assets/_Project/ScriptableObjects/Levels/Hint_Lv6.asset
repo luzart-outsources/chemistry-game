@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bac70751ef23ea49930cc7a4b32d5cb, type: 3}
+  m_Name: Hint_Lv6
+  m_EditorClassIdentifier: 
+  Tier1_Reagent: "Qu\u1EF3 t\xEDm ph\xE2n bi\u1EC7t acid (HCl, H<sub>2</sub>SO<sub>4</sub>)
+    v\u1EDBi mu\u1ED1i. Ion SO<sub>4</sub> c\xF3 trong Na<sub>2</sub>SO<sub>4</sub>."
+  Tier2_Order: "Tr\u1ED9n Na<sub>2</sub>SO<sub>4</sub> v\u1EDBi BaCl<sub>2</sub>
+    r\u1ED3i l\u1ECDc l\u1EA5y k\u1EBFt t\u1EE7a tr\u1EAFng. Tr\xE1nh Na<sub>2</sub>CO<sub>3</sub>
+    (c\u0169ng tr\u1EAFng) v\xE0 H<sub>2</sub>SO<sub>4</sub> d\u01B0."
+  Tier3_Formula: "Na<sub>2</sub>SO<sub>4</sub> + BaCl<sub>2</sub> \u2192 BaSO<sub>4</sub>\u2193
+    + 2NaCl. BaSO<sub>4</sub> tr\u1EAFng, kh\xF4ng tan trong acid."

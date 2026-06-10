@@ -25,6 +25,7 @@ namespace ChemistryGame.EditorTools
             SeedTools();
             SeedReactions();
             SeedLevels();
+            RegisterLevelsToGameManager();
             Debug.Log("[ChemistrySeeder] All seeded.");
         }
 
@@ -83,6 +84,16 @@ namespace ChemistryGame.EditorTools
             S("KSCN",   "KSCN",   "Kali thioxianat",            SubstanceCategoryType.Indicator, SubstancePhase.Aqueous,     7f,  new Color(0.9f, 0.92f, 0.95f, 0.5f));
             S("FeSCN3", "Fe(SCN)<sub>3</sub>","Sắt(III) thioxianat",       SubstanceCategoryType.Salt,      SubstancePhase.Aqueous,     5f,  new Color(0.78f, 0.1f, 0.12f, 0.95f));
             S("KCl",    "KCl",    "Kali clorua",                SubstanceCategoryType.Salt,      SubstancePhase.Aqueous,     7f,  new Color(0.85f, 0.95f, 1f, 0.5f));
+
+            // ===== Bổ sung Màn 6 — Nhận biết ion SO4 (BaSO4) =====
+            S("BaCl2",  "BaCl<sub>2</sub>",  "Bari clorua",                SubstanceCategoryType.Salt,      SubstancePhase.Aqueous,     7f,  new Color(0.82f, 0.93f, 1f, 0.55f));
+            S("BaSO4",  "BaSO<sub>4</sub>",  "Bari sunfat",                SubstanceCategoryType.Salt,      SubstancePhase.Precipitate, 7f,  new Color(0.97f, 0.97f, 0.97f, 0.97f));
+            S("BaCO3",  "BaCO<sub>3</sub>",  "Bari cacbonat",              SubstanceCategoryType.Salt,      SubstancePhase.Precipitate, 7f,  new Color(0.95f, 0.95f, 0.93f, 0.96f));
+            // ===== Bổ sung Màn 8 — Phân biệt CO2 / SO2 =====
+            S("Na2SO3", "Na<sub>2</sub>SO<sub>3</sub>", "Natri sunfit",               SubstanceCategoryType.Salt,      SubstancePhase.Aqueous,     9f,  new Color(0.85f, 0.93f, 1f, 0.55f));
+            S("SO2",    "SO<sub>2</sub>",    "Khí sunfurơ",                SubstanceCategoryType.Gas,       SubstancePhase.Gas,         3f,  new Color(0.9f, 0.95f, 0.6f, 0.4f));
+            S("CaSO3",  "CaSO<sub>3</sub>",  "Canxi sunfit",               SubstanceCategoryType.Salt,      SubstancePhase.Precipitate, 7f,  new Color(0.95f, 0.96f, 0.96f, 0.95f));
+            S("CaSO4",  "CaSO<sub>4</sub>",  "Canxi sunfat",               SubstanceCategoryType.Salt,      SubstancePhase.Precipitate, 7f,  new Color(0.96f, 0.96f, 0.94f, 0.95f));
 
             // ===== Crystallization links (Aqueous → Crystal khi cô cạn) =====
             // NaCl_aq → NaCl crystal: classic L1 goal "thu NaCl tinh thể".
@@ -233,6 +244,43 @@ namespace ChemistryGame.EditorTools
             var r17 = R("FeCl3_KSCN",     "FeCl<sub>3</sub> + 3KSCN → Fe(SCN)<sub>3</sub> + 3KCl", "FeCl<sub>3</sub> + 3KSCN → Fe(SCN)<sub>3</sub> + 3KCl (đỏ máu)", SideEffectType.ColorFlash);
             r17.Inputs.Add(Sto("FeCl3",1));r17.Inputs.Add(Sto("KSCN",3));
             r17.Outputs.Add(Sto("FeSCN3",1));r17.Outputs.Add(Sto("KCl",3));
+
+            // ===== Màn 6 — Nhận biết ion SO4 =====
+            var r18 = R("Na2SO4_BaCl2",  "Na<sub>2</sub>SO<sub>4</sub> + BaCl<sub>2</sub> → BaSO<sub>4</sub>↓ + 2NaCl", "Na<sub>2</sub>SO<sub>4</sub> + BaCl<sub>2</sub> → BaSO<sub>4</sub>↓ + 2NaCl (trắng)", SideEffectType.PrecipitateForm);
+            r18.Inputs.Add(Sto("Na2SO4",1)); r18.Inputs.Add(Sto("BaCl2",1));
+            r18.Outputs.Add(Sto("BaSO4",1)); r18.Outputs.Add(Sto("NaCl_aq",2));
+
+            var r19 = R("BaCl2_Na2CO3",  "BaCl<sub>2</sub> + Na<sub>2</sub>CO<sub>3</sub> → BaCO<sub>3</sub>↓ + 2NaCl", "BaCl<sub>2</sub> + Na<sub>2</sub>CO<sub>3</sub> → BaCO<sub>3</sub>↓ + 2NaCl (trắng - dễ nhầm)", SideEffectType.PrecipitateForm);
+            r19.Inputs.Add(Sto("BaCl2",1)); r19.Inputs.Add(Sto("Na2CO3",1));
+            r19.Outputs.Add(Sto("BaCO3",1)); r19.Outputs.Add(Sto("NaCl_aq",2));
+
+            var r20 = R("H2SO4_BaCl2",   "H<sub>2</sub>SO<sub>4</sub> + BaCl<sub>2</sub> → BaSO<sub>4</sub>↓ + 2HCl", "H<sub>2</sub>SO<sub>4</sub> + BaCl<sub>2</sub> → BaSO<sub>4</sub>↓ + 2HCl (còn acid dư)", SideEffectType.PrecipitateForm);
+            r20.Inputs.Add(Sto("H2SO4",1)); r20.Inputs.Add(Sto("BaCl2",1));
+            r20.Outputs.Add(Sto("BaSO4",1)); r20.Outputs.Add(Sto("HCl",2));
+
+            // ===== Màn 7 — Cu(OH)2 & nhiệt phân =====
+            var r21 = R("CuOH2_Heat",    "Cu(OH)<sub>2</sub> --t°→ CuO + H<sub>2</sub>O", "Cu(OH)<sub>2</sub> --t°→ CuO + H<sub>2</sub>O (đen)", SideEffectType.SmokeWhite);
+            r21.Inputs.Add(Sto("CuOH2",1));
+            r21.Outputs.Add(Sto("CuO",1)); r21.Outputs.Add(Sto("H2O",1));
+            r21.Conditions.Add(new ReactionCondition { Type = ReactionConditionType.Heat });
+
+            var r22 = R("CuOH2_HCl",     "Cu(OH)<sub>2</sub> + 2HCl → CuCl<sub>2</sub> + 2H<sub>2</sub>O", "Cu(OH)<sub>2</sub> + 2HCl → CuCl<sub>2</sub> + 2H<sub>2</sub>O (tan - sai mục tiêu)", SideEffectType.ColorFlash);
+            r22.Inputs.Add(Sto("CuOH2",1)); r22.Inputs.Add(Sto("HCl",2));
+            r22.Outputs.Add(Sto("CuCl2",1)); r22.Outputs.Add(Sto("H2O",2));
+
+            // ===== Màn 8 — Phân biệt CO2 / SO2 =====
+            var r23 = R("Na2SO3_HCl",    "Na<sub>2</sub>SO<sub>3</sub> + 2HCl → 2NaCl + SO<sub>2</sub>↑ + H<sub>2</sub>O", "Na<sub>2</sub>SO<sub>3</sub> + 2HCl → 2NaCl + SO<sub>2</sub>↑ + H<sub>2</sub>O (sai khí)", SideEffectType.BubblesLarge);
+            r23.Inputs.Add(Sto("Na2SO3",1)); r23.Inputs.Add(Sto("HCl",2));
+            r23.Outputs.Add(Sto("NaCl_aq",2)); r23.Outputs.Add(Sto("SO2",1)); r23.Outputs.Add(Sto("H2O",1));
+
+            var r24 = R("SO2_CaOH2",     "SO<sub>2</sub> + Ca(OH)<sub>2</sub> → CaSO<sub>3</sub>↓ + H<sub>2</sub>O", "SO<sub>2</sub> + Ca(OH)<sub>2</sub> → CaSO<sub>3</sub>↓ + H<sub>2</sub>O (đục nhưng sai)", SideEffectType.PrecipitateForm);
+            r24.Inputs.Add(Sto("SO2",1)); r24.Inputs.Add(Sto("CaOH2",1));
+            r24.Outputs.Add(Sto("CaSO3",1)); r24.Outputs.Add(Sto("H2O",1));
+
+            var r25 = R("H2SO4_CaCO3",   "H<sub>2</sub>SO<sub>4</sub> + CaCO<sub>3</sub> → CaSO<sub>4</sub>↓ + CO<sub>2</sub>↑ + H<sub>2</sub>O", "H<sub>2</sub>SO<sub>4</sub> + CaCO<sub>3</sub> → CaSO<sub>4</sub> + CO<sub>2</sub> + H<sub>2</sub>O (CaSO<sub>4</sub> bám, chậm/dừng)", SideEffectType.BubblesSmall);
+            r25.Inputs.Add(Sto("H2SO4",1)); r25.Inputs.Add(Sto("CaCO3",1));
+            r25.Outputs.Add(Sto("CaSO4",1)); r25.Outputs.Add(Sto("CO2",1)); r25.Outputs.Add(Sto("H2O",1));
+            r25.SlowReaction = true;
 
             AssetDatabase.SaveAssets();
             Debug.Log($"[ChemistrySeeder] Reactions: {rxs.Count}");
@@ -394,10 +442,132 @@ namespace ChemistryGame.EditorTools
                 "Sục Cl<sub>2</sub> đủ để chuyển FeCl<sub>2</sub> → FeCl<sub>3</sub>. Test KSCN cho đỏ máu.",
                 "Fe + 2HCl → FeCl<sub>2</sub> + H<sub>2</sub>. Sau đó 2FeCl<sub>2</sub> + Cl<sub>2</sub> → 2FeCl<sub>3</sub>. KSCN xác nhận Fe<sup>3+</sup>.");
 
+            // ===== Màn 6 — Nhận biết ion SO4 (BaSO4 trắng) =====
+            var lv6 = L("Level_06_BaSO4", 6, "Nhận biết ion SO<sub>4</sub>", "Tạo và chứng minh kết tủa BaSO<sub>4</sub> trắng.");
+            lv6.Bottles.Add(B("Na2SO4", 40f));
+            lv6.Bottles.Add(B("BaCl2",  40f));
+            lv6.Bottles.Add(B("H2SO4",  40f));
+            lv6.Bottles.Add(B("NaCl",   30f));
+            lv6.Bottles.Add(B("Na2CO3", 40f));
+            lv6.Bottles.Add(B("HCl",    40f));
+            lv6.Tools.Add(T("Litmus")); lv6.Tools.Add(T("FilterPaper")); lv6.Tools.Add(T("DistilledWater"));
+            lv6.AvailableReactions.Add(rxs["Na2SO4_BaCl2"]); lv6.AvailableReactions.Add(rxs["BaCl2_Na2CO3"]); lv6.AvailableReactions.Add(rxs["H2SO4_BaCl2"]);
+            lv6.PurityRule.TargetProduct = subs["BaSO4"];
+            lv6.PurityRule.MinTargetAmount = 5f;
+            lv6.PurityRule.ForbiddenSubstances = new List<SubstanceData> { subs["BaCO3"], subs["HCl"] };
+            lv6.PurityRule.ForbiddenTolerance = 0.5f;
+            lv6.Traps.Add(Trap("BaCO3_trap", "BaCO3", "BaCO<sub>3</sub> cũng trắng nhưng là cacbonat — không phải kết tủa sunfat."));
+            lv6.Traps.Add(Trap("AcidExcess", "HCl",   "Dùng H<sub>2</sub>SO<sub>4</sub> dư — còn axit HCl, sản phẩm không tinh khiết."));
+            lv6.ThreeStarBlockingTraps.AddRange(lv6.Traps);
+            lv6.Hints = MakeHint("Lv6",
+                "Quỳ tím phân biệt acid (HCl, H<sub>2</sub>SO<sub>4</sub>) với muối. Ion SO<sub>4</sub> có trong Na<sub>2</sub>SO<sub>4</sub>.",
+                "Trộn Na<sub>2</sub>SO<sub>4</sub> với BaCl<sub>2</sub> rồi lọc lấy kết tủa trắng. Tránh Na<sub>2</sub>CO<sub>3</sub> (cũng trắng) và H<sub>2</sub>SO<sub>4</sub> dư.",
+                "Na<sub>2</sub>SO<sub>4</sub> + BaCl<sub>2</sub> → BaSO<sub>4</sub>↓ + 2NaCl. BaSO<sub>4</sub> trắng, không tan trong acid.");
+
+            // ===== Màn 7 — Điều chế CuO từ Cu(OH)2 =====
+            var lv7 = L("Level_07_CuO", 7, "Điều chế CuO", "Tạo CuO đen: kết tủa Cu(OH)<sub>2</sub> rồi nung.");
+            lv7.Bottles.Add(B("CuSO4", 40f));
+            lv7.Bottles.Add(B("NaOH",  50f));
+            lv7.Bottles.Add(B("HCl",   40f));
+            lv7.Bottles.Add(B("H2SO4", 40f));
+            lv7.Tools.Add(T("FilterPaper")); lv7.Tools.Add(T("Burner")); lv7.Tools.Add(T("Litmus")); lv7.Tools.Add(T("DistilledWater"));
+            lv7.AvailableReactions.Add(rxs["CuSO4_NaOH"]); lv7.AvailableReactions.Add(rxs["CuOH2_Heat"]); lv7.AvailableReactions.Add(rxs["CuOH2_HCl"]); lv7.AvailableReactions.Add(rxs["CuO_HCl"]);
+            lv7.PurityRule.TargetProduct = subs["CuO"];
+            lv7.PurityRule.MinTargetAmount = 5f;
+            lv7.PurityRule.ForbiddenSubstances = new List<SubstanceData> { subs["CuCl2"], subs["NaOH"] };
+            lv7.PurityRule.ForbiddenTolerance = 1f;
+            lv7.Traps.Add(Trap("HClDissolve", "CuCl2", "HCl làm tan Cu(OH)<sub>2</sub> thành CuCl<sub>2</sub> — sai mục tiêu."));
+            lv7.Traps.Add(Trap("ExcessBase",  "NaOH",  "Dư NaOH — còn bazơ, sản phẩm bẩn."));
+            lv7.ThreeStarBlockingTraps.AddRange(lv7.Traps);
+            lv7.Hints = MakeHint("Lv7",
+                "CuSO<sub>4</sub> + NaOH cho kết tủa xanh Cu(OH)<sub>2</sub>. Đừng thêm HCl.",
+                "Tạo Cu(OH)<sub>2</sub>, lọc, rồi dùng đèn khò nung tới CuO đen. Tránh dư NaOH.",
+                "CuSO<sub>4</sub> + 2NaOH → Cu(OH)<sub>2</sub>↓ + Na<sub>2</sub>SO<sub>4</sub>; Cu(OH)<sub>2</sub> --t°→ CuO + H<sub>2</sub>O.");
+
+            // ===== Màn 8 — Phân biệt CO2 và SO2 =====
+            var lv8 = L("Level_08_CO2_SO2", 8, "Phân biệt CO<sub>2</sub> và SO<sub>2</sub>", "Thu đúng CO<sub>2</sub>, chứng minh bằng nước vôi; tránh nhầm SO<sub>2</sub>.");
+            lv8.Bottles.Add(B("CaCO3",  40f));
+            lv8.Bottles.Add(B("Na2CO3", 40f));
+            lv8.Bottles.Add(B("Na2SO3", 40f));
+            lv8.Bottles.Add(B("HCl",    60f));
+            lv8.Bottles.Add(B("H2SO4",  50f));
+            lv8.Bottles.Add(B("CaOH2",  50f));
+            lv8.Tools.Add(T("GasCollector")); lv8.Tools.Add(T("Litmus")); lv8.Tools.Add(T("DistilledWater"));
+            lv8.AvailableReactions.Add(rxs["CaCO3_HCl"]); lv8.AvailableReactions.Add(rxs["CO2_CaOH2"]); lv8.AvailableReactions.Add(rxs["Na2SO3_HCl"]); lv8.AvailableReactions.Add(rxs["SO2_CaOH2"]); lv8.AvailableReactions.Add(rxs["H2SO4_CaCO3"]);
+            lv8.PurityRule.TargetProduct = subs["CaCO3"];
+            lv8.PurityRule.MinTargetAmount = 5f;
+            lv8.PurityRule.ForbiddenSubstances = new List<SubstanceData> { subs["SO2"], subs["CaSO3"], subs["CaSO4"] };
+            lv8.PurityRule.ForbiddenTolerance = 0.5f;
+            lv8.Traps.Add(Trap("WrongGasSO2",  "CaSO3", "Bạn dùng Na<sub>2</sub>SO<sub>3</sub> → SO<sub>2</sub> (không phải CO<sub>2</sub>); nước vôi đục bởi CaSO<sub>3</sub>."));
+            lv8.Traps.Add(Trap("SulfateStall", "CaSO4", "H<sub>2</sub>SO<sub>4</sub> + CaCO<sub>3</sub> → CaSO<sub>4</sub> ít tan, phản ứng chậm/dừng."));
+            lv8.ThreeStarBlockingTraps.Add(lv8.Traps[0]);
+            lv8.Hints = MakeHint("Lv8",
+                "Cả CO<sub>2</sub> và SO<sub>2</sub> đều sinh khí; nhưng SO<sub>2</sub> làm quỳ ẩm đỏ mạnh hơn.",
+                "Dùng CaCO<sub>3</sub> + HCl để có CO<sub>2</sub>, thu khí rồi sục vào nước vôi. Tránh Na<sub>2</sub>SO<sub>3</sub> (ra SO<sub>2</sub>) và H<sub>2</sub>SO<sub>4</sub> (CaSO<sub>4</sub> bám, chậm).",
+                "CaCO<sub>3</sub> + 2HCl → CaCl<sub>2</sub> + CO<sub>2</sub>↑ + H<sub>2</sub>O; CO<sub>2</sub> + Ca(OH)<sub>2</sub> → CaCO<sub>3</sub>↓ + H<sub>2</sub>O.");
+
             // Save
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             Debug.Log($"[ChemistrySeeder] Levels: {levels.Count}");
+        }
+
+        /// <summary>
+        /// Gán tất cả LevelConfig (sort theo LevelIndex) vào GameManager.levels trong Main.unity.
+        /// An toàn: hỏi save scene hiện tại trước khi mở Main nếu cần.
+        /// </summary>
+        [MenuItem("ChemistryGame/Seed/Register Levels To GameManager")]
+        public static void RegisterLevelsToGameManager()
+        {
+            const string scenePath = "Assets/_Project/Scenes/Main.unity";
+
+            var active = UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene();
+            bool alreadyOpen = active.IsValid() && active.path == scenePath;
+            UnityEngine.SceneManagement.Scene scene;
+            if (alreadyOpen)
+            {
+                scene = active;
+            }
+            else
+            {
+                if (!UnityEditor.SceneManagement.EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo())
+                    return; // user cancelled
+                scene = UnityEditor.SceneManagement.EditorSceneManager.OpenScene(
+                    scenePath, UnityEditor.SceneManagement.OpenSceneMode.Single);
+            }
+
+            // Find GameManager anywhere in the scene (kể cả inactive).
+            ChemistryGame.Core.GameManager gm = null;
+            foreach (var root in scene.GetRootGameObjects())
+            {
+                gm = root.GetComponentInChildren<ChemistryGame.Core.GameManager>(true);
+                if (gm != null) break;
+            }
+            if (gm == null)
+            {
+                Debug.LogError("[ChemistrySeeder] Không tìm thấy GameManager trong Main.unity — đăng ký màn thất bại.");
+                return;
+            }
+
+            // Gom level + sort theo LevelIndex.
+            var levels = new List<LevelConfig>(LoadAll<LevelConfig>(LEVEL_DIR).Values);
+            levels.Sort((a, b) => a.LevelIndex.CompareTo(b.LevelIndex));
+
+            // Set qua SerializedObject vì 'levels' là private [SerializeField].
+            var so = new SerializedObject(gm);
+            var prop = so.FindProperty("levels");
+            prop.ClearArray();
+            for (int i = 0; i < levels.Count; i++)
+            {
+                prop.InsertArrayElementAtIndex(i);
+                prop.GetArrayElementAtIndex(i).objectReferenceValue = levels[i];
+            }
+            so.ApplyModifiedPropertiesWithoutUndo();
+
+            EditorUtility.SetDirty(gm);
+            UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);
+            UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);
+            Debug.Log($"[ChemistrySeeder] Đã đăng ký {levels.Count} màn vào GameManager.");
         }
 
         private static Dictionary<string, T> LoadAll<T>(string folder) where T : ScriptableObject

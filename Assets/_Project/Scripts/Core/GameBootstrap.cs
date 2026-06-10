@@ -19,6 +19,18 @@ namespace ChemistryGame.Core
             if (AudioManager.Instance != null)
                 AudioManager.Instance.ApplyVolumes();
 
+            // DEBUG: vào thẳng 1 màn để test (set debugPlayLevelIndex ở GameManager Inspector).
+            var gm = GameManager.Instance;
+            if (gm != null && gm.DebugPlayLevelIndex > 0 && UIManager.Instance != null)
+            {
+                gm.SetCurrentLevel(gm.DebugPlayLevelIndex);
+                if (gm.CurrentLevel == null)
+                    Debug.LogWarning($"[GameBootstrap] DEBUG: màn {gm.DebugPlayLevelIndex} chưa có trong " +
+                        "GameManager.levels — chạy ChemistryGame/Seed/All (hoặc kéo asset vào list) trước.");
+                await UIManager.Instance.ShowAsync(UIId.CG_Gameplay);
+                return;
+            }
+
             if (autoShowMainMenu && UIManager.Instance != null)
             {
                 await UIManager.Instance.ShowAsync(UIId.CG_MainMenu);

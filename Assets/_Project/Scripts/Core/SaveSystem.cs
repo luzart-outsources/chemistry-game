@@ -75,8 +75,8 @@ namespace ChemistryGame.Core
             if (stars > rec.Stars) rec.Stars = stars;
             if (stars >= 1) rec.Completed = true;
 
-            // Check diploma
-            if (!Current.DiplomaUnlocked && Current.TotalStars() >= 15)
+            // Check diploma (8 màn × 3★ = 24)
+            if (!Current.DiplomaUnlocked && Current.TotalStars() >= 24)
                 Current.DiplomaUnlocked = true;
 
             Save();

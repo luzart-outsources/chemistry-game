@@ -58,18 +58,21 @@ namespace ChemistryGame.UI
                 if (lvl == null) continue;
                 var card = Instantiate(cardPrefab, cardsRoot);
                 var rec = SaveSystem.Current.Levels.TryGetValue(lvl.LevelIndex, out var r) ? r : null;
-                bool unlocked = SaveSystem.Current.IsLevelUnlocked(lvl.LevelIndex);
+                bool unlocked = (GameManager.Instance != null && GameManager.Instance.DebugUnlockAllLevels)
+                    || SaveSystem.Current.IsLevelUnlocked(lvl.LevelIndex);
                 int stars = rec?.Stars ?? 0;
                 card.Bind(lvl, stars, unlocked, OnCardClick);
                 _cards.Add(card);
             }
             if (totalStarsText != null)
-                totalStarsText.text = $"{SaveSystem.Current.TotalStars()} / 15 sao";
+                totalStarsText.text = $"{SaveSystem.Current.TotalStars()} / 24 sao";
         }
 
         private async void OnCardClick(LevelConfig lvl)
         {
-            if (!SaveSystem.Current.IsLevelUnlocked(lvl.LevelIndex)) return;
+            bool unlocked = (GameManager.Instance != null && GameManager.Instance.DebugUnlockAllLevels)
+                || SaveSystem.Current.IsLevelUnlocked(lvl.LevelIndex);
+            if (!unlocked) return;
             AudioManager.Instance?.PlaySfx("sfx_button");
             GameManager.Instance.SetCurrentLevel(lvl.LevelIndex);
             await UIManager.Instance.HideAsync(Id);

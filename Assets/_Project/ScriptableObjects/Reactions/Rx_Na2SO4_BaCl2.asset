@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ff0fb2345ce784ba55beceb108ecf3, type: 3}
+  m_Name: Rx_Na2SO4_BaCl2
+  m_EditorClassIdentifier: 
+  Id: Na2SO4_BaCl2
+  Description: "Na<sub>2</sub>SO<sub>4</sub> + BaCl<sub>2</sub> \u2192 BaSO<sub>4</sub>\u2193
+    + 2NaCl"
+  Inputs:
+  - Substance: {fileID: 11400000, guid: bcab183843f18aa4cbd9913294357770, type: 2}
+    Ratio: 1
+  - Substance: {fileID: 11400000, guid: eeb18c09999186d40b53b7db2089a214, type: 2}
+    Ratio: 1
+  Conditions: []
+  Outputs:
+  - Substance: {fileID: 11400000, guid: 74b760c49133ebe4e96056bd40e69ead, type: 2}
+    Ratio: 1
+  - Substance: {fileID: 11400000, guid: f6617fedbf704f14f9ce687f47c4ce50, type: 2}
+    Ratio: 2
+  PrimarySideEffect: 8
+  FlashColor: {r: 1, g: 1, b: 1, a: 1}
+  ReactionEquation: "Na<sub>2</sub>SO<sub>4</sub> + BaCl<sub>2</sub> \u2192 BaSO<sub>4</sub>\u2193
+    + 2NaCl (tr\u1EAFng)"
+  LimitedByLowestInput: 1
+  SlowReaction: 0

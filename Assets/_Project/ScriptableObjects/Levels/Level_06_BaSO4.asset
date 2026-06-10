@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8116506dfe28e247bfb2dcd7b37106b, type: 3}
+  m_Name: Level_06_BaSO4
+  m_EditorClassIdentifier: 
+  LevelIndex: 6
+  DisplayName: "Nh\u1EADn bi\u1EBFt ion SO<sub>4</sub>"
+  ObjectiveText: "T\u1EA1o v\xE0 ch\u1EE9ng minh k\u1EBFt t\u1EE7a BaSO<sub>4</sub>
+    tr\u1EAFng."
+  Bottles:
+  - Substance: {fileID: 11400000, guid: bcab183843f18aa4cbd9913294357770, type: 2}
+    InitialAmount: 40
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: eeb18c09999186d40b53b7db2089a214, type: 2}
+    InitialAmount: 40
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: e1610df9754f85f458c249bc1c7b2d7b, type: 2}
+    InitialAmount: 40
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: d26bdd47577e48047ac9c2b003e6dccb, type: 2}
+    InitialAmount: 30
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: 5dbc919d17dc2884fa09d562525c2642, type: 2}
+    InitialAmount: 40
+    MaskLabel: 0
+    MaskedLabel: '?'
+  - Substance: {fileID: 11400000, guid: 0b0559bcb48b4bf45a7f59fddf390784, type: 2}
+    InitialAmount: 40
+    MaskLabel: 0
+    MaskedLabel: '?'
+  Tools:
+  - Tool: {fileID: 11400000, guid: 6d8ef94d45a5d74438318f84f09d9604, type: 2}
+  - Tool: {fileID: 11400000, guid: 360a58a9de64bd24aa8bf25a20e07253, type: 2}
+  - Tool: {fileID: 11400000, guid: 7afc6bbfbf362f044a644c7597555948, type: 2}
+  AvailableReactions:
+  - {fileID: 11400000, guid: 9d9502b572b719a418894b95432d80d5, type: 2}
+  - {fileID: 11400000, guid: cf74992fc3ca8f74186c18883f13ea0b, type: 2}
+  - {fileID: 11400000, guid: 20cba67ea4bd78840a7390d399b6cdab, type: 2}
+  PurityRule:
+    TargetProduct: {fileID: 11400000, guid: 74b760c49133ebe4e96056bd40e69ead, type: 2}
+    MinTargetAmount: 5
+    ForbiddenSubstances:
+    - {fileID: 11400000, guid: 1d3d7eaef5fb8fa42b82313014802f28, type: 2}
+    - {fileID: 11400000, guid: 0b0559bcb48b4bf45a7f59fddf390784, type: 2}
+    ForbiddenTolerance: 0.5
+    RejectAnyPrecipitate: 0
+  Traps:
+  - TrapId: BaCO3_trap
+    TriggerProduct: {fileID: 11400000, guid: 1d3d7eaef5fb8fa42b82313014802f28, type: 2}
+    ExplanationVi: "BaCO<sub>3</sub> c\u0169ng tr\u1EAFng nh\u01B0ng l\xE0 cacbonat
+      \u2014 kh\xF4ng ph\u1EA3i k\u1EBFt t\u1EE7a sunfat."
+  - TrapId: AcidExcess
+    TriggerProduct: {fileID: 11400000, guid: 0b0559bcb48b4bf45a7f59fddf390784, type: 2}
+    ExplanationVi: "D\xF9ng H<sub>2</sub>SO<sub>4</sub> d\u01B0 \u2014 c\xF2n axit
+      HCl, s\u1EA3n ph\u1EA9m kh\xF4ng tinh khi\u1EBFt."
+  Hints: {fileID: 11400000, guid: fccd3034fe23c4b4284a741613628753, type: 2}
+  ThreeStarBlockingTraps:
+  - TrapId: BaCO3_trap
+    TriggerProduct: {fileID: 11400000, guid: 1d3d7eaef5fb8fa42b82313014802f28, type: 2}
+    ExplanationVi: "BaCO<sub>3</sub> c\u0169ng tr\u1EAFng nh\u01B0ng l\xE0 cacbonat
+      \u2014 kh\xF4ng ph\u1EA3i k\u1EBFt t\u1EE7a sunfat."
+  - TrapId: AcidExcess
+    TriggerProduct: {fileID: 11400000, guid: 0b0559bcb48b4bf45a7f59fddf390784, type: 2}
+    ExplanationVi: "D\xF9ng H<sub>2</sub>SO<sub>4</sub> d\u01B0 \u2014 c\xF2n axit
+      HCl, s\u1EA3n ph\u1EA9m kh\xF4ng tinh khi\u1EBFt."

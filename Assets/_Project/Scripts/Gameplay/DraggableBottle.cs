@@ -15,6 +15,14 @@ namespace ChemistryGame.Gameplay
         [SerializeField] private TMP_Text labelText;
         [SerializeField] private TMP_Text amountText;
 
+        [Header("Chất rắn (solid / precipitate render)")]
+        [Tooltip("Sprite 'bột/hạt' tùy chọn. Khi chất là rắn/kết tủa, liquidImage đổi sang sprite này để KHÔNG nhìn như chất lỏng. Để trống = chỉ tô đặc (opaque) + tag nhãn.")]
+        [SerializeField] private Sprite solidFillSprite;
+        [Tooltip("Hậu tố thêm vào nhãn cho chất rắn (vd ' (rắn)'). Để trống nếu không muốn.")]
+        [SerializeField] private string solidLabelSuffix = " (rắn)";
+        private Sprite _liquidFillSprite;   // cache sprite gốc của liquidImage (dạng chất lỏng)
+        private bool _spriteCached;
+
         public SubstanceData Substance { get; private set; }
         public float CurrentAmount { get; private set; }
         public float PourPerDrop { get; private set; } = 25f;
@@ -30,7 +38,12 @@ namespace ChemistryGame.Gameplay
             Refresh();
             // Also drive LayeredLiquidView if present (new shader-based fill)
             var llv = GetComponentInChildren<LayeredLiquidView>();
-            if (llv != null && s != null) llv.BindSingle(s.VisualColor, initialAmount);
+            if (llv != null && s != null)
+            {
+                var fillColor = s.VisualColor;
+                if (IsSolidLike) fillColor.a = 1f; // chất rắn: lớp đặc, không trong như dung dịch
+                llv.BindSingle(fillColor, initialAmount);
+            }
         }
 
         public void SetPourPerDrop(float v) => PourPerDrop = Mathf.Max(1f, v);
@@ -43,14 +56,38 @@ namespace ChemistryGame.Gameplay
             if (llv != null) llv.TweenFillFromAmount(CurrentAmount);
         }
 
+        /// <summary>Chất rắn / kết tủa / tinh thể — render khác chất lỏng (không nhìn như ống nghiệm nước).</summary>
+        private bool IsSolidLike => Substance != null && (Substance.IsSolid || Substance.IsPrecipitate);
+
         private void Refresh()
         {
             if (Substance == null) return;
-            if (liquidImage != null) liquidImage.color = Substance.VisualColor;
+
+            if (liquidImage != null)
+            {
+                if (!_spriteCached) { _liquidFillSprite = liquidImage.sprite; _spriteCached = true; }
+
+                if (IsSolidLike)
+                {
+                    var c = Substance.VisualColor; c.a = 1f;     // rắn: tô đặc, đục
+                    liquidImage.color = c;
+                    if (solidFillSprite != null) liquidImage.sprite = solidFillSprite;
+                }
+                else
+                {
+                    liquidImage.color = Substance.VisualColor;   // lỏng/dung dịch: giữ độ trong suốt
+                    if (_liquidFillSprite != null) liquidImage.sprite = _liquidFillSprite;
+                }
+            }
+
             if (labelText != null)
             {
-                labelText.text = _masked ? _maskedLabel : Substance.Formula;
+                if (_masked) labelText.text = _maskedLabel;
+                else labelText.text = IsSolidLike && !string.IsNullOrEmpty(solidLabelSuffix)
+                    ? Substance.Formula + solidLabelSuffix
+                    : Substance.Formula;
             }
+
             if (amountText != null) amountText.text = $"{CurrentAmount:F0}";
         }
 

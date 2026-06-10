@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bac70751ef23ea49930cc7a4b32d5cb, type: 3}
+  m_Name: Hint_Lv7
+  m_EditorClassIdentifier: 
+  Tier1_Reagent: "CuSO<sub>4</sub> + NaOH cho k\u1EBFt t\u1EE7a xanh Cu(OH)<sub>2</sub>.
+    \u0110\u1EEBng th\xEAm HCl."
+  Tier2_Order: "T\u1EA1o Cu(OH)<sub>2</sub>, l\u1ECDc, r\u1ED3i d\xF9ng \u0111\xE8n
+    kh\xF2 nung t\u1EDBi CuO \u0111en. Tr\xE1nh d\u01B0 NaOH."
+  Tier3_Formula: "CuSO<sub>4</sub> + 2NaOH \u2192 Cu(OH)<sub>2</sub>\u2193 + Na<sub>2</sub>SO<sub>4</sub>;
+    Cu(OH)<sub>2</sub> --t\xB0\u2192 CuO + H<sub>2</sub>O."
