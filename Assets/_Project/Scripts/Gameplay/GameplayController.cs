@@ -134,7 +134,8 @@ namespace ChemistryGame.Gameplay
         private void HandleDrop(SubstanceData s, float amount)
         {
             if (Phase != GameplayPhase.Playing) return;
-            AudioManager.Instance?.PlaySfx("sfx_pour");
+            bool isSolid = s != null && (s.IsSolid || s.IsPrecipitate);
+            AudioManager.Instance?.PlaySfx(isSolid ? "sfx_drop" : "sfx_pour");
 
             // Find source bottle + animator.
             DraggableBottle source = null;
@@ -146,18 +147,32 @@ namespace ChemistryGame.Gameplay
                 var tubeRect = layeredTube.transform as RectTransform;
                 if (animator != null && tubeRect != null && !animator.IsBusy)
                 {
-                    animator.PourTo(tubeRect, layeredTube, amount,
-                        onMidPour: () => {
-                            PlayFx(SideEffectType.BubblesSmall);
-                            _engine.AddSubstance(s, amount);
-                        },
-                        onComplete: null);
+                    if (isSolid)
+                    {
+                        // Chất rắn: KHÔNG rót — thả 1 cục từ trên miệng ống xuống.
+                        var chunkColor = s.VisualColor; chunkColor.a = 1f;
+                        animator.DropSolidTo(tubeRect, layeredTube, source.SolidChunkSprite, chunkColor,
+                            onImpact: () => {
+                                PlayFx(SideEffectType.PrecipitateForm);
+                                _engine.AddSubstance(s, amount);
+                            },
+                            onComplete: null);
+                    }
+                    else
+                    {
+                        animator.PourTo(tubeRect, layeredTube, amount,
+                            onMidPour: () => {
+                                PlayFx(SideEffectType.BubblesSmall);
+                                _engine.AddSubstance(s, amount);
+                            },
+                            onComplete: null);
+                    }
                     return;
                 }
             }
 
             // Fallback: no animator → instant
-            PlayFx(SideEffectType.BubblesSmall);
+            PlayFx(isSolid ? SideEffectType.PrecipitateForm : SideEffectType.BubblesSmall);
             _engine.AddSubstance(s, amount);
         }
 

@@ -1,0 +1,1421 @@
+================================================================================
+BỘ CÂU HỎI & TRẢ LỜI LUYỆN TẬP BẢO VỆ ĐỒ ÁN TỐT NGHIỆP
+Game giáo dục hóa học (Unity) — ~270 câu hỏi-đáp, chia 15 nhóm chủ đề
+Câu có dấu (!) là câu hội đồng rất hay hỏi. Khi luyện, hãy diễn đạt lại
+câu trả lời bằng lời của mình, đừng học thuộc nguyên văn.
+================================================================================
+
+========================================
+NHÓM A — GIỚI THIỆU & LÝ DO CHỌN ĐỀ TÀI
+========================================
+
+1. (!) Vì sao em chọn đề tài game giáo dục hóa học?
+→ Thí nghiệm hóa ở THCS bị hạn chế: thiếu hóa chất, lo an toàn (acid, khí độc),
+mỗi học sinh ít được tự tay làm. Game cho phép "làm sai thoải mái" với chi phí
+bằng 0, có phản hồi tức thời, và biến phần khó dạy nhất — quy trình điều chế —
+thành trò chơi giải đố có mục tiêu rõ ràng.
+
+2. Đối tượng người dùng là ai? Vì sao chọn khối THCS?
+→ Học sinh lớp 8–9, vì nội dung hóa vô cơ (acid–bazơ–muối, kết tủa, chất khí)
+là nền tảng đầu tiên của môn hóa, giai đoạn dễ "mất gốc" nhất; nội dung 8 màn
+bám đúng các dạng bài SGK lớp 8–9.
+
+3. Game giải quyết điều gì mà SGK/lớp học chưa làm được?
+→ Cho học sinh TỰ TAY thao tác và được phép sai. SGK mô tả, video thì xem thụ
+động; game bắt người chơi tự suy luận thứ tự thao tác, lượng chất và điều kiện
+phản ứng, sai ở đâu được giải thích ngay ở đó.
+
+4. Tóm tắt gameplay trong 1 phút?
+→ Mỗi màn nhận các lọ hóa chất (có lọ bị che nhãn) và bộ dụng cụ (quỳ tím, đèn
+khò, giấy lọc, sục khí...). Người chơi kéo-thả/rót hóa chất vào ống nghiệm,
+phản ứng tự xảy ra theo quy tắc hóa học. Mục tiêu: tạo đủ lượng sản phẩm đích
+TINH KHIẾT rồi bấm Nộp bài. Hệ thống chấm 0–3 sao theo: có sản phẩm, độ tinh
+khiết, không dính bẫy và không dùng gợi ý.
+
+5. Mục tiêu học tập của từng màn là gì?
+→ M1: trung hòa acid-bazơ + cô cạn; M2: phản ứng kết tủa + lọc; M3: điều chế
+và nhận biết CO2 bằng nước vôi; M4: oxit bazơ + acid, điều kiện đun nóng;
+M5: oxi hóa–khử (FeCl2→FeCl3) + thuốc thử KSCN; M6: nhận biết ion SO4 bằng
+BaCl2; M7: nhiệt phân Cu(OH)2; M8: phân biệt CO2/SO2 — bài tổng hợp.
+
+6. Vì sao chọn cơ chế "điều chế chất tinh khiết" làm lõi gameplay?
+→ Vì đây là dạng bài điển hình của SGK (điều chế – tách – nhận biết), tự nhiên
+tạo ra bài toán giải đố nhiều bước, và cho phép thiết kế "bẫy sai lầm" có ý
+nghĩa sư phạm (dư acid, tạo nhầm kết tủa...).
+
+7. Game này khác gì xem video thí nghiệm trên YouTube?
+→ Tương tác chủ động thay vì xem thụ động; có nhánh SAI kèm giải thích; có đo
+lường được (sao, số lần thử, số hint) để biết người học tiến bộ thế nào.
+
+8. (!) Khác gì các app thí nghiệm ảo đã có (PhET, BeakerLab, Chemist...)?
+→ (1) Nội dung tiếng Việt bám SGK THCS; (2) là GAME giải đố có mục tiêu + chấm
+điểm, không chỉ mô phỏng để quan sát; (3) hệ thống bẫy sư phạm giải thích sai
+lầm; (4) kèm bộ công cụ soạn nội dung cho giáo viên (Content Editor). Thua kém
+về độ sâu mô phỏng vật lý — nhưng định vị sản phẩm khác nhau.
+
+9. Phạm vi (scope) đồ án giới hạn ở đâu? Vì sao?
+→ Hóa vô cơ THCS, 8 màn minh chứng, nền tảng desktop, offline, tiếng Việt.
+Giới hạn để dồn thời gian cho chất lượng engine mô phỏng + pipeline nội dung —
+hai phần có giá trị kỹ thuật cao nhất.
+
+10. Em có khảo sát nhu cầu trước khi làm không?
+→ (Trả lời thật theo quá trình của bạn.) Khung gợi ý: tham khảo ý kiến giáo
+viên/bạn học sư phạm, phân tích các app hiện có và các dạng bài SGK; nếu chưa
+khảo sát chính thức thì thừa nhận và nêu kế hoạch khảo sát khi thử nghiệm.
+
+11. Giáo viên dùng game này trong tiết học theo kịch bản nào?
+→ 5–10 phút demo màn mẫu trên máy chiếu → 25–30 phút học sinh tự chơi 1–2 màn
+khớp bài đang học → 10 phút giáo viên tổng kết dựa trên các bẫy mà cả lớp hay
+mắc (game hiển thị rõ lỗi gì, vì sao).
+
+12. Vì sao làm thí nghiệm ẢO trong khi mục tiêu môn hóa là thực hành THẬT?
+→ Game BỔ TRỢ chứ không thay thế: luyện trước quy trình và xử lý sai lầm trong
+môi trường an toàn, để khi vào phòng thí nghiệm thật học sinh thao tác đúng và
+hiệu quả hơn — tương tự phi công luyện simulator trước khi bay thật.
+
+13. Game thiên về giải trí hay học tập?
+→ Học là lõi (nội dung = bài SGK, thắng thua = đúng sai hóa học), giải trí là
+vỏ (sao, hiệu ứng, confetti, mở khóa) để duy trì động lực. Hai lớp tách bạch:
+bỏ hết hiệu ứng thì bài toán hóa học vẫn nguyên vẹn.
+
+14. Kế hoạch thực hiện chia mấy giai đoạn?
+→ 4 giai đoạn (khớp lịch sử Git): (1) dựng khung dự án + engine hóa học;
+(2) gameplay và hệ thống UI; (3) bộ công cụ nội dung (Seeder, Content Editor);
+(4) hoàn thiện, seed 8 màn, kiểm thử và sửa lỗi.
+
+15. Ba đóng góp chính của đồ án?
+→ (1) Engine mô phỏng phản ứng rule-based thuần C# với thuật toán chất-giới-hạn;
+(2) bộ 8 màn nội dung hóa THCS tiếng Việt có bẫy/gợi ý thiết kế sư phạm;
+(3) pipeline công cụ soạn nội dung có kiểm tra lỗi, cho người không biết code.
+
+========================================
+NHÓM B — CÔNG NGHỆ NỀN TẢNG
+========================================
+
+16. (!) Vì sao chọn Unity mà không phải Godot/Unreal/web?
+→ (1) Hệ UI + kéo-thả (EventSystem) hoàn chỉnh sẵn; (2) C# đủ mạnh để viết
+engine logic tách riêng; (3) ScriptableObject là nền data-driven rất hợp nội
+dung giáo dục; (4) build đa nền tảng (PC/WebGL/Android) không đổi code;
+(5) em thành thạo Unity nhất — chọn công cụ tối đa hóa chất lượng trong thời
+gian đồ án. Unreal mạnh về 3D AAA (thừa), web thuần phải tự viết mọi thứ.
+
+17. Vì sao dùng Unity 2022.3 LTS mà không phải bản mới nhất?
+→ LTS = Long Term Support, ổn định và được vá lỗi dài hạn. Đồ án cần ổn định
+hơn là tính năng mới; tránh rủi ro breaking change giữa chừng.
+
+18. Dùng những thư viện bên thứ ba nào, vai trò gì?
+→ TextMeshPro (chữ sắc nét + chỉ số dưới công thức hóa học), UniTask (async/
+await cho UI), DOTween (tween animation), Luzart UI Framework (quản lý vòng
+đời màn hình/popup), Unity MCP (hỗ trợ tự động hóa khi phát triển).
+
+19. UniTask là gì, khác coroutine chỗ nào?
+→ Thư viện async/await tối ưu cho Unity: không cấp phát GC như coroutine,
+trả được giá trị, compose tuần tự dễ (await nhiều bước), hỗ trợ
+CancellationToken để hủy giữa chừng — coroutine không có những điều này.
+
+20. (!) Vì sao UI dùng async/await thay vì coroutine?
+→ Vòng đời UI là chuỗi bước tuần tự (load → bind dữ liệu → animate → chờ
+tương tác). Viết bằng await dễ đọc như code đồng bộ, hủy được bằng token khi
+popup bị đóng sớm, tránh "callback hell" và lồng coroutine.
+
+21. DOTween dùng ở đâu? Cho ví dụ cụ thể.
+→ Fade/scale popup khi mở-đóng (ease OutBack), tween độ đầy ống nghiệm 0.45
+giây, particle UI (DOAnchorPos/DOScale/DOFade), rung card popup khi thua,
+confetti khi thắng.
+
+22. TextMeshPro giải quyết vấn đề gì cho game hóa học?
+→ Render chữ vector sắc nét mọi cỡ + rich text thẻ <sub> để hiển thị đúng
+H₂O, Na₂CO₃; hỗ trợ font tiếng Việt đầy đủ dấu.
+
+23. Build cho nền tảng nào, độ phân giải bao nhiêu?
+→ Desktop 1920x1080 là chính. Kiến trúc UI dùng Canvas scale nên port WebGL/
+Android là hướng mở rộng, không phải viết lại.
+
+24. Vì sao làm 2D UI thay vì dựng cảnh 3D phòng thí nghiệm?
+→ Trọng tâm là LOGIC hóa học và đọc thông tin (màu, nhãn, pH) — 2D rõ ràng,
+chi phí asset thấp; 3D đẹp hơn nhưng không tăng giá trị học tập tương xứng
+với công sức trong khuôn khổ đồ án.
+
+25. ScriptableObject là gì, khác MonoBehaviour?
+→ Là asset chứa DỮ LIỆU, sống độc lập ngoài scene, không gắn GameObject,
+nhiều nơi tham chiếu chung một bản. MonoBehaviour là component logic có vòng
+đời theo GameObject/scene. Dự án dùng SO cho toàn bộ nội dung hóa học.
+
+26. PlayerPrefs lưu ở đâu trên Windows? Giới hạn gì?
+→ Trong Registry (HKCU\Software\[Company]\[Product]). Phù hợp dữ liệu nhỏ
+dạng key-value; không hợp dữ liệu lớn/nhị phân; là plain-text nên sửa được.
+
+27. JsonUtility có hạn chế gì, em xử lý ra sao?
+→ Không serialize được Dictionary. PlayerData đóng gói qua "envelope": tách
+Dictionary thành 2 List song song (LevelIds + LevelRecords) khi save, dựng
+lại Dictionary khi load.
+
+28. Quản lý mã nguồn thế nào?
+→ Git, ~12 commit theo giai đoạn, message theo chuẩn conventional commits
+(feat/build/docs) — đọc lịch sử là thấy tiến độ từng phase.
+
+29. EventSystem của Unity hoạt động thế nào với kéo-thả?
+→ EventSystem raycast qua GraphicRaycaster của Canvas mỗi frame, phát hiện
+con trỏ đè lên UI nào rồi gọi các interface IBeginDragHandler/IDragHandler/
+IEndDragHandler/IPointerClickHandler trên đúng object đó.
+
+30. Canvas Screen Space Overlay khác World Space? Em dùng loại nào?
+→ Overlay vẽ UI đè trên cùng không phụ thuộc camera — em dùng loại này. Hệ
+quả: ParticleSystem world-space bị UI che, nên em viết UIParticleBurst chạy
+ngay TRONG canvas bằng Image + DOTween.
+
+31. DefaultExecutionOrder dùng làm gì trong dự án?
+→ Ép thứ tự Awake giữa các singleton: AudioManager(-100) khởi tạo trước
+GameManager(-90), trước script thường (0) — đảm bảo Instance sẵn sàng trước
+khi bị gọi, tránh NullReference lúc khởi động.
+
+32. DontDestroyOnLoad có ý nghĩa gì khi game chỉ có 1 scene?
+→ Hiện là lớp an toàn dự phòng, chi phí bằng 0. Nếu sau này thêm scene
+(minigame, phòng lab 3D) thì singleton vẫn sống xuyên scene, không phải sửa.
+
+33. Nếu phải bỏ DOTween, em thay bằng gì?
+→ Viết tween thủ công bằng coroutine lerp hoặc thư viện khác (LeanTween).
+Điểm gọi đã tập trung (TweenExt + các hàm AnimateShow/Hide) nên ước lượng
+vài ngày công.
+
+34. Asmdef là gì? Vì sao dự án từng thêm rồi gỡ?
+→ Assembly Definition chia code thành các assembly riêng: compile nhanh hơn
+và CƯỠNG CHẾ ranh giới phụ thuộc. Dự án từng thêm asmdef + unit test cho
+editor tool, sau gỡ để đơn giản hóa cấu trúc (có trong lịch sử commit) —
+đổi lại mất ranh giới cưỡng chế, em nhận đây là trade-off.
+
+35. Unity MCP trong manifest là gì?
+→ Cầu nối cho phép công cụ ngoài (AI/automation) điều khiển Unity Editor,
+phục vụ quá trình phát triển; là package editor, không đi vào bản build.
+
+========================================
+NHÓM C — KIẾN TRÚC & DESIGN PATTERNS
+========================================
+
+36. (!) Mô tả kiến trúc tổng thể của hệ thống?
+→ 4 tầng: (1) Chemistry — lõi mô phỏng thuần C#, không dính Unity;
+(2) Gameplay — MonoBehaviour nối engine với người chơi (kéo-thả, hoạt ảnh,
+dụng cụ); (3) Core + UI — GameManager, SaveSystem, AudioManager, các màn
+hình; (4) Editor tools — sinh và soạn nội dung. Phụ thuộc MỘT CHIỀU:
+UI → Gameplay → Chemistry; tầng Chemistry không biết gì về UI.
+
+37. (!) Vì sao tách engine thành pure C# không kế thừa MonoBehaviour?
+→ (1) Unit test không cần mở Unity; (2) tái sử dụng trên server/CLI;
+(3) tách bạch trách nhiệm — MonoBehaviour chỉ lo hiển thị và input;
+(4) editor tool có thể chạy thử logic. Đây là quyết định kiến trúc quan
+trọng nhất của đồ án.
+
+38. Liệt kê các design pattern và VỊ TRÍ áp dụng?
+→ Singleton (GameManager, AudioManager, UIManager); Facade (ChemistryEngine
+gói state + matcher); Observer (event ReactionOccurred/StateChanged +
+GameplayEvents); State Machine (GameplayPhase); Data-driven (toàn bộ nội
+dung là ScriptableObject); Template Method (UIBase định vòng đời, màn hình
+override); Object Pool (8 AudioSource cho SFX); Command một phần
+(ActionRecord ghi lịch sử thao tác).
+
+39. Singleton có nhược điểm gì? Vì sao vẫn dùng?
+→ Nhược: trạng thái toàn cục, ẩn phụ thuộc, khó test song song. Vẫn dùng vì
+app nhỏ, vòng đời các manager rõ ràng, truy cập tiện; rủi ro được giảm bằng
+DefaultExecutionOrder + guard tự hủy bản trùng trong Awake.
+
+40. (!) Event bus static (GameplayEvents) — ưu điểm và rủi ro?
+→ Ưu: UI và logic không tham chiếu nhau — thay giao diện không sửa engine.
+Rủi ro: quên unsubscribe gây memory leak và gọi vào object đã hủy. Xử lý:
+subscribe trong OnEnable / unsubscribe trong OnDisable đối xứng, có ClearAll()
+để dọn khi cần.
+
+41. Observer pattern ở engine thể hiện thế nào?
+→ ChemistryEngine bắn 2 event: ReactionOccurred (controller phát hiệu ứng +
+hiện phương trình) và StateChanged (cập nhật hình chất lỏng + StatePanel).
+Engine không biết ai nghe — chỉ phát.
+
+42. Facade pattern thể hiện ở đâu?
+→ ChemistryEngine giấu WorkspaceState + ReactionMatcher sau API đơn giản:
+AddSubstance, ApplyHeat, Filter, BubbleGas... Tầng Gameplay không bao giờ
+thao tác trực tiếp vào nội bộ state.
+
+43. FSM GameplayPhase có những trạng thái nào?
+→ None, Setup, Playing, Submitting, ResultWin, ResultFail, Paused. Chuyển:
+LoadLevel (Setup→Playing), bấm Nộp (Playing→Submitting→ResultWin/Fail),
+Restart quay về Setup. Guard điều kiện theo Phase chặn thao tác sai thời điểm.
+
+44. Thêm chế độ chơi mới (vd trắc nghiệm) phải sửa gì?
+→ Thêm màn hình UI + controller mới; engine và data giữ nguyên. Có thể thêm
+field "mode" vào LevelConfig. Kiến trúc tầng giúp phần thêm mới nằm gọn ở
+tầng trên.
+
+45. Vì sao mỗi level có danh sách AvailableReactions riêng?
+→ (1) Kiểm soát độ khó và không gian tìm lời giải; (2) tránh phản ứng ngoài
+ý đồ phá màn; (3) matcher duyệt ít rule hơn — nhanh hơn.
+
+46. Data-driven design là gì, thể hiện ở đâu?
+→ Hành vi mô tả bằng DỮ LIỆU thay vì code: toàn bộ chất/phản ứng/dụng cụ/
+level/bẫy/gợi ý là asset ScriptableObject — thêm nội dung mới không sửa,
+không build lại logic.
+
+47. Nếu 2 người phát triển (1 code, 1 nội dung) thì phân công thế nào?
+→ Dev giữ Scripts; designer làm việc hoàn toàn trong Content Editor và các
+asset. Ranh giới giao tiếp là các ScriptableObject — không giẫm chân nhau.
+
+48. Vòng đời UIBase gồm những bước nào?
+→ OnCreateAsync (bind nút, 1 lần) → OnBeforeShowAsync (đổ dữ liệu, mỗi lần
+hiện) → AnimateShowAsync (tween) → OnShownAsync (bắt đầu nhận input) →
+OnBeforeHide → AnimateHide → OnHidden → OnRelease. Tách BeforeShow khỏi
+Animate để dữ liệu đã sẵn sàng TRƯỚC khi người dùng nhìn thấy.
+
+49. Vì sao chỉ dùng 1 scene? Trade-off?
+→ Chuyển màn = ẩn/hiện prefab qua UIManager: nhanh (không load scene), giữ
+nguyên singleton, dễ chồng popup. Trade-off: scene Main gánh mọi thứ, đòi kỷ
+luật vòng đời UI — đã giải bằng framework UIBase chuẩn hóa.
+
+50. UIManager chia lane để làm gì?
+→ 6 lane theo thứ tự che phủ: System > Toast > Popup > HUD > Screen >
+WorldOverlay — đảm bảo loading/alert luôn đè tất cả, toast đè popup, popup
+đè màn hình chính.
+
+51. Khi ResultPopup hiện trên Gameplay, màn dưới ra sao?
+→ Framework gọi OnPauseAsync trên màn dưới (ngừng nhận input), khi popup
+đóng thì OnResumeAsync — màn dưới không bị hủy, chỉ "ngủ".
+
+52. Nếu cần 2 ống nghiệm cùng lúc thì kiến trúc chịu được không?
+→ Được: ChemistryEngine là class thường (không singleton) — tạo 2 instance,
+mỗi ống 1 engine + 1 view. Controller quản lý danh sách thay vì 1 tham chiếu.
+
+53. UI gọi logic qua event, nhưng controller gọi popup trực tiếp — bất đối xứng?
+→ Có, và là lựa chọn có chủ đích: chiều UI→logic cần decouple vì UI thay đổi
+thường xuyên; chiều logic→popup kết quả là flow tuyến tính, gọi trực tiếp
+ShowAsync rõ ràng và dễ await tuần tự hơn.
+
+54. Phân biệt GameManager và GameplayController?
+→ GameManager: cấp ứng dụng — danh sách level, level hiện tại, sống xuyên
+suốt. GameplayController: cấp MỘT phiên chơi — engine, lọ, dụng cụ, chấm
+điểm; được nạp lại mỗi màn.
+
+55. Tính năng replay/xem lại dựa vào dữ liệu nào có sẵn?
+→ WorkspaceState.History — danh sách ActionRecord (hành động, chất, lượng,
+thời điểm) đủ để phát lại toàn bộ chuỗi thao tác.
+
+56. SOLID: chỗ nào tuân thủ tốt, chỗ nào vi phạm?
+→ Tốt: SRP (Matcher/Checker/Engine mỗi class một nhiệm vụ), tách interface
+qua event. Vi phạm: GameplayController hơi "god class" (spawn, tool, chấm,
+FX trong một file) — hướng cải tiến là tách các handler riêng.
+
+57. Vì sao Amount là struct thay vì dùng float trần?
+→ Ngữ nghĩa kiểu giá trị, gom ngưỡng IsZero (≤0.001) một chỗ để xử lý sai số
+float nhất quán, không null, và nếu sau đổi đơn vị/precision chỉ sửa 1 nơi.
+
+58. Muốn port engine lên server (chấm bài online) cần làm gì?
+→ Tách 3 file lõi Chemistry sang thư viện .NET chuẩn; việc chính là thay
+tham chiếu ScriptableObject bằng DTO theo Id — logic matcher/checker giữ
+nguyên vì không đụng UnityEngine API nào ngoài data asset.
+
+59. Thứ tự khởi tạo singleton đảm bảo bằng gì? Sai thì sao?
+→ DefaultExecutionOrder (-100, -90) + GameBootstrap chờ 1 frame
+(UniTask.Yield) cho UIManager sẵn sàng. Nếu sai thứ tự → NullReference khi
+truy cập Instance quá sớm.
+
+60. Thư mục Editor được Unity xử lý đặc biệt thế nào?
+→ Mọi code trong thư mục Editor/ chỉ compile trong Unity Editor, bị LOẠI
+hoàn toàn khỏi bản build — nên seeder/content editor không làm nặng game.
+
+========================================
+NHÓM D — CHEMISTRY ENGINE & MÔ HÌNH HÓA HỌC
+========================================
+
+61. (!) Trình bày luồng xử lý từ lúc người chơi đổ chất vào ống?
+→ AddSubstance: cộng chất vào Dictionary + ghi ActionRecord → gọi
+RunReactionsToSteadyState: tìm mọi phản ứng khớp (đủ chất + đủ điều kiện),
+tính limiting factor, áp dụng phản ứng có factor lớn nhất (trừ input, cộng
+output theo ratio×factor), bắn event ReactionOccurred — lặp đến khi không
+còn phản ứng khớp (trần 20 vòng) → bắn StateChanged cho UI cập nhật.
+
+62. (!) Limiting factor tính thế nào? Ví dụ tỉ lệ 2:1?
+→ factor = min(lượng_có / hệ_số) trên mọi chất đầu vào. Ví dụ 2Cu + O2 →
+2CuO với ống {Cu:6, O2:4}: Cu cho 6/2=3, O2 cho 4/1=4 → factor=3 (Cu là
+chất giới hạn). Tiêu thụ Cu 2×3=6, O2 1×3=3; sinh CuO 2×3=6. Đúng nguyên lý
+"chất phản ứng hết trước quyết định lượng sản phẩm".
+
+63. (!) Vì sao vòng lặp steady-state giới hạn 20 vòng?
+→ Lưới an toàn chống vòng lặp vô hạn nếu dữ liệu định nghĩa 2 phản ứng
+ngược nhau (A→B, B→A). Thực tế mỗi vòng TIÊU THỤ chất nên chuỗi hội tụ
+nhanh (2–3 bước); 20 là trần phòng lỗi người soạn nội dung, tránh treo game.
+
+64. Hai phản ứng cùng đủ điều kiện thì engine chọn cái nào?
+→ Chọn factor lớn nhất — heuristic "phản ứng mạnh nhất xảy ra trước". Hóa
+học thật quyết định bằng động học; trong phạm vi THCS, mỗi level chỉ 2–5
+phản ứng đã được designer chọn lọc nên không xảy ra xung đột phi lý.
+
+65. WorkspaceState lưu gì? Vì sao dùng Dictionary?
+→ Contents: Dictionary<SubstanceData, Amount> — tra cứu/cập nhật O(1); các
+cờ IsHeated, Temperature, IsFiltered, CollectedGases; và History ghi mọi
+thao tác. Dictionary vì mỗi chất là duy nhất, thao tác chính là "hỏi lượng
+chất X".
+
+66. Điều kiện Heat kiểm tra ở đâu? Tắt đèn giữa chừng thì sao?
+→ Trong ReactionMatcher.CheckConditions: rule có condition Heat đòi
+state.IsHeated == true. Tắt đèn → ApplyHeat(false) → các phản ứng cần nhiệt
+không khớp nữa, phản ứng thường vẫn chạy bình thường.
+
+67. pH tính thế nào? Sai gì so với thực tế?
+→ Lấy pH của acid mạnh nhất (thấp nhất) hoặc bazơ mạnh nhất; nếu có CẢ HAI
+→ coi như trung hòa, trả 7. Sai: không xét bên nào DƯ bao nhiêu, không có
+thang log thật. Đủ cho mục đích quỳ tím định tính ở THCS; hướng nâng cấp là
+so tổng lượng acid/bazơ còn lại.
+
+68. (!) Đơn vị "lượng chất" trong game là gì? Vì sao không dùng mol thật?
+→ Đơn vị trừu tượng (hiển thị mL/g) — hệ số Ratio trong phản ứng mô phỏng
+tỉ lệ MOL của phương trình. Không dùng mol thật để người chơi không phải
+tính khối lượng mol khi đang giải đố; trade-off có chủ đích, kiến trúc cho
+phép nâng cấp sau (Amount là struct bọc).
+
+69. Phase Aqueous khác Liquid thế nào, vì sao tách?
+→ Aqueous = chất TAN trong nước (có thể kết tinh khi cô cạn, hiển thị lớp
+trên); Liquid = chất lỏng/dung môi. Tách để: cô cạn đúng (chỉ bay hơi dung
+môi), kết tinh đúng (chỉ Aqueous), và phân lớp hiển thị đúng.
+
+70. Cơ chế CrystalForm hoạt động ra sao? Vì sao chỉ NaCl_aq có?
+→ Khi đun, CrystallizeStep chuyển dần chất Aqueous sang asset CrystalForm
+của nó (NaCl_aq → NaCl rắn). CuSO4, FeCl3 CỐ TÌNH không gán CrystalForm để
+người chơi không "cô cạn ăn gian" — màn 4 yêu cầu CuSO4 dạng dung dịch.
+
+71. EvaporateStep khác EvaporateWater?
+→ EvaporateWater: xóa toàn bộ dung môi tức thì (bản cũ). EvaporateStep: trừ
+dần theo deltaTime mỗi frame — cho hoạt ảnh cô cạn mượt, dừng được giữa
+chừng khi tắt đèn.
+
+72. Phản ứng Cu(OH)2 → CuO cần gì để xảy ra?
+→ Rule CuOH2_Heat có condition Heat → người chơi phải bật đèn khò
+(IsHeated=true) thì matcher mới cho khớp. Mô phỏng đúng "nhiệt phân".
+
+73. BubbleGas khác AddSubstance chỗ nào?
+→ Bản chất cũng thêm chất vào state rồi chạy steady-state, nhưng ghi
+ActionRecord riêng "BubbleGas" (phục vụ log sư phạm) và gắn với dụng cụ sục
+khí (mỗi lần 20 đơn vị).
+
+74. CollectGasInto làm gì? Khí thu rồi còn phản ứng không?
+→ Chuyển mọi chất Phase=Gas từ Contents sang danh sách CollectedGases —
+khí đã thu KHÔNG còn trong ống nên không tham gia phản ứng nữa.
+
+75. (!) Vì sao Filter (lọc) chỉ đặt cờ mà không xóa kết tủa khỏi dữ liệu?
+→ Quyết định thiết kế chấm điểm: thắng-thua đánh giá trên "tập chất ĐÃ TẠO
+RA" — người chơi thắng nhờ điều chế đúng, không phải nhờ tách cơ học. Nếu
+Filter xóa thật, người chơi "rửa sạch" được mọi sai lầm và hệ thống bẫy mất
+tác dụng sư phạm. Lọc/thu khí vì vậy thiên về trực quan (cosmetic).
+
+76. PurityChecker kiểm tra mấy bước? Thứ tự có quan trọng không?
+→ 3 bước theo thứ tự: (1) lượng sản phẩm đích ≥ MinTargetAmount — thiếu thì
+fail sớm với thông báo "Chưa tạo được X"; (2) từng chất cấm không vượt
+ForbiddenTolerance — vượt là tạp; (3) nếu RejectAnyPrecipitate thì mọi kết
+tủa lạ đều là tạp. Thứ tự quan trọng để thông điệp lỗi đúng trọng tâm.
+
+77. ForbiddenTolerance để làm gì? Đặt = 0 thì sao?
+→ Cho phép sót lượng VẾT (xử lý sai số float + người chơi khó cân tuyệt
+đối). Đặt 0 thì gần như không thể đạt 2 sao → ức chế, phản tác dụng học tập.
+
+78. RejectAnyPrecipitate dùng khi nào?
+→ Màn yêu cầu dung dịch trong suốt không lẫn kết tủa lạ — bất kỳ kết tủa
+nào ngoài sản phẩm đích đều bị tính tạp, khỏi phải liệt kê hết chất cấm.
+
+79. Trap khác Forbidden substance thế nào?
+→ Forbidden: chấm ĐỊNH LƯỢNG độ tinh khiết (có tolerance). Trap: chấm ĐỊNH
+TÍNH sự hiện diện của "chất tố cáo sai lầm", kèm lời giải thích tiếng Việt
+và chặn mốc 3 sao. Một chất có thể nằm cả hai (NaOH ở màn 5).
+
+80. Vì sao trap không tự kích hoạt trong engine mà quét lúc nộp bài?
+→ Trap là phán xét SƯ PHẠM về kết quả, không phải hiện tượng vật lý — engine
+giữ trung lập chỉ mô phỏng. Quét một lần lúc Submit là đủ, đơn giản và dễ
+kiểm soát thông điệp.
+
+81. Cờ SlowReaction hoạt động thế nào?
+→ Đánh dấu phản ứng chậm (H2SO4 + CaCO3 màn 8 — CaSO4 sinh ra bám ngoài đá
+vôi làm phản ứng gần như dừng): hệ thống cảnh báo và giảm tốc, dạy học sinh
+vì sao điều chế CO2 nên dùng HCl chứ không phải H2SO4.
+
+82. Ratio là tỉ lệ mol hay khối lượng? Hệ quả?
+→ Tỉ lệ MOL đơn giản hóa (đúng hệ số phương trình). Hệ quả: lượng trong game
+là "phần mol", không bảo toàn gam thật — chấp nhận được ở mức THCS vì SGK
+cũng dạy theo hệ số.
+
+83. Người chơi dư HCl ở màn 1 thì chuyện gì xảy ra qua từng hệ thống?
+→ Engine: HCl thừa nằm lại Contents. PurityChecker: HCl > tolerance 1.0 →
+tạp, IsPure=false → tối đa 1 sao. Trap ExcessAcid khớp → popup giải thích
+"Dư HCl — môi trường còn acid" và chặn 3 sao. Người chơi học được phải
+trung hòa vừa đủ (dùng quỳ kiểm tra).
+
+84. Xử lý sai số float thế nào?
+→ Amount.IsZero dùng ngưỡng ≤ 0.001 thay vì so == 0; chấm tinh khiết dùng
+tolerance; mọi phép trừ clamp về 0 — tránh "0.0000001 vẫn tính còn chất".
+
+85. Phương trình trong game có cân bằng đúng không? Ai thẩm định?
+→ Soạn theo SGK hóa 8–9, hệ số nhập vào Ratio + chuỗi ReactionEquation hiển
+thị. Thẩm định bằng đối chiếu SGK và nhờ người có chuyên môn rà soát (kể quá
+trình thật của bạn); hội đồng có thể kiểm tra bất kỳ phương trình nào.
+
+86. Thêm phản ứng thuận nghịch (cân bằng) được không?
+→ Kiến trúc rule cho phép khai báo 2 rule ngược chiều, nhưng cần thêm cơ chế
+điều kiện dừng (hằng số cân bằng/nồng độ) để tránh dao động — hiện chỉ có
+trần 20 vòng. Đây là hướng phát triển, ngoài phạm vi THCS.
+
+87. Nhiệt độ có mấy mức? Vì sao chọn 600°C?
+→ 2 mức: 25°C (thường) và 600°C (đun) — đại diện trạng thái "có/không đun".
+600°C đủ cho mọi phản ứng nhiệt phân trong chương trình THCS; tránh UI nhiệt
+kế liên tục gây phức tạp không cần thiết.
+
+88. Vì sao tách ReactionMatcher khỏi ChemistryEngine?
+→ SRP: matching test được độc lập (đưa bộ rule + state giả là chạy), engine
+chỉ lo trình tự áp dụng và bắn event. Muốn thay thuật toán chọn phản ứng
+(vd theo độ ưu tiên) chỉ sửa matcher.
+
+89. ReactionEvent chứa gì, UI dùng làm gì?
+→ Rule (phản ứng nào), Consumed/Produced (chất + lượng tiêu thụ/sinh ra),
+Factor. UI dùng để hiện phương trình phản ứng, chọn hiệu ứng theo
+PrimarySideEffect và log lượng chất thay đổi.
+
+90. Cho ví dụ chuỗi phản ứng dây chuyền tự động?
+→ Màn 3: đổ HCl vào CaCO3 → khớp CaCO3_HCl sinh CO2; vòng lặp tiếp theo
+thấy ống có Ca(OH)2 → khớp CO2_CaOH2 sinh CaCO3 kết tủa (nước vôi đục).
+Hai phản ứng nối nhau tự động trong MỘT lần RunReactionsToSteadyState,
+không cần code riêng.
+
+========================================
+NHÓM E — GAMEPLAY & TƯƠNG TÁC
+========================================
+
+91. Mô tả vòng đời một màn chơi?
+→ LoadLevel: đọc LevelConfig → sinh các lọ (DraggableBottle) + nút dụng cụ
+(ToolButton) → tạo ChemistryEngine với danh sách phản ứng của màn → Phase
+Playing. Người chơi thao tác → bấm Nộp: PurityChecker + quét trap + tính sao
+→ ResultPopup (thắng, lưu save) hoặc WrongProductPopup (thua) → chơi lại
+hoặc màn kế.
+
+92. (!) Kéo-thả cài đặt bằng những interface nào? Trình tự gọi?
+→ IBeginDragHandler (lưu vị trí gốc, reparent lên canvas root, alpha 0.7,
+tắt raycast để raycast xuyên qua lọ), IDragHandler (cập nhật anchoredPosition
+theo delta / scaleFactor của canvas), IEndDragHandler (raycast điểm thả tìm
+DroppableTube bằng GetComponentInParent → có thì đổ, không thì snap về).
+
+93. Phân biệt CLICK lọ với KÉO lọ thế nào?
+→ Ngưỡng di chuyển ~5px: dưới ngưỡng coi là click (OnPointerClick → mở popup
+chọn lượng), vượt ngưỡng là drag. Tránh xung đột 2 hành vi trên cùng 1 lọ.
+
+94. Thả lọ ngoài ống nghiệm thì sao?
+→ OnEndDrag không tìm thấy DroppableTube → gọi base.OnEndDrag: trả lọ về vị
+trí cũ, khôi phục alpha/raycast/scale. Không có gì bị đổ ra.
+
+95. Vì sao khi kéo phải reparent lọ và tắt raycast?
+→ Reparent lên canvas root để lọ vẽ TRÊN CÙNG, không bị Mask của panel cắt
+hình khi kéo ngang ống nghiệm. Tắt raycastTarget để tia raycast "xuyên qua"
+chính cái lọ đang kéo mà tìm thấy ống nghiệm bên dưới.
+
+96. Popup chọn lượng cho chọn từ bao nhiêu đến bao nhiêu?
+→ Slider từ 1 mL đến đúng lượng còn lại trong lọ, mặc định min(25, còn lại);
+hiển thị "x mL / y mL" theo thời gian thực + ô preview đúng màu hóa chất.
+
+97. (!) Hoạt ảnh rót gồm những bước nào? Vì sao add chất ở GIỮA hoạt ảnh?
+→ Bay lọ tới miệng ống (0.35s) → xoay quanh pivot mép lọ tới ~95° (0.6s, có
+AnimationCurve điều tốc) → quá 50° bật LineRenderer vẽ dòng chảy → callback
+onMidPour gọi engine.AddSubstance ĐÚNG LÚC lọ đang nghiêng đổ → xoay về →
+bay về chỗ cũ. Add ở giữa để hiệu ứng phản ứng (sủi bọt, đổi màu) xuất hiện
+TRÙNG NHỊP với hình ảnh rót — người chơi cảm nhận đúng nhân-quả; add ngay
+lúc thả chuột thì màu đổi trước khi lọ kịp nghiêng, phá cảm giác mô phỏng.
+
+98. Dòng chất lỏng khi rót vẽ bằng gì?
+→ LineRenderer nối từ miệng lọ xuống mặt nước ống nghiệm; bật khi góc
+nghiêng > 50°, tắt khi xoay trở về.
+
+99. Chất rắn thả vào ống có hoạt ảnh khác gì chất lỏng?
+→ DropSolidTo: sinh "cục rắn" tạm (Image), rơi xuống có gia tốc (ease-in
+0.32s mô phỏng trọng lực, kèm xoay lật), chạm mặt nước gọi onImpact (add
+chất), rồi chìm xuống 0.22s + mờ dần và hủy. Không xoay lọ rót như chất lỏng.
+
+100. Vì sao phải gỡ lọ khỏi LayoutGroup khi chạy hoạt ảnh?
+→ Lọ nằm trong LayoutGroup tự xếp vị trí — nếu không gỡ, layout kéo lọ về ô
+grid mỗi frame làm hoạt ảnh giật. Giải pháp: LayoutElement.ignoreLayout=true
++ reparent ra ngoài Mask, xong trả lại đúng thứ tự cũ.
+
+101. Kể nhanh 7 loại dụng cụ và hành vi?
+→ Quỳ tím: đọc pH báo màu; Đèn khò: bật/tắt nhiệt + cô cạn; Giấy lọc: đặt cờ
+lọc (trực quan); Nước cất: thêm 30 đơn vị H2O; Bình thu khí: gom khí ra khỏi
+ống; Thuốc thử nhỏ giọt (KSCN/HNO3): thêm 1 đơn vị lượng vết; Sục khí
+(Cl2/O2): thêm 20 đơn vị khí vào dung dịch.
+
+102. Đèn khò chạy 2 pha như thế nào?
+→ Coroutine: pha 1 BAY HƠI dung môi 12 đơn vị/giây (hiệu ứng hơi nước mỗi
+0.35s); hết dung môi sang pha 2 KẾT TINH chất Aqueous → Crystal 6 đơn vị/
+giây (hiệu ứng lấp lánh); xong nháy sparkle kết thúc.
+
+103. Bấm đèn khò lần 2 thì sao?
+→ Toggle tắt: ApplyHeat(false) + dừng coroutine bay hơi. Phản ứng cần nhiệt
+ngừng khớp từ thời điểm đó.
+
+104. Quỳ tím báo kết quả ở đâu, lấy dữ liệu từ đâu?
+→ Dòng text phản hồi + Toast, ví dụ "Quỳ → ĐỎ (pH 3.5)"; dữ liệu từ
+WorkspaceState.CalculatePH().
+
+105. StatePanel hiển thị gì, cập nhật khi nào?
+→ Danh sách chất + lượng trong ống, pH, nhiệt độ, log thao tác; render lại
+mỗi khi engine bắn StateChanged.
+
+106. Bấm Nộp bài chạy qua những bước nào?
+→ Guard Phase==Playing → chuyển Submitting → PurityChecker.Check(state,
+rule) → quét Traps theo TriggerProduct → CalculateStars → thắng: lưu
+SaveSystem.ReportLevelResult + sparkle + sfx_win + ResultPopup; thua:
+sfx_fail + WrongProductPopup kèm chất sai/tạp chất đầu tiên.
+
+107. Điều kiện thắng tối thiểu? Khi thua hiện gì?
+→ Thắng: tạo đủ sản phẩm đích (≥ MinTargetAmount) tức ≥ 1 sao. Thua: popup
+nêu lý do ("Chưa tạo được X" / "Còn tạp: ..."), kèm "Bạn tạo: [chất sai]"
+hoặc "Tạp: [chất]" + nút thử lại.
+
+108. (!) Công thức tính sao và phạt hint?
+→ 1 sao: đủ sản phẩm đích; 2 sao: thêm điều kiện tinh khiết; 3 sao: tinh
+khiết + không dính trap chặn + không dùng hint. Phạt: dùng ≥1 hint → tối đa
+2 sao; ≥3 hint → tối đa 1 sao. Triết lý: thưởng kiến thức, kỹ năng, tự lực.
+
+109. Undo hiện hoạt động thế nào? Cải tiến ra sao?
+→ Hiện Undo = Restart (nạp lại level từ đầu). Cải tiến đã quy hoạch: stack
+các snapshot WorkspaceState.Clone() trước mỗi thao tác, Undo = pop snapshot
+— nền móng (Clone + History) đã có sẵn trong engine.
+
+110. Người chơi spam kéo-thả khi hoạt ảnh đang chạy thì sao?
+→ BottlePourAnimator có cờ _busy: đang rót thì không nhận lệnh rót mới —
+chặn hoạt ảnh chồng chéo và double-add dữ liệu.
+
+111. Tutorial xuất hiện khi nào, dạy gì?
+→ Chỉ ở màn 1 khi Attempts == 0 (lần chơi đầu tiên). Dạy 4 bước: kéo lọ vào
+ống — dùng dụng cụ — theo dõi màu/pH ở panel phải — bấm Nộp bài; kèm tip
+"sai cũng học được, bấm Bắt đầu lại để thử cách khác".
+
+112. Vì sao cần CẢ HAI cách đổ (kéo-thả và popup chọn lượng)?
+→ Kéo-thả nhanh, tự nhiên cho thao tác thăm dò; popup slider phục vụ chiến
+thuật cần ĐONG CHÍNH XÁC (trung hòa vừa đủ, tỉ lệ mol) — thiếu một trong hai
+đều làm hỏng trải nghiệm.
+
+113. Có thể đổ ngược từ ống nghiệm về lọ không?
+→ Không — một chiều như thí nghiệm thật (đổ hỗn hợp ngược về lọ hóa chất gốc
+là sai nguyên tắc phòng lab), đồng thời giảm độ phức tạp engine. Muốn làm
+lại có Restart.
+
+114. Mặt nước nghiêng khi rót làm bằng gì?
+→ Tham số SurfaceTilt (thuộc tính _SARM của shader) do BottlePourAnimator set
+theo góc xoay qua AnimationCurve — mặt chất lỏng trong lọ nghiêng theo lọ.
+
+115. Lọ hết chất (CurrentAmount = 0) thì kéo-thả xử lý sao?
+→ OnEndDrag kiểm tra CurrentAmount > 0 mới đổ; lọ rỗng chỉ snap về chỗ cũ,
+không bắn event gì.
+
+========================================
+NHÓM F — UI/UX
+========================================
+
+116. Luồng màn hình của game? Mấy bước để vào chơi?
+→ Bootstrap → MainMenu → LevelSelect → Gameplay → popup kết quả. Từ mở game
+đến chơi: 2 lần bấm (Chơi → chọn màn).
+
+117. (!) Chỉ 1 scene thì "chuyển màn hình" thực chất là gì?
+→ UIManager Show/Hide các prefab UI theo UIId (MainMenu 7000, LevelSelect
+7001, Gameplay 7002, các popup 71xx...). Không hề gọi SceneManager.LoadScene
+— nhanh, giữ singleton, chồng popup dễ.
+
+118. Các lane UI và thứ tự che phủ?
+→ System > Toast > Popup > HUD > Screen > WorldOverlay. Loading/alert đè tất
+cả; toast đè popup; popup đè HUD và màn hình chính.
+
+119. Nút được bind ở bước nào, dữ liệu đổ ở bước nào trong vòng đời UI?
+→ Bind nút ở OnCreateAsync (chạy 1 lần khi tạo); đổ dữ liệu ở
+OnBeforeShowAsync (chạy MỖI LẦN hiện — vd LevelSelect rebuild lưới thẻ,
+ResultPopup nhận số sao).
+
+120. ResultPopup hiển thị gì? Nút "Màn kế" disable khi nào?
+→ Tiêu đề màn, lý do ("Sản phẩm tinh khiết"...), 3 ô sao, confetti +
+sfx_star; nút Màn kế disable khi GameManager.HasNextLevel() == false (đang
+ở màn cuối).
+
+121. WrongProductPopup khác ResultPopup thế nào?
+→ Tiêu đề "Sản phẩm chưa đạt", hiệu ứng RUNG card (shake 0.4s) thay vì
+confetti, nêu cụ thể "Bạn tạo: [công thức sai]" hoặc "Tạp: [chất]" — phản
+hồi sư phạm thay vì ăn mừng.
+
+122. Toast tự ẩn bằng cơ chế gì? Vì sao không await?
+→ OnShownAsync gọi AutoHideAsync theo kiểu fire-and-forget (không await) để
+UIManager không bị block; AutoHide delay ~2 giây rồi tự Hide, có catch
+OperationCanceledException khi bị đóng sớm.
+
+123. LevelSelect dựng lưới thẻ thế nào?
+→ BuildCards mỗi lần hiện: xóa thẻ cũ, duyệt GameManager.Levels, instantiate
+LevelCard và Bind(config, số sao từ save, trạng thái khóa, callback click).
+
+124. Cơ chế khóa màn hiển thị ra sao?
+→ Thẻ khóa có lockedOverlay (phủ xám) + button không bấm được; mở khi màn
+trước đạt ≥ 1 sao (hoặc cờ debug mở hết).
+
+125. Popup cài đặt chỉnh được gì, lưu khi nào?
+→ 2 slider nhạc nền/SFX (0–100%). Kéo tới đâu áp AudioManager + SaveSystem
+.Save() ngay tới đó — không có nút "Lưu" riêng, không thể quên lưu.
+
+126. Hint popup hoạt động thế nào?
+→ 3 nút bậc gợi ý; bấm hiện nội dung "→ [gợi ý]" và Raise(tier) để
+controller tăng HintsUsed (ảnh hưởng cap sao); kèm sfx. Bậc 1 thuốc thử,
+bậc 2 thứ tự, bậc 3 phương trình đầy đủ.
+
+127. Font xử lý tiếng Việt + công thức thế nào?
+→ Font Saira Condensed qua TextMeshPro (đủ dấu tiếng Việt); công thức dùng
+rich text <sub> cho chỉ số dưới (H₂O, Na₂CO₃) — từng có bug thiếu glyph đã
+fix (nằm trong lịch sử commit).
+
+128. Màu sắc UI lấy từ đâu?
+→ ColorPalette (ScriptableObject) định nghĩa tập trung: AcidRed, BaseBlue,
+PrecipWhite, BloodRedKSCN, CuSO4Blue, FeOH3Brown, StarGold, SuccessGreen,
+FailRed, HintPurple... — đổi tông màu toàn game sửa 1 asset.
+
+129. Popup dùng ease gì khi mở, vì sao?
+→ Scale với Ease.OutBack (vọt quá rồi nảy về) — tạo cảm giác "bật" thu hút
+ánh nhìn vào popup mới; fade dùng OutQuad nhẹ nhàng. Thời lượng ngắn
+0.2–0.3s để không cản thao tác.
+
+130. Bấm Pause giữa lúc đang rót thì sao?
+→ PausePopup hiện đè và chặn input màn dưới (cơ chế pause của UI framework);
+hoạt ảnh rót là coroutine vẫn chạy nốt — chấp nhận được vì dữ liệu đã add an
+toàn; cải tiến có thể khóa nút Pause khi animator._busy.
+
+131. Game có hỗ trợ người mù màu không?
+→ Chưa có chế độ riêng — nhận là hạn chế. Giảm nhẹ sẵn có: mọi chất đều kèm
+NHÃN công thức chữ, pH hiện số. Hướng: thêm pattern/ký hiệu cho lớp chất
+lỏng, bảng màu colorblind-safe.
+
+132. Trải nghiệm thất bại được thiết kế "thân thiện" thế nào?
+→ Thua không bị phạt tài nguyên; popup giải thích NGUYÊN NHÂN cụ thể bằng
+tiếng Việt (ExplanationVi của trap); nút thử lại ngay; tutorial nhấn mạnh
+"sai cũng học được" — đúng tinh thần productive failure.
+
+133. Em đã test UX với người thật chưa?
+→ (Trả lời thật.) Khung gợi ý: cho bạn bè chơi và quan sát điểm kẹt — ví dụ
+người chơi không biết click lọ mở popup chọn lượng → bổ sung tutorial/
+tooltip; đong sai lượng → thêm hiển thị "x mL / y mL" realtime.
+
+========================================
+NHÓM G — DỮ LIỆU & CONTENT PIPELINE
+========================================
+
+134. (!) Vì sao chọn ScriptableObject thay vì JSON/XML/database?
+→ (1) Tham chiếu asset-to-asset bằng GUID — đổi tên file không vỡ liên kết;
+(2) chỉnh sửa trực quan trong Inspector/editor tool, có Undo; (3) type-safe,
+lỗi phát hiện lúc soạn chứ không phải lúc chạy; (4) không phải viết parser.
+JSON hợp khi cần tải nội dung từ server — là bước sau (Addressables).
+
+135. Một LevelConfig gồm những trường gì?
+→ LevelIndex, DisplayName, ObjectiveText; Bottles (chất + lượng đầu + che
+nhãn); Tools; AvailableReactions (phản ứng bật cho màn); PurityRule (điều
+kiện thắng); Traps + ThreeStarBlockingTraps; Hints (3 bậc). Người không
+biết code đọc Inspector vẫn hiểu được màn chơi.
+
+136. SubstanceData có những trường nào? CrystalForm đặc biệt gì?
+→ Id, Formula, DisplayName, Category (Acid/Base/Salt/Metal/Oxide/Gas/
+Indicator/Solvent...), Phase (6 pha), PH, VisualColor, IconSprite/
+BottleSprite, ShortDescription. CrystalForm trỏ sang asset chất rắn tương
+ứng — chỉ chất nào được phép kết tinh mới gán (NaCl_aq → NaCl).
+
+137. ReactionRule mô tả phản ứng bằng cấu trúc gì?
+→ Inputs/Outputs: List<ReactionStoich {Substance, Ratio}> (1–3 chất mỗi
+bên); Conditions: list {Type, Value} (Heat, Catalyst, BubbleGasThrough...);
+PrimarySideEffect + FlashColor (hiệu ứng); ReactionEquation (chuỗi hiển
+thị); cờ LimitedByLowestInput, SlowReaction.
+
+138. ChemistrySeeder hoạt động thế nào? "Idempotent" nghĩa là gì?
+→ Menu ChemistryGame/Seed tạo toàn bộ asset nội dung bằng code: 43 chất, 25
+phản ứng, 9 dụng cụ, 8 level + hint. Idempotent = chạy lại bao nhiêu lần
+cũng không tạo trùng (có thì cập nhật, chưa có thì tạo) — cần vì nội dung
+được sinh lại nhiều lần trong quá trình phát triển.
+
+139. Quy trình thêm 1 màn chơi mới từ A–Z?
+→ (1) Chuẩn bị chất/phản ứng còn thiếu (Content Editor hoặc seeder);
+(2) tạo LevelConfig: mục tiêu, lọ, dụng cụ, tick phản ứng khả dụng;
+(3) tạo PurityRule (đích + chất cấm + tolerance); (4) thêm Traps + Hint 3
+bậc; (5) panel Validation báo sạch lỗi; (6) Register vào GameManager.levels
+(quick action hoặc menu Seed/Register Levels); (7) chơi thử cả 3 mốc sao.
+
+140. ContentEditorWindow bố cục thế nào?
+→ 3 tab (Substances/Reactions/Levels) × 3 cột: trái = danh sách có ô tìm
+kiếm; giữa = form chỉnh sửa; phải = panel Validation (lỗi/cảnh báo realtime)
++ Quick Actions (Duplicate, Find References, Add to GameManager, Reveal,
+Delete).
+
+141. Validation kiểm tra những lỗi gì? Cho 5 ví dụ.
+→ Id trùng nhau; tên file lệch Id; phản ứng thiếu Inputs/Outputs; Ratio ≤ 0;
+LevelIndex trùng; level thiếu TargetProduct; trap thiếu TriggerProduct;
+level thiếu lọ/dụng cụ/hint. Phân 3 mức Error/Warning/Info.
+
+142. AssetIndex để làm gì, khi nào rebuild?
+→ Cache toàn bộ asset nội dung + bản đồ THAM CHIẾU NGƯỢC trong RAM để tra
+nhanh. Tự rebuild khi có asset import/xóa/di chuyển nhờ AssetPostprocessor —
+không bao giờ hiển thị dữ liệu cũ.
+
+143. "Tìm tham chiếu ngược" chạy dựa trên gì?
+→ Reverse map của AssetIndex: từ 1 chất tra ra phản ứng nào dùng nó làm
+input/output, level nào bày nó trong lọ — trả lời "xóa chất này có an toàn
+không" trước khi xóa.
+
+144. Inline Create Overlay giải quyết pain point gì?
+→ Đang soạn phản ứng mà thiếu một chất → tạo chất mới NGAY trong overlay,
+không phải bỏ dở sang tab khác rồi quay lại — giảm context switch, đúng
+workflow người soạn nội dung.
+
+145. AssetWriter tập trung CRUD một chỗ để được gì?
+→ Mọi tạo/sửa/xóa asset đi qua một cửa: đăng ký Undo thống nhất, MarkDirty +
+SaveAll nhất quán, dễ log và sửa hành vi chung (vd đổi thư mục lưu).
+
+146. Xóa 1 chất đang được phản ứng dùng thì sao?
+→ Tham chiếu trong phản ứng thành null/missing — panel Validation lập tức
+báo Error ở phản ứng/level liên quan. Quy trình đúng là bấm Find References
+kiểm tra TRƯỚC khi xóa.
+
+147. PrefabBuilder sinh gì? Vì sao build prefab bằng code?
+→ 14 prefab (lọ, nút dụng cụ, ống nghiệm, thẻ level, các màn hình + popup,
+toast) và đăng ký vào UIRegistry. Build bằng code để tái tạo nhất quán, sửa
+cấu trúc hàng loạt một chỗ, không thao tác tay lặp lại dễ sai.
+
+148. AudioSeeder sinh âm thanh bằng cách nào?
+→ Tổng hợp dạng sóng bằng code (sine/noise theo tần số, envelope đơn giản)
+theo "kiểu" (click, chime, fanfare, bubble, flame, arpeggio...) → ghi file
+WAV vào Audio/ → bind vào AudioManager. 12 SFX + 2 nhạc nền, 0 đồng bản quyền.
+
+149. Tài nguyên procedural: lợi và hại?
+→ Lợi: sạch bản quyền, tái tạo được khi đổi tham số, repo nhẹ, phong cách
+đồng nhất. Hại: thẩm mỹ thua asset chuyên nghiệp — chấp nhận ở giai đoạn đồ
+án; data đã chừa field (IconSprite, BottleSprite, NamedClip) để thay asset
+đẹp mà không sửa logic.
+
+150. Nội dung hóa học lấy nguồn từ đâu, ai thẩm định?
+→ SGK hóa 8–9 + kiến thức chuẩn về hiện tượng (màu kết tủa, điều kiện phản
+ứng). Thẩm định bằng đối chiếu SGK và nhờ người có chuyên môn rà (trình bày
+thật quá trình của bạn). Validation tool lo phần đúng đắn CẤU TRÚC dữ liệu.
+
+151. Giáo viên không biết Unity muốn thêm nội dung thì làm sao?
+→ Dùng Content Editor — toàn bộ là form và dropdown, không cần code. Xa
+hơn: xuất công cụ soạn nội dung độc lập/web (hướng phát triển).
+
+152. GUID trong asset Unity là gì?
+→ Định danh bất biến sinh trong file .meta. Mọi tham chiếu lưu GUID chứ
+không phải đường dẫn → đổi tên/di chuyển file không vỡ liên kết.
+
+153. Sau khi build, có thể cập nhật nội dung không?
+→ Không — ScriptableObject bị đóng gói trong build. Hướng giải quyết:
+Addressables hoặc StreamingAssets + định dạng JSON để tải nội dung từ
+ngoài/server, kiến trúc data-driven hiện tại tương thích hướng này.
+
+========================================
+NHÓM H — SAVE & TIẾN TRÌNH NGƯỜI CHƠI
+========================================
+
+154. Dữ liệu người chơi lưu bằng gì, ở đâu, định dạng nào?
+→ PlayerPrefs với 1 key "OngNghiem_PlayerData", giá trị là chuỗi JSON
+(JsonUtility). Trên Windows nằm trong Registry.
+
+155. Mỗi màn lưu những thông tin gì?
+→ LevelRecord: Stars (0–3, chỉ ghi đè khi cao hơn), Completed, Attempts
+(số lần chơi), HintsUsedEver (tổng hint từng dùng).
+
+156. Khi nào game save? Có nguy cơ mất dữ liệu không?
+→ Save ngay khi có kết quả màn chơi (ReportLevelResult) và khi đổi âm
+lượng. Mất dữ liệu chỉ khi crash giữa phiên CHƯA nộp bài — chấp nhận được
+vì một màn chỉ vài phút.
+
+157. (!) PlayerPrefs là JSON plain-text — người chơi sửa file "hack full sao"
+được. Em nghĩ gì?
+→ Đúng, và em chấp nhận có cân nhắc: game offline single-player giáo dục —
+hack sao chỉ tự lừa mình, không có leaderboard/kinh tế ảo nên không có động
+cơ lẫn nạn nhân. Mã hóa client chỉ làm khó chứ không chặn được. Khi nào có
+xếp hạng online thì chấm điểm + lưu trữ chuyển về server (engine pure C#
+port được). Đây là đánh giá rủi ro, không phải thiếu hiểu biết.
+
+158. Logic mở khóa màn?
+→ Màn 1 luôn mở; màn N mở khi màn N-1 đạt ≥ 1 sao. Dev có cờ
+debugUnlockAllLevels và debugPlayLevelIndex để test nhanh.
+
+159. "Bằng tốt nghiệp" (Diploma) mở khi nào?
+→ Khi tổng sao ≥ 24 (8 màn × 3 sao) → DiplomaUnlocked = true, huy hiệu hiện
+ở MainMenu — phần thưởng dài hạn khuyến khích chơi lại lấy đủ 3 sao.
+
+160. Save bị hỏng (JSON lỗi) thì game xử lý sao?
+→ Load bọc try-catch: parse lỗi → reset về PlayerData mới tinh, game vẫn
+chạy bình thường (fail-safe, thà mất save còn hơn crash).
+
+161. Vì sao chỉ lưu số sao cao nhất?
+→ Đủ cho 2 nhu cầu hiện tại: mở khóa màn và tổng sao mở diploma. Lịch sử
+từng lần chơi là nhu cầu analytics — hướng mở rộng, đã có Attempts/
+HintsUsedEver làm nền.
+
+162. Trường Version trong PlayerData để làm gì?
+→ Đánh dấu phiên bản schema save. Khi cấu trúc thay đổi, code đọc version
+cũ và migrate sang mới thay vì vỡ dữ liệu người chơi cũ.
+
+163. Attempts và HintsUsedEver được dùng vào đâu?
+→ Attempts == 0 quyết định hiện Tutorial lần đầu; cả hai là dữ liệu sư phạm
+thô (đo độ khó màn, mức phụ thuộc gợi ý) cho phân tích sau này.
+
+164. Muốn đồng bộ save lên cloud thì sửa gì?
+→ Trừu tượng SaveSystem thành interface storage (local/cloud), thêm backend
+(PlayFab/Firebase), xử lý xung đột khi merge (lấy max sao theo màn).
+
+165. Hai người chơi chung 1 máy có vấn đề gì?
+→ Chung 1 save — tiến trình lẫn nhau. Giải pháp: multi-profile, key
+PlayerPrefs theo tên hồ sơ, thêm màn chọn hồ sơ lúc khởi động.
+
+========================================
+NHÓM I — ĐỒ HỌA, SHADER, HIỆU ỨNG & ÂM THANH
+========================================
+
+166. (!) Shader chất lỏng làm được gì? Property nào điều khiển?
+→ Shader "ChemistryGame/LiquidLayered" vẽ tối đa 4 lớp màu trong một ống:
+_C1.._C4 (màu từng lớp), _FillAmount (độ đầy 0–1), _SARM (độ nghiêng mặt
+nước khi rót), _LayerCount (số lớp). Nhìn ống là "đọc" được trạng thái hóa
+học: kết tủa trắng dưới đáy, dung dịch màu ở trên.
+
+167. Quy tắc phân lớp: chất nào xuống đáy, chất nào ở trên?
+→ Trong LayeredLiquidView.UpdateFromContents: chất "lắng" (Precipitate/
+Solid/Crystal) → lớp đáy; chất tan (Aqueous/Liquid) → lớp trên; khí bỏ qua
+(đã thoát). Đúng trực quan thí nghiệm thật.
+
+168. Màu một lớp khi nhiều chất trộn nhau tính thế nào?
+→ Trung bình CÓ TRỌNG SỐ theo lượng: màu lớp = Σ(màu chất × lượng) / tổng
+lượng — chất nhiều quyết định màu chủ đạo, đổ thêm chất màu đậm thì lớp đổi
+màu dần.
+
+169. Vì sao mỗi view phải clone material riêng trong Awake?
+→ Nếu dùng chung material asset, đổi màu ống này sẽ lan sang mọi lọ/ống khác
+(material là shared). Clone per-instance để mỗi vật thể giữ màu độc lập.
+
+170. LiquidView cũ và LayeredLiquidView mới khác gì? Vì sao giữ cả hai?
+→ Bản cũ: Image.fillAmount một màu trộn tất cả — không phân lớp được. Bản
+mới: shader 4 lớp + nghiêng mặt nước. Giữ bản cũ làm fallback và minh chứng
+quá trình cải tiến (nói được trong thuyết trình).
+
+171. Particle chạy trên UI bằng cách nào mà không bị Canvas che?
+→ Không dùng ParticleSystem world-space (bị overlay canvas đè). Tự viết
+UIParticleBurst: sinh các Image + CanvasGroup ngay TRONG canvas, chuyển động
+bằng DOTween — particle là UI nên nằm đúng thứ tự vẽ.
+
+172. Kể 5 pattern chuyển động particle và hiệu ứng tương ứng?
+→ Rise (khói/hơi nước bay lên — OutQuad), Fall (kết tủa rơi lắng — InQuad),
+Burst (nổ/sparkle tỏa tròn — OutCubic), Bubble (bọt khí bay lên lắc lư
+Yoyo — InOutSine), Drop (giọt rơi nhanh). Mỗi SideEffectType map sang một
+BurstSpec (số hạt, màu, spread, thời lượng).
+
+173. SideEffectType có bao nhiêu loại?
+→ 11: None, BubblesSmall, BubblesLarge, SmokeWhite, Steam, Flame, Sparkle,
+ColorFlash, PrecipitateForm, GasEvolve, Explosion. Explosion dự phòng cho
+phản ứng mãnh liệt — nội dung hiện chưa dùng, dành mở rộng.
+
+174. Confetti khi thắng tạo thế nào?
+→ ResultPopup spawn prefab confetti trong AnimateShowAsync + phát sfx_star,
+đồng thời card scale OutBack — gói "ăn mừng" đa giác quan.
+
+175. Âm thanh trong game gồm những gì, tạo bằng cách nào?
+→ 12 SFX (button, pour, drop, bubble, burner, filter, indicator, hint, star,
+win, fail, back) + 2 nhạc nền (menu, gameplay) — TẤT CẢ sinh bằng code qua
+AudioSeeder (tổng hợp sóng, ghi WAV), không tải asset ngoài.
+
+176. Pool 8 AudioSource giải quyết vấn đề gì? Round-robin là sao?
+→ Nhiều SFX nổ cùng lúc (rót + sủi bọt + click) mà chỉ 1 source thì tiếng
+sau CẮT tiếng trước. Pool 8 nguồn, phát xoay vòng lần lượt (round-robin) —
+các tiếng chồng nhau tự nhiên.
+
+177. Âm lượng điều khiển và lưu thế nào?
+→ Slider Settings → AudioManager.SetMusicVolume/SetSfxVolume áp ngay vào
+các source + ghi vào PlayerData.Settings (MusicVol 0.7, SfxVol 0.85 mặc
+định) → SaveSystem.Save() tức thì.
+
+178. Vì sao không dùng asset thương mại nào? Trade-off?
+→ Sạch bản quyền 100% + chủ động tái tạo. Trade-off là thẩm mỹ — em ưu tiên
+đúng chỗ: đồ án chấm kiến trúc và giá trị giáo dục; data đã chừa field để
+thay asset đẹp sau mà không sửa logic.
+
+179. Muốn nâng cấp đồ họa thì pipeline hỗ trợ ở đâu?
+→ SubstanceData/ToolData có sẵn IconSprite, BottleSprite; prefab tách khỏi
+logic; ColorPalette tập trung màu. Thay sprite/màu không đụng một dòng logic.
+
+180. FPS có ổn định khi nhiều particle + tween chạy cùng lúc?
+→ Tải rất nhẹ (UI 2D, vài chục hạt là Image tween). Em chưa đo profiler
+chuyên sâu — nhận điểm này; kế hoạch: đo scene nặng nhất (đun + nhiều FX)
+bằng Unity Profiler trước khi build mobile.
+
+========================================
+NHÓM J — TÍNH GIÁO DỤC & SƯ PHẠM
+========================================
+
+181. (!) Cơ sở sư phạm nào cho thiết kế "học qua thất bại"?
+→ Thuyết kiến tạo (constructivism) và "productive failure": sai lầm là dữ
+liệu học quý nhất nếu được giải thích ngay tại ngữ cảnh. Trap biến mỗi lỗi
+phổ biến thành một bài giảng mini đúng lúc — thay vì chỉ báo "Sai".
+
+182. Nội dung bám chương trình lớp mấy?
+→ Hóa 8–9 (vô cơ): acid–bazơ–muối, điều chế và nhận biết chất khí, kim
+loại + phi kim, oxi hóa–khử cơ bản. 8 màn map sang các dạng bài: trung hòa,
+kết tủa AgCl/BaSO4, điều chế CO2, muối đồng, chuỗi sắt Fe→FeCl2→FeCl3,
+nhiệt phân Cu(OH)2, phân biệt CO2/SO2.
+
+183. Hint 3 bậc thiết kế theo nguyên tắc gì?
+→ Scaffolding (giàn giáo hỗ trợ giảm dần): bậc 1 định hướng (thuốc thử nào),
+bậc 2 chiến lược (thứ tự thao tác), bậc 3 đáp án (phương trình đầy đủ) —
+người học chỉ nhận đúng mức hỗ trợ cần, tự đi xa nhất có thể.
+
+184. Phạt sao khi dùng hint có phản tác dụng không (sợ không dám bấm)?
+→ Đã cân bằng: bậc 1–2 vẫn giữ được 2 sao — khuyến khích dùng "đúng liều";
+chỉ bậc 3 (lộ đáp án) phạt nặng về 1 sao. Người chơi vẫn QUA màn được để
+không nản; muốn 3 sao thì chơi lại tự lực — vòng lặp luyện tập lành mạnh.
+
+185. Trap "BaCO3 cũng trắng như BaSO4" (màn 6) dạy kỹ năng gì?
+→ Kết tủa trắng CHƯA ĐỦ để kết luận có ion SO4 — phải phản chứng (BaSO4
+không tan trong acid, BaCO3 tan sủi bọt). Dạy tư duy phản biện thí nghiệm:
+một quan sát có thể có nhiều nguyên nhân.
+
+186. Màn 1 che nhãn 3 lọ nhằm rèn gì?
+→ Quy trình NHẬN BIẾT chất bằng thuốc thử (quỳ tím phân acid/bazơ/muối) —
+dạng bài kinh điển của SGK; buộc người chơi lập kế hoạch thử trước khi trộn,
+không thể làm bừa.
+
+187. Những yếu tố game hóa (gamification) nào được dùng?
+→ Sao 0–3 theo chất lượng lời giải, mở khóa màn tuần tự, bằng tốt nghiệp ảo
+ở 24 sao, confetti + âm thanh ăn mừng, tutorial lần đầu, toast khích lệ,
+thẻ màn chơi hiện tiến độ.
+
+188. Làm sao chặn người chơi thắng bằng thử bừa (brute force)?
+→ (1) Lượng hóa chất đầu màn hữu hạn — đổ bừa là cạn; (2) chất cấm có
+tolerance thấp 0.5–1; (3) thử bừa thường sinh đúng chất BẪY (Fe(OH)2,
+CuCl2...) → thua kèm giải thích; (4) 3 sao đòi sạch tuyệt đối + không hint.
+Thiết kế ép lập kế hoạch như giải bài điều chế thật.
+
+189. Có lo học sinh học "hóa học sai" từ mô hình đơn giản hóa?
+→ Có, và em kiểm soát: chỗ dễ hiểu nhầm nhất là pH trung hòa "tự động" và
+lượng trừu tượng. Giảm thiểu bằng: phương trình CHUẨN luôn hiển thị khi
+phản ứng xảy ra, trap giải thích đúng bản chất, tài liệu hướng dẫn nêu rõ
+giới hạn mô hình, và định vị game là CÔNG CỤ BỔ TRỢ có giáo viên đồng hành.
+
+190. Phản hồi tức thời (immediate feedback) thể hiện ở đâu?
+→ Phản ứng xảy ra là thấy ngay: hiệu ứng + đổi màu + phương trình hiện trên
+feed; quỳ tím báo pH tức thì; nộp bài có giải thích cụ thể; mọi thao tác có
+log — không bao giờ phải đoán "mình vừa làm gì".
+
+191. Game đo lường tiến bộ của học sinh bằng gì?
+→ Hiện: sao mỗi màn, Attempts, HintsUsedEver — đủ thấy xu hướng (càng chơi
+càng ít hint, ít lần thử). Tương lai: phân tích log ActionRecord để chỉ ra
+lỗi sai phổ biến của từng em.
+
+192. Dạy 40 học sinh cùng lúc, giáo viên theo dõi thế nào?
+→ Hiện là bản offline từng máy — giáo viên xem trực tiếp màn hình tổng kết.
+Hướng phát triển đã quy hoạch: tài khoản + dashboard giáo viên tổng hợp sao/
+lỗi sai của cả lớp.
+
+193. Vì sao chọn "điều chế" thay vì "cân bằng phương trình" như app khác?
+→ Cân bằng phương trình là kỹ năng ký hiệu — nhiều app làm rồi. Điều chế
+rèn tư duy QUY TRÌNH + hiện tượng + xử lý sai lầm — gần "làm hóa" thật
+nhất, và là phần học sinh yếu nhất khi chỉ học chay.
+
+194. Độ khó 8 màn tăng dần theo nguyên tắc nào?
+→ Tăng số chất nhiễu (3 lọ → 6 lọ), tăng phản ứng nhiễu (2 → 5), thêm điều
+kiện (đun, sục khí), bẫy tinh vi dần (màn 6 kết tủa trắng giả, màn 8 khí
+giả). Bước nhảy lớn nhất là màn 5: chuỗi 2 bước + oxi hóa khử + thuốc thử.
+
+195. SO2 là khí độc — game có truyền tải an toàn thí nghiệm không?
+→ Có gián tiếp: trap WrongGasSO2 giải thích sinh nhầm khí SO2 và hậu quả;
+hướng bổ sung: icon cảnh báo độc tính trên chất, thông điệp an toàn trong
+mô tả chất (ShortDescription đã có sẵn chỗ).
+
+196. Nếu chương trình SGK thay đổi thì cập nhật có khó không?
+→ Không — nội dung là DATA: sửa asset/seeder, không đụng code. Pipeline
+content chính là "bảo hiểm" trước thay đổi chương trình.
+
+197. Đã cho người thật chơi thử chưa, thu được gì?
+→ (Trả lời thật.) Khung: bạn bè/em nhỏ chơi thử → phát hiện cần đong chính
+xác (thêm popup slider), cần biết đang có gì trong ống (StatePanel), cần
+hướng dẫn đầu (tutorial).
+
+198. Một tiết 45 phút dùng game thế nào là hợp lý?
+→ 5' khởi động demo màn mẫu; 30' học sinh chơi theo cặp 1–2 màn khớp bài
+đang học (cặp để thảo luận — học xã hội); 10' giáo viên chiếu các trap cả
+lớp hay dính và giảng lại đúng chỗ sai.
+
+========================================
+NHÓM K — KIỂM THỬ & CHẤT LƯỢNG
+========================================
+
+199. (!) Em kiểm thử dự án bằng những phương pháp nào?
+→ (1) Chơi thử có hệ thống: mỗi màn đi cả đường thắng 3 sao LẪN cố tình dính
+từng trap; (2) smoke-test checklist cho Content Editor (có file docs trong
+lịch sử commit); (3) Validator chặn dữ liệu lỗi từ khâu soạn; (4) test thủ
+công các edge case kéo-thả. Thừa nhận: chưa có unit test tự động — xem câu 200.
+
+200. Vì sao không có unit test? Nếu viết, test class nào trước?
+→ Từng có asmdef + test, đã gỡ theo quyết định tinh gọn (commit "remove
+asmdefs and unit tests"). Nhận là hạn chế. Nếu viết lại, ưu tiên 3 class
+pure C# dễ test nhất: ReactionMatcher (factor tỉ lệ 2:1, điều kiện Heat),
+PurityChecker (tolerance, thiếu target), WorkspaceState (add/consume/pH).
+
+201. Smoke-test checklist cho Content Editor gồm gì?
+→ Mở window không lỗi; tạo/sửa/xóa từng loại asset; search lọc đúng; inline
+create hoạt động; validation báo đúng lỗi cài sẵn; quick actions (duplicate,
+find references, add to GameManager) chạy; Undo hoàn tác được.
+
+202. Kể 3 bug từng gặp và cách debug?
+→ (1) TMP thiếu font/chỉ số dưới vỡ chữ — fix trong commit "Fix UI overlap
+and TMP rendering"; (2) particle world-space bị canvas che — giải bằng cách
+viết UIParticleBurst chạy trong canvas; (3) hoạt ảnh rót bị LayoutGroup kéo
+giật về grid — giải bằng ignoreLayout + reparent. Phương pháp: cô lập hiện
+tượng, Debug.Log + pause Inspector xem state từng frame.
+
+203. Edge case: đổ 1 mL nhiều lần thay vì đổ nhiều một lần — kết quả khác không?
+→ Trạng thái CUỐI tương đương vì steady-state chạy sau MỖI lần thêm; khác
+biệt chỉ là nhiều event/hiệu ứng hơn. Hành vi này còn đúng bản chất "thêm
+từ từ" của thí nghiệm.
+
+204. Edge case: đổ chất khi đèn khò đang bật — có lỗi thứ tự event không?
+→ Không: mỗi thao tác chạy steady-state với cờ IsHeated HIỆN HÀNH; coroutine
+bay hơi đọc state mới mỗi frame. Phản ứng cần nhiệt sẽ khớp ngay trong lần
+thêm chất đó.
+
+205. Làm sao biết 25 phản ứng đúng và 8 màn đều giải được?
+→ Tự giải từng màn đủ cả 3 mốc sao trước khi chốt nội dung; phương trình
+đối chiếu SGK; Validator chặn lỗi cấu trúc (thiếu output, ratio sai). Mỗi
+màn còn có lời giải chuẩn nằm ngay trong Hint bậc 3.
+
+206. Có lời giải "ngoài ý muốn" (unintended solution) không? Chặn thế nào?
+→ Ba lớp chặn: AvailableReactions giới hạn theo màn (không có phản ứng
+ngoài ý đồ), danh sách chất cấm + tolerance, lượng hóa chất hữu hạn. Ví dụ
+cụ thể: màn 4 không cho CuSO4 có CrystalForm để không "cô cạn ăn gian".
+
+207. Hiệu năng vòng steady-state tệ nhất là bao nhiêu?
+→ Mỗi vòng duyệt ≤ 5 rule × vài input; trần 20 vòng → vài trăm phép so sánh
+là TỆ NHẤT — không đáng kể so với ngân sách 16ms/frame.
+
+208. Designer nhập dữ liệu sai (ratio=0, thiếu output) thì chặn ở đâu?
+→ Validator của Content Editor báo Error ngay khi soạn, trước khi dữ liệu
+kịp vào game. Engine còn lớp phòng thủ thứ hai: bỏ qua input có ratio ≤ 0.
+
+209. Quy trình kiểm tra trước buổi demo?
+→ Seed lại nội dung sạch → chơi xuyên 8 màn pass → kiểm popup/âm thanh/
+tutorial → build máy demo → chuẩn bị sẵn save "gần đủ sao" để demo diploma
+và màn cuối nhanh.
+
+210. Em dùng Debug.Log thế nào trong phát triển?
+→ Log có ngữ cảnh (tên hệ thống + dữ liệu kèm), Warning khi cấu hình thiếu
+(level không tìm thấy...), kết hợp pause editor + Inspector soi state. Khi
+xong tính năng thì dọn log rác để Console sạch.
+
+========================================
+NHÓM L — HIỆU NĂNG & TỐI ƯU
+========================================
+
+211. Độ phức tạp thuật toán matching mỗi lần thao tác?
+→ O(số rule × số input mỗi rule) ≈ vài chục phép so sánh vì mỗi level chỉ
+bật 2–5 rule — chi phí không đáng kể, chạy được mỗi frame nếu cần.
+
+212. Vì sao tra audio clip bằng Dictionary thay vì List?
+→ PlaySfx gọi rất thường xuyên — Dictionary O(1) theo id, List phải duyệt
+O(n) mỗi lần phát; build Dictionary một lần lúc Awake.
+
+213. Instantiate/Destroy particle liên tục có gây GC spike không?
+→ Có tiềm năng (mỗi burst vài chục object). Hiện chưa thành vấn đề ở desktop;
+cải tiến quy hoạch: object pool cho particle — tái dùng Image thay vì hủy.
+
+214. Clone material mỗi view có tốn không? Cách nào tốt hơn?
+→ Mỗi view 1 material instance — chấp nhận được với số lượng ít (≤ chục).
+Cách tối ưu hơn là MaterialPropertyBlock: set property per-renderer không
+clone material — nằm trong danh sách cải tiến.
+
+215. Kéo lọ có gây rebuild layout liên tục không?
+→ Có nếu để lọ trong LayoutGroup — vì vậy khi kéo/chạy hoạt ảnh, lọ được
+reparent ra root + ignoreLayout, tránh LayoutGroup tính lại mỗi frame.
+
+216. Game nặng nhất ở khâu nào: CPU, GPU hay RAM?
+→ Đều nhẹ: logic O(nhỏ), đồ họa 2D ít draw call, asset gọn. Điểm nóng tiềm
+năng duy nhất là nhiều tween + particle đồng loạt — chưa chạm ngưỡng ở desktop.
+
+217. Build size khoảng bao nhiêu, vì sao nhỏ?
+→ Ước vài chục MB — không texture/audio nặng (âm thanh sinh code, sprite
+đơn giản), không thư viện lớn. Thuận lợi khi phát cho trường học mạng yếu.
+
+218. Port lên điện thoại cấu hình thấp thì lo nhất gì?
+→ Không phải hiệu năng mà là UX: vùng chạm kéo-thả nhỏ, text công thức nhỏ
+trên màn 5–6 inch — cần scale lại layout + tăng hit area; logic giữ nguyên.
+
+219. DOTween có nguy cơ tween leak không?
+→ Tween trỏ vào object đã destroy sẽ warning. TweenExt.AwaitAsync có kill
+theo CancellationToken khi UI đóng sớm; popup ngắn hạn nên thực tế chưa
+gặp leak.
+
+220. Trần 20 vòng steady-state đã bao giờ chạm chưa? Đo bằng cách nào?
+→ Chưa — chuỗi dài nhất quan sát là 2–3 phản ứng. Cách đo: log số vòng mỗi
+lần chạy; cải tiến nhỏ: log Warning nếu chạm trần để phát hiện dữ liệu
+định nghĩa vòng lặp.
+
+========================================
+NHÓM M — CÂU HỎI PHẢN BIỆN "XOÁY" (luyện giữ bình tĩnh)
+========================================
+
+221. (!) Game của em chỉ là "nếu A + B thì ra C" theo bảng tra — gọi là
+"mô phỏng" có quá lời không?
+→ Một nửa nhận xét đúng: phản ứng là RULE định nghĩa sẵn — như mọi hệ
+rule-based. Phần "mô phỏng" nằm ở chỗ khác: tính lượng theo chất giới hạn,
+điều kiện môi trường (nhiệt, sục khí), CHUỖI phản ứng tự dây chuyền đến
+trạng thái ổn định, bay hơi – kết tinh liên tục theo thời gian thực, và
+đánh giá độ tinh khiết. Tức là có MÔ HÌNH TRẠNG THÁI ĐỘNG, không phải tra
+cứu một lần.
+
+222. (!) Mô hình của em sai ở đâu so với hóa học thật? Kể ít nhất 3 điểm.
+→ Chủ động kể 5: (1) đơn vị lượng trừu tượng, không phải mol/gam thật;
+(2) pH lấy theo chất mạnh nhất, có cả acid+bazơ thì coi là 7 — chưa xét dư;
+(3) không có nhiệt động học/tốc độ phản ứng (trừ cờ SlowReaction);
+(4) nhiệt độ chỉ 2 mức; (5) lọc/thu khí thiên trực quan. Biện hộ: mức trừu
+tượng NHẮM ĐÚNG trình độ THCS — SGK cũng chỉ yêu cầu định tính + hệ số;
+và kiến trúc data-driven cho phép nâng độ chính xác sau mà không đập lại.
+
+223. (!) Đổ NaOH vào nước cất trong game có hiện tượng gì không? Ngoài đời
+có tỏa nhiệt — game thiếu gì?
+→ Trong game chỉ là pha loãng, không có hiện tượng — đúng là thiếu NHIỆT
+PHẢN ỨNG (enthalpy). Thừa nhận thẳng; hướng bổ sung đã hình dung: thêm
+trường ΔH vào ReactionRule và hiệu ứng Steam/nóng lên khi hòa tan tỏa
+nhiệt. Trả lời kiểu này cho thấy em hiểu cả cái mình CHƯA làm.
+
+224. Vì sao có cả acid và bazơ thì pH mặc định = 7? Dư acid mạnh thì sao?
+→ Là đơn giản hóa có chủ đích cho quỳ tím 3 trạng thái của THCS. Đúng là
+chưa xét bên dư; hướng sửa đã nghĩ: so tổng "đương lượng" acid/bazơ còn lại
+rồi nội suy pH về phía bên dư. Lưu ý: phần CHẤM ĐIỂM không dựa pH mà dựa
+lượng chất thật trong ống nên không gây chấm sai.
+
+225. Em nói "tách pure C# để dễ test" nhưng không có test — mâu thuẫn không?
+→ Kiến trúc ENABLE test khác với ĐÃ viết test — em ưu tiên quỹ thời gian
+cho tính năng và nội dung. Nhận hạn chế, và sẵn sàng demo viết 1 test cho
+ReactionMatcher ngay tại chỗ nếu hội đồng muốn — vì kiến trúc cho phép,
+việc đó chỉ mất vài phút.
+
+226. Học sinh giỏi thấy game dễ, học sinh yếu thấy khó — cân bằng kiểu gì?
+→ Người yếu: hint 3 bậc + được qua màn với 1 sao + trap giải thích tận nơi.
+Người giỏi: mốc 3 sao khắt khe + đường giải dài (màn 4: Cu→CuO→CuSO4 thay
+vì đường tắt) + màn sau nhiều nhiễu. Cùng một màn phục vụ 2 mức là nhờ
+tách "qua màn" khỏi "qua màn xuất sắc".
+
+227. Vì sao tôi phải tin 25 phản ứng của em đúng?
+→ Nguồn: phương trình chuẩn SGK hóa 8–9; quy trình: đối chiếu từng phản ứng
+khi soạn + validation cấu trúc; minh bạch: phương trình hiển thị ngay trong
+game. Em mời hội đồng kiểm tra bất kỳ phản ứng nào ngay bây giờ — (tự tin,
+vì 25 phản ứng đều là kiến thức phổ thông chuẩn).
+
+228. Em làm một mình hay nhờ AI/code mẫu? Em hiểu sâu tới đâu?
+→ Trả lời TRUNG THỰC theo thực tế của bạn (có dùng công cụ gì thì nói).
+Điểm mấu chốt cần chốt: em chịu trách nhiệm và hiểu mọi quyết định thiết
+kế — mời hội đồng chỉ bất kỳ class nào, em giải thích cơ chế và lý do tồn
+tại của nó ngay tại chỗ.
+
+229. Bỏ hết hiệu ứng đẹp đi thì giá trị cốt lõi còn lại là gì?
+→ Ba thứ không liên quan đến hiệu ứng: engine mô phỏng rule-based với thuật
+toán chất giới hạn; thiết kế sư phạm trap/hint/purity; pipeline công cụ nội
+dung có validation. Hiệu ứng chỉ là lớp trình bày — và đó chính là minh
+chứng kiến trúc tách tầng tốt.
+
+230. So với PhET (đại học Colorado, miễn phí), em thua kém gì và hơn gì?
+→ Thua: độ sâu mô phỏng vật lý, độ phủ chủ đề, đội ngũ kiểm định. Hơn trong
+ngách của mình: tiếng Việt bám SGK THCS, có MỤC TIÊU + chấm điểm + tiến
+trình (PhET là sandbox quan sát), bẫy sư phạm giải thích sai lầm, và công
+cụ cho giáo viên Việt tự soạn màn. Định vị khác nhau: PhET để quan sát
+hiện tượng, game của em để LUYỆN quy trình.
+
+231. 8 màn có quá ít cho một đồ án tốt nghiệp không?
+→ Định vị lại: đồ án không phải "8 màn chơi" mà là HỆ THỐNG — engine + 43
+chất + 25 phản ứng + pipeline soạn nội dung. 8 màn là bộ minh chứng phủ đủ
+các dạng bài THCS. Và em xin demo: tạo màn thứ 9 ngay trước hội đồng trong
+vài phút bằng Content Editor — tốc độ nhân nội dung chính là giá trị.
+
+232. Vì sao không làm web để học sinh khỏi cài đặt?
+→ Quỹ thời gian đồ án dồn cho 1 nền tảng làm tốt nhất; web thuần phải tự
+viết toàn bộ kéo-thả/render/animation. Quan trọng: Unity export WebGL được
+— đường lên web là re-build, không phải viết lại. Đây là quyết định trì
+hoãn có chủ đích, không phải bế tắc kỹ thuật.
+
+233. Game có gì chống việc học vẹt đáp án (xem bạn chơi rồi bắt chước)?
+→ Mức hiện tại: muốn 3 sao phải đong lượng hợp lý chứ không chỉ đúng thứ tự;
+bắt chước mù vẫn dễ dính trap. Thừa nhận thứ tự lọ/lượng đang cố định —
+hướng đã nghĩ: randomize vị trí lọ che nhãn và lượng ban đầu giữa các lần
+chơi (data-driven nên dễ thêm).
+
+234. Tutorial chỉ một đoạn text — đủ cho học sinh lớp 8 không?
+→ Cho phạm vi demo là đủ vì MÀN 1 chính là tutorial thực hành (ít lọ, ít
+phản ứng, bẫy nhẹ). Hướng nâng cấp: tutorial tương tác từng bước có
+highlight (kiến trúc UI lane System đã sẵn chỗ cho overlay hướng dẫn).
+
+235. Thầy yêu cầu thêm màn "điều chế oxi" trước ngày mai — em cần bao lâu?
+→ Nếu dùng chất sẵn có: 30–60 phút bằng Content Editor (tạo level, purity,
+trap, hint, register, chơi thử). Điều chế O2 cần thêm chất mới (KMnO4 hoặc
+H2O2/MnO2) + 1–2 phản ứng: thêm ~30 phút nữa. Trả lời được CON SỐ cụ thể
+nhờ pipeline — đó chính là điều em muốn chứng minh.
+
+236. Số đo nào chứng minh game "có tính giáo dục" chứ không phải em tự nhận?
+→ Hiện mới có: nội dung align SGK + phản hồi người chơi thử + các chỉ số
+hành vi (attempts/hints giảm dần). Chuẩn khoa học cần thực nghiệm pre-test/
+post-test nhóm đối chứng — em trình bày như THIẾT KẾ THÍ NGHIỆM tương lai;
+log ActionRecord đã ghi đủ dữ liệu thao tác để phân tích.
+
+237. Kiến trúc 4 tầng có over-engineering cho game 8 màn không?
+→ Không, vì nó phục vụ đúng 2 mục tiêu đã tuyên bố: nội dung nhân rộng được
+(data-driven) và logic kiểm chứng được (pure C#). Hard-code 8 màn thì nhanh
+hơn 2-3 tuần nhưng chết ở mở rộng và không có giá trị học thuật. Trade-off
+có chủ đích, không phải thói quen thêm tầng.
+
+238. Vì sao chấm theo "chất tồn tại trong ống" mà không chấm "quy trình thao tác"?
+→ Kết quả hóa học là bằng chứng KHÁCH QUAN của quy trình đúng — chấm quy
+trình dễ phạt oan cách giải sáng tạo khác lời giải mẫu. Engine vẫn ghi đủ
+History từng thao tác, nên chấm quy trình (vd kỹ thuật an toàn) là tính
+năng thêm được sau mà không sửa nền.
+
+239. Trước ý kiến "phải mã hóa file save", em bảo vệ PlayerPrefs thế nào?
+→ Phân tích mối đe dọa: offline, single-player, không leaderboard → không
+có nạn nhân lẫn động cơ gian lận; mã hóa client chỉ làm khó người mày mò
+chứ không chặn được về nguyên tắc (key nằm trong client). Nguồn lực dồn
+vào rủi ro thật (mất save → đã có fail-safe reset). Khi có online: chuyển
+xác thực + chấm điểm về server — lúc đó mới là bài toán bảo mật thật.
+
+240. Nếu làm lại từ đầu, em đổi quyết định kỹ thuật nào trước tiên?
+→ (Chọn 1–2, nói chân thành): (1) viết unit test cho engine NGAY TỪ ĐẦU —
+pure C# nên chi phí thấp, lợi ích cao; (2) thiết kế Amount gắn mol thật từ
+đầu để sau nâng cấp không phải migrate; (3) gom text hiển thị vào bảng
+localization sớm thay vì hard-code tiếng Việt. Tránh trả lời "không đổi gì"
+— hội đồng muốn thấy năng lực tự phản biện.
+
+========================================
+NHÓM N — TÌNH HUỐNG & MỞ RỘNG
+========================================
+
+241. Thêm hóa hữu cơ cần sửa lớp nào, giữ nguyên gì?
+→ Giữ nguyên: engine, matcher, purity, UI, editor tool. Thêm: asset chất/
+phản ứng mới (enum điều kiện Catalyst/Light đã có sẵn); phần mới thật sự là
+UI hiển thị công thức cấu tạo nếu muốn dạy sâu.
+
+242. Thêm chế độ sandbox (trộn tự do) tốn bao nhiêu công?
+→ Engine sẵn sàng (bỏ PurityRule, nạp toàn bộ reactions). Việc chính là UI
+chọn chất từ danh mục dài + cân nhắc hiệu năng matching với 25+ rule cùng
+lúc (vẫn nhỏ). Ước 1–2 tuần.
+
+243. Chế độ 2 người đối kháng (ai điều chế nhanh hơn)?
+→ Khả thi vì ChemistryEngine là class thường — mỗi người 1 instance chạy
+song song + đồng hồ chung. Khối lượng chính nằm ở UI chia màn và (nếu
+online) netcode đồng bộ, không nằm ở engine.
+
+244. Leaderboard online cần hạ tầng gì?
+→ Backend lưu điểm (sao, thời gian giải), xác thực người dùng, và QUAN
+TRỌNG: chấm điểm server-side chống gian lận — port engine pure C# lên
+server để verify lời giải từ log ActionRecord.
+
+245. Thêm tiếng Anh — các bước localize?
+→ (1) Gom text hard-code (tutorial, tiêu đề popup, toast) vào bảng key-value;
+(2) data thêm cột đa ngôn ngữ cho DisplayName/ObjectiveText/ExplanationVi/
+Hint; (3) Settings.Lang đã có sẵn làm công tắc. Khối lượng chủ yếu là dịch
+nội dung, không phải sửa kiến trúc.
+
+246. Thêm nồng độ mol/L thì ảnh hưởng lan tới đâu?
+→ Amount thêm khái niệm thể tích dung môi; pH tính từ nồng độ thay vì tra
+chất mạnh nhất; matcher giữ nguyên (ratio đã là mol). Điểm sửa tập trung ở
+struct Amount + CalculatePH — minh chứng lợi ích của việc bọc kiểu từ đầu.
+
+247. Thêm "sổ tay hóa học" tra cứu chất?
+→ Dữ liệu CÓ SẴN trong SubstanceData (công thức, phân loại, màu, pH, mô
+tả) — chỉ cần một màn hình UI duyệt asset, ước 2–3 ngày. Cho thấy lợi ích
+phụ của data-driven: dữ liệu dùng lại được cho tính năng mới.
+
+248. Chuyển sang VR phòng thí nghiệm — phần nào sống sót?
+→ Toàn bộ tầng Chemistry nguyên vẹn (không biết gì về cách hiển thị). Thay
+tầng tương tác: XR grab thay kéo-thả 2D, view 3D thay LayeredLiquidView.
+Câu này chính là bài test giá trị của kiến trúc tách tầng — và nó pass.
+
+249. Muốn chấm "kỹ thuật thao tác" (rót acid vào nước, không ngược lại)?
+→ History đã ghi đủ: chuỗi ActionRecord có thứ tự, chất, lượng, thời điểm.
+Chỉ cần viết bộ rule đánh giá TRÌNH TỰ trên log đó lúc nộp bài — không đụng
+engine.
+
+250. Làm bản cho tiểu học thì đổi gì?
+→ Engine rule-based dùng lại NGUYÊN XI — chỉ thay data + skin: "pha màu",
+"nguyên liệu nấu ăn" thay hóa chất; bỏ công thức, tăng hiệu ứng. Cho thấy
+engine thực chất là hệ "trộn chất theo luật" tổng quát.
+
+251. Tích hợp AI gợi ý thông minh thay hint tĩnh?
+→ Kiến trúc hình dung: bộ phân tích so sánh WorkspaceState hiện tại với
+đích (thiếu chất gì, đang dính trap nào, còn nguyên liệu gì) → sinh gợi ý
+ngữ cảnh. Làm rule-based trước (đủ tốt, rẻ), LLM là bước sau nếu cần ngôn
+ngữ tự nhiên.
+
+252. Trường muốn cài 500 máy — có vấn đề phân phối/bản quyền không?
+→ Build offline copy tự do, không DRM; asset 100% tự sinh nên sạch bản
+quyền; cần kiểm tra license các package (DOTween bản free, UniTask MIT).
+Việc còn lại chỉ là installer + hướng dẫn.
+
+253. Thêm chế độ "thi đấu 10 phút" đụng vào FSM thế nào?
+→ Thêm bộ đếm giờ trong trạng thái Playing (hoặc state TimedPlaying mới),
+hết giờ ép chuyển Submitting; tiêu chí thời gian cộng vào CalculateStars.
+FSM hiện tại mở rộng tự nhiên, không phá luồng cũ.
+
+254. Cho cộng đồng tự tạo màn (UGC) — rủi ro và giải pháp?
+→ Rủi ro lớn nhất: nội dung hóa học SAI lan truyền (phản giáo dục). Giải
+pháp: validation tự động (đã có nền Validator) + duyệt thủ công trước khi
+công khai + cơ chế báo cáo. Kỹ thuật chia sẻ: export/import JSON từ
+ScriptableObject.
+
+255. Roadmap 6 tháng nếu được đầu tư tiếp?
+→ Tháng 1–2: unit test + hệ mol/nồng độ; tháng 3: thêm 8–12 màn + mở đầu
+hữu cơ; tháng 4: WebGL + localization; tháng 5: dashboard giáo viên; tháng
+6: thử nghiệm tại trường, đo pre/post-test và công bố kết quả.
+
+========================================
+NHÓM O — CÂU HỎI NHANH VỀ MÃ NGUỒN (trả lời < 15 giây)
+========================================
+
+256. Class nào quyết định một phản ứng có xảy ra hay không?
+→ ReactionMatcher (kiểm điều kiện + tính limiting factor); ChemistryEngine
+là nơi áp dụng kết quả.
+
+257. Event nào bắn khi nội dung ống nghiệm thay đổi?
+→ StateChanged của ChemistryEngine (kèm danh sách phản ứng vừa xảy ra).
+
+258. Hàm nào tính số sao, nằm ở đâu?
+→ CalculateStars trong GameplayController, gọi trong HandleSubmit.
+
+259. LevelConfig là gì, tạo bằng cách nào?
+→ ScriptableObject asset; tạo qua CreateAssetMenu "ChemistryGame/Level
+Config", qua ChemistrySeeder, hoặc tab Levels của Content Editor.
+
+260. Bấm "Nộp bài" thì event nào được bắn, ai xử lý?
+→ GameplayEvents.RaiseSubmit() → GameplayController.HandleSubmit() (đã
+subscribe trong OnEnable).
+
+261. Prefab lọ hóa chất gồm những component chính nào?
+→ DraggableBottle (kế thừa DraggableItem) + LayeredLiquidView (hiển thị
+chất lỏng) + BottlePourAnimator (hoạt ảnh rót) trên RectTransform/Image.
+
+262. Key PlayerPrefs của save là gì?
+→ "OngNghiem_PlayerData".
+
+263. Đèn khò bay hơi và kết tinh với tốc độ bao nhiêu?
+→ Bay hơi 12 đơn vị/giây, kết tinh 6 đơn vị/giây (2 pha nối tiếp).
+
+264. Shader chất lỏng tên gì, tối đa mấy lớp màu?
+→ "ChemistryGame/LiquidLayered", tối đa 4 lớp (_C1.._C4).
+
+265. Người chơi đang kéo lọ thì FSM ở trạng thái nào?
+→ Playing.
+
+266. Hàm GetHint(tier) thuộc class nào?
+→ HintBundle (ScriptableObject) — trả về chuỗi theo bậc 1/2/3.
+
+267. Màn nào có lọ bị che nhãn?
+→ Màn 1 — ba lọ "Lọ A/B/C" (HCl, NaOH, Na2CO3).
+
+268. Phản ứng nào trong game yêu cầu điều kiện Heat?
+→ Cu_O2 (2Cu + O2 → 2CuO) và CuOH2_Heat (Cu(OH)2 → CuO + H2O).
+
+269. Tổng sao tối đa toàn game? Diploma cần bao nhiêu?
+→ 24 sao (8 màn × 3); Diploma mở đúng ở mốc 24.
+
+270. Tutorial hiện ở điều kiện nào?
+→ Màn 1 VÀ lần chơi đầu tiên (Attempts == 0).
+
+================================================================================
+(Hết — 270 câu hỏi-đáp. Khi luyện: che phần "→", tự trả lời rồi đối chiếu.
+Các câu (!) nên luyện nhiều lần nhất. Chúc bảo vệ thành công!)
+================================================================================

@@ -91,7 +91,7 @@ namespace ChemistryGame.Gameplay
         {
             if (_activeBottle == null || slider == null || _onConfirm == null) { Close(); return; }
             var amt = Mathf.Min(slider.value, _activeBottle.CurrentAmount);
-            AudioManager.Instance?.PlaySfx("sfx_pour");
+            AudioManager.Instance?.PlaySfx(_activeBottle.IsSolidLike ? "sfx_drop" : "sfx_pour");
             _onConfirm.Invoke(amt);
             Close();
         }

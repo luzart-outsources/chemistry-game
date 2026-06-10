@@ -42,6 +42,12 @@ namespace ChemistryGame.Gameplay
         [SerializeField] private float rotateDurationBase = 0.6f;
         [SerializeField] private float moveDuration = 0.35f;
 
+        [Header("Solid drop (thả cục chất rắn)")]
+        [SerializeField] private float chunkFallDuration = 0.32f;
+        [SerializeField] private float chunkSinkDuration = 0.22f;
+        [Tooltip("Kích thước cục rơi so với size chai (0.45 = 45%).")]
+        [SerializeField, Range(0.2f, 0.8f)] private float chunkSizeRatio = 0.45f;
+
         private Vector2 _originAnchoredPos;
         private Quaternion _originRotation;
         private Transform _chosenPivot;
@@ -75,32 +81,25 @@ namespace ChemistryGame.Gameplay
             StartCoroutine(PourSequence(targetTubeRect, targetTubeView, amount, onMidPour, onComplete));
         }
 
+        /// <summary>
+        /// Animation cho CHẤT RẮN: chai (đang hiển thị dạng cục) bay đến lơ lửng trên
+        /// miệng ống, "fake" 1 cục nhỏ tách ra rơi thẳng xuống mặt chất lỏng, chìm rồi
+        /// biến mất. KHÔNG nghiêng chai, KHÔNG vẽ stream nước.
+        /// onImpact invoked đúng lúc cục chạm mặt nước — caller gọi engine.AddSubstance ở đây.
+        /// </summary>
+        public void DropSolidTo(RectTransform targetTubeRect, LayeredLiquidView targetTubeView,
+            Sprite chunkSprite, Color chunkColor, Action onImpact, Action onComplete)
+        {
+            if (_busy) return;
+            if (targetTubeRect == null || targetTubeView == null) return;
+            StartCoroutine(DropSequence(targetTubeRect, targetTubeView, chunkSprite, chunkColor, onImpact, onComplete));
+        }
+
         private IEnumerator PourSequence(RectTransform tubeRect, LayeredLiquidView tubeView,
             float amount, Action onMidPour, Action onComplete)
         {
             _busy = true;
-
-            // Snapshot the origin FRESH (layout group may have moved us since Awake).
-            var rtSnap = (RectTransform)transform;
-            _originAnchoredPos = rtSnap.anchoredPosition;
-            _originRotation = transform.localRotation;
-
-            // Detach from VerticalLayoutGroup/HorizontalLayoutGroup so we can move freely.
-            _layoutElem = GetComponent<UnityEngine.UI.LayoutElement>();
-            if (_layoutElem == null) _layoutElem = gameObject.AddComponent<UnityEngine.UI.LayoutElement>();
-            _layoutElem.ignoreLayout = true;
-
-            // Reparent ra ngoài Viewport/Mask để không bị clip khi bay sang tube area.
-            // Lên cao nhất trong Gameplay prefab (sibling của InventoryPanel + Workspace).
-            _originalParent = transform.parent;
-            _originalSiblingIndex = transform.GetSiblingIndex();
-            // Find ancestor Gameplay (root of current gameplay prefab) — first ancestor without Mask above.
-            var newParent = FindSafeAncestor(_originalParent);
-            if (newParent != null && newParent != _originalParent)
-            {
-                rtSnap.SetParent(newParent, worldPositionStays: true);
-                rtSnap.SetAsLastSibling(); // render trên top
-            }
+            PrepareForAnimation();
 
             // 1. Choose pivot point based on relative X position.
             float myX = transform.position.x;
@@ -109,8 +108,6 @@ namespace ChemistryGame.Gameplay
             else                { _chosenPivot = rightRotatePoint; _directionMultiplier = 1f; }
 
             // 2. Move chai sao cho pivot trùng cạnh tube.
-            var rt = (RectTransform)transform;
-            Vector2 startWorld = rt.position;
             // mục tiêu: pivot điểm = cạnh trên của tube (top-mid)
             Vector3 tubeTopWorld = tubeView.GetTopWorldPosition();
             // offset: pivot không phải transform.position. tính offset trong local space.
@@ -118,15 +115,7 @@ namespace ChemistryGame.Gameplay
             Vector3 offsetWorldFromPivot = transform.position - pivotWorld;
             Vector3 destWorld = tubeTopWorld + offsetWorldFromPivot + new Vector3(0, 0.2f, 0); // 0.2 unit above
 
-            float t = 0f;
-            Vector3 fromWorld = rt.position;
-            while (t < moveDuration)
-            {
-                t += Time.deltaTime;
-                rt.position = Vector3.Lerp(fromWorld, destWorld, t / moveDuration);
-                yield return null;
-            }
-            rt.position = destWorld;
+            yield return MoveRoutine(destWorld, moveDuration);
 
             // 3. Mid-pour callback (data transfer happens here).
             onMidPour?.Invoke();
@@ -202,11 +191,142 @@ namespace ChemistryGame.Gameplay
             transform.localRotation = _originRotation;
             liquidView.SurfaceTilt = 0f;
 
-            // 6. Move back to origin.
-            elapsed = 0f;
+            // 6. Move back to origin + restore layout slot.
+            yield return ReturnToOriginRoutine();
+
+            _busy = false;
+            onComplete?.Invoke();
+        }
+
+        /// <summary>
+        /// Sequence cho chất rắn: bay lên trên miệng ống → thả 1 cục nhỏ rơi xuống
+        /// (gia tốc như trọng lực) → cục chìm + mờ dần → chai quay về kệ.
+        /// </summary>
+        private IEnumerator DropSequence(RectTransform tubeRect, LayeredLiquidView tubeView,
+            Sprite chunkSprite, Color chunkColor, Action onImpact, Action onComplete)
+        {
+            _busy = true;
+            PrepareForAnimation();
+
+            // Hình học tube trong world-space (đúng với mọi canvas scale).
+            var corners = new Vector3[4];
+            tubeRect.GetWorldCorners(corners);
+            Vector3 bottomMid = Vector3.Lerp(corners[0], corners[3], 0.5f);
+            Vector3 topMid = Vector3.Lerp(corners[1], corners[2], 0.5f);
+            float tubeHeight = Vector3.Distance(bottomMid, topMid);
+
+            // 1. Bay đến lơ lửng phía trên miệng ống (giữ thẳng đứng, không nghiêng).
+            Vector3 hoverPos = topMid + Vector3.up * (tubeHeight * 0.25f);
+            yield return MoveRoutine(hoverPos, moveDuration);
+
+            // 2. "Fake" 1 cục nhỏ tách khỏi chai, rơi thẳng xuống.
+            var rootRect = (RectTransform)transform;
+            var chunkGo = new GameObject("SolidChunk",
+                typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+            var chunkRt = (RectTransform)chunkGo.transform;
+            chunkRt.SetParent(transform.parent, false); // cùng safe-ancestor → không bị Mask clip
+            chunkRt.SetAsLastSibling();
+            var chunkImg = chunkGo.GetComponent<Image>();
+            chunkImg.sprite = chunkSprite;               // null vẫn ok: quad trắng tint màu chất
+            chunkImg.color = chunkColor;
+            chunkImg.preserveAspect = true;
+            chunkImg.raycastTarget = false;
+            chunkRt.sizeDelta = rootRect.rect.size * chunkSizeRatio;
+            chunkRt.position = transform.position;
+
+            // Điểm chạm: mặt chất lỏng hiện tại (hoặc gần đáy nếu ống rỗng).
+            float surface01 = Mathf.Max(0.12f, tubeView.CurrentFill01) * 0.9f;
+            Vector3 impactPos = Vector3.Lerp(bottomMid, topMid, Mathf.Clamp01(surface01));
+
+            float t = 0f;
+            Vector3 fallFrom = chunkRt.position;
+            while (t < chunkFallDuration)
+            {
+                t += Time.deltaTime;
+                float k = Mathf.Clamp01(t / chunkFallDuration);
+                k *= k; // ease-in: rơi nhanh dần kiểu trọng lực
+                chunkRt.position = Vector3.Lerp(fallFrom, impactPos, k);
+                chunkRt.localEulerAngles = new Vector3(0f, 0f, Mathf.Lerp(8f, -14f, k)); // lộn nhẹ
+                yield return null;
+            }
+            chunkRt.position = impactPos;
+
+            // 3. Chạm mặt nước: data vào engine (tube tự tween fill qua OnStateChanged).
+            onImpact?.Invoke();
+
+            // 4. Cục chìm thêm một đoạn + mờ dần rồi biến mất.
+            t = 0f;
+            Vector3 sinkDest = impactPos - Vector3.up * (tubeHeight * 0.1f);
+            Color fadeFrom = chunkImg.color;
+            while (t < chunkSinkDuration)
+            {
+                t += Time.deltaTime;
+                float k = Mathf.Clamp01(t / chunkSinkDuration);
+                chunkRt.position = Vector3.Lerp(impactPos, sinkDest, k);
+                var c = fadeFrom; c.a = 1f - k;
+                chunkImg.color = c;
+                yield return null;
+            }
+            Destroy(chunkGo);
+
+            // 5. Chai (cục lớn) quay về kệ.
+            yield return ReturnToOriginRoutine();
+
+            _busy = false;
+            onComplete?.Invoke();
+        }
+
+        // ===== Shared animation steps (dùng chung cho Pour + Drop) =====
+
+        /// <summary>Snapshot origin + tách khỏi layout group + reparent ra ngoài Mask.</summary>
+        private void PrepareForAnimation()
+        {
+            // Snapshot the origin FRESH (layout group may have moved us since Awake).
+            var rtSnap = (RectTransform)transform;
+            _originAnchoredPos = rtSnap.anchoredPosition;
+            _originRotation = transform.localRotation;
+
+            // Detach from VerticalLayoutGroup/HorizontalLayoutGroup so we can move freely.
+            _layoutElem = GetComponent<UnityEngine.UI.LayoutElement>();
+            if (_layoutElem == null) _layoutElem = gameObject.AddComponent<UnityEngine.UI.LayoutElement>();
+            _layoutElem.ignoreLayout = true;
+
+            // Reparent ra ngoài Viewport/Mask để không bị clip khi bay sang tube area.
+            // Lên cao nhất trong Gameplay prefab (sibling của InventoryPanel + Workspace).
+            _originalParent = transform.parent;
+            _originalSiblingIndex = transform.GetSiblingIndex();
+            // Find ancestor Gameplay (root of current gameplay prefab) — first ancestor without Mask above.
+            var newParent = FindSafeAncestor(_originalParent);
+            if (newParent != null && newParent != _originalParent)
+            {
+                rtSnap.SetParent(newParent, worldPositionStays: true);
+                rtSnap.SetAsLastSibling(); // render trên top
+            }
+        }
+
+        /// <summary>Lerp world-position của chai đến dest trong duration giây.</summary>
+        private IEnumerator MoveRoutine(Vector3 destWorld, float duration)
+        {
+            var rt = (RectTransform)transform;
+            float t = 0f;
+            Vector3 fromWorld = rt.position;
+            while (t < duration)
+            {
+                t += Time.deltaTime;
+                rt.position = Vector3.Lerp(fromWorld, destWorld, t / duration);
+                yield return null;
+            }
+            rt.position = destWorld;
+        }
+
+        /// <summary>Bay về vị trí gốc rồi gắn lại vào layout group (slot cũ).</summary>
+        private IEnumerator ReturnToOriginRoutine()
+        {
+            var rt = (RectTransform)transform;
+            float elapsed = 0f;
             Vector3 backFrom = rt.position;
             Vector3 backDest;
-            if (rt.parent is RectTransform parentRt)
+            if (rt.parent is RectTransform)
             {
                 // convert anchoredPos -> world
                 rt.anchoredPosition = _originAnchoredPos;
@@ -231,9 +351,6 @@ namespace ChemistryGame.Gameplay
             }
             // Restore layout flow so VerticalLayoutGroup positions us back into the slot.
             if (_layoutElem != null) _layoutElem.ignoreLayout = false;
-
-            _busy = false;
-            onComplete?.Invoke();
         }
 
         /// <summary>

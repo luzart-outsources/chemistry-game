@@ -466,6 +466,8 @@ MonoBehaviour:
   liquidImage: {fileID: 8686800050637322769}
   labelText: {fileID: 689745627565435083}
   amountText: {fileID: 7531790671053619773}
+  solidChunkSprite: {fileID: 21300000, guid: 7de6e407814d952488d58ce4bd1f41de, type: 2}
+  solidLabelSuffix: ' (rắn)'
 --- !u!114 &7208167155655027454
 MonoBehaviour:
   m_ObjectHideFlags: 0

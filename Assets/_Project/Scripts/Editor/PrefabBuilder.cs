@@ -14,6 +14,7 @@ namespace ChemistryGame.EditorTools
     /// <summary>
     /// Builds tất cả prefabs cho game: UI screens, popups, gameplay items.
     /// Idempotent: overwrite nếu đã tồn tại.
+    /// Ngoại lệ: DraggableBottle.prefab KHÔNG bị ghi đè nếu đã có (xem BuildBottlePrefab).
     /// </summary>
     public static class PrefabBuilder
     {
@@ -121,32 +122,76 @@ namespace ChemistryGame.EditorTools
         }
 
         // ===== Bottle =====
+        /// <summary>
+        /// Build DraggableBottle khớp đúng cấu trúc DraggableBottle.prefab hiện tại:
+        /// body sprite bottle_body, child Liquid full-stretch + LayeredLiquidView (material LiquidLayered),
+        /// BottlePourAnimator (LeftPivot/RightPivot + StreamLine LineRenderer), LayoutElement 140x200,
+        /// solidChunkSprite = Assets/Sprite/bg_02.asset.
+        /// Guard: nếu prefab đã tồn tại thì KHÔNG ghi đè — SaveAsPrefabAsset sẽ sinh lại fileID
+        /// (gãy reference bên ngoài) và xoá mọi tinh chỉnh tay. Muốn build lại: xoá file prefab trước.
+        /// </summary>
         public static GameObject BuildBottlePrefab()
         {
+            string path = $"{GP_DIR}/DraggableBottle.prefab";
+            var existing = AssetDatabase.LoadAssetAtPath<GameObject>(path);
+            if (existing != null)
+            {
+                Debug.Log($"[PrefabBuilder] Bỏ qua {path}: đã tồn tại, không ghi đè để giữ tinh chỉnh tay. Xoá file nếu muốn build lại từ đầu.");
+                return existing;
+            }
+
+            var bodySprite  = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/_Project/Art/Sprites/bottle_body.png");
+            var liquidMat   = AssetDatabase.LoadAssetAtPath<Material>("Assets/_Project/Art/Materials/LiquidLayered.mat");
+            var chunkSprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprite/bg_02.asset");
+            if (bodySprite == null || liquidMat == null || chunkSprite == null)
+                Debug.LogWarning("[PrefabBuilder] Thiếu asset cho DraggableBottle (bottle_body.png / LiquidLayered.mat / bg_02.asset) — field tương ứng sẽ để trống.");
+
             var root = new GameObject("DraggableBottle", typeof(RectTransform), typeof(CanvasGroup), typeof(Image));
             var rt = root.GetComponent<RectTransform>();
-            rt.sizeDelta = new Vector2(120, 180);
-            var bodyImg = root.GetComponent<Image>();
-            bodyImg.color = new Color(0.95f, 0.95f, 0.95f, 0.4f);
+            rt.sizeDelta = new Vector2(140, 200);
+            var bodyImg = AddImage(root, Color.white, bodySprite);
 
-            // Liquid inside
+            // Liquid: full-stretch, cùng sprite chai, material LiquidLayered (shader fill nhiều lớp)
             var liquidGo = MakeUI("Liquid", root.transform);
-            var lrt = Anchor(liquidGo, new Vector2(0.15f, 0.05f), new Vector2(0.85f, 0.85f), Vector2.zero, Vector2.zero);
-            var liqImg = AddImage(liquidGo, new Color(0.4f, 0.8f, 1f, 0.7f));
-            liqImg.type = Image.Type.Filled;
-            liqImg.fillMethod = Image.FillMethod.Vertical;
-            liqImg.fillOrigin = (int)Image.OriginVertical.Bottom;
-            liqImg.fillAmount = 1f;
+            Anchor(liquidGo, Vector2.zero, Vector2.one, Vector2.zero, Vector2.zero);
+            var liqImg = AddImage(liquidGo, Color.white, bodySprite);
+            liqImg.material = liquidMat;
+            liqImg.preserveAspect = true;
+            liqImg.fillMethod = Image.FillMethod.Vertical; // type vẫn Simple; chỉ để khớp serialized state của prefab
 
-            // Label
-            var labelGo = MakeUI("Label", root.transform);
-            Anchor(labelGo, new Vector2(0f, 0.85f), new Vector2(1f, 1.05f), Vector2.zero, Vector2.zero);
-            var labelT = AddText(labelGo, "?", 22, Color.black);
+            var liquidView = liquidGo.AddComponent<LayeredLiquidView>();
+            var lvSo = new SerializedObject(liquidView);
+            lvSo.FindProperty("maxCapacity").floatValue = 100f; // prefab override; default trong script là 80
+            lvSo.ApplyModifiedProperties();
 
-            // Amount
+            // Amount (dưới đáy chai)
             var amtGo = MakeUI("Amount", root.transform);
-            Anchor(amtGo, new Vector2(0f, -0.15f), new Vector2(1f, 0f), Vector2.zero, Vector2.zero);
-            var amtT = AddText(amtGo, "50", 18, Color.white);
+            Anchor(amtGo, new Vector2(0.15f, -0.18f), new Vector2(0.85f, 0f), Vector2.zero, Vector2.zero);
+            var amtT = AddText(amtGo, "50", 22, new Color(1f, 0.95f, 0.7f));
+            amtT.fontStyle = FontStyles.Bold;
+
+            // Pivot xoay khi rót (BottlePourAnimator.RotateAround quanh miệng chai)
+            var leftPivotRt = Anchor(MakeUI("LeftPivot", root.transform),
+                new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
+            leftPivotRt.anchoredPosition = new Vector2(-30, 85);
+            var rightPivotRt = Anchor(MakeUI("RightPivot", root.transform),
+                new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
+            rightPivotRt.anchoredPosition = new Vector2(30, 85);
+
+            // StreamLine: Transform thường (không phải RectTransform) — LineRenderer vẽ world-space
+            var streamGo = new GameObject("StreamLine");
+            streamGo.transform.SetParent(root.transform, false);
+            var streamLine = streamGo.AddComponent<LineRenderer>();
+            streamLine.enabled = false;
+            streamLine.startWidth = 0.08f;
+            streamLine.endWidth = 0.04f;
+            streamLine.sortingOrder = 100;
+
+            // Label (công thức chất — giữa thân chai)
+            var labelGo = MakeUI("Label", root.transform);
+            Anchor(labelGo, new Vector2(0.05f, 0.45f), new Vector2(0.95f, 0.7f), Vector2.zero, Vector2.zero);
+            var labelT = AddText(labelGo, "?", 28, new Color(0.1f, 0.15f, 0.25f));
+            labelT.fontStyle = FontStyles.Bold;
 
             var comp = root.AddComponent<DraggableBottle>();
             var soComp = new SerializedObject(comp);
@@ -156,9 +201,28 @@ namespace ChemistryGame.EditorTools
             soComp.FindProperty("liquidImage").objectReferenceValue = liqImg;
             soComp.FindProperty("labelText").objectReferenceValue = labelT;
             soComp.FindProperty("amountText").objectReferenceValue = amtT;
+            soComp.FindProperty("solidChunkSprite").objectReferenceValue = chunkSprite;
             soComp.ApplyModifiedProperties();
 
-            return SavePrefab(root, $"{GP_DIR}/DraggableBottle.prefab");
+            // Curves + pourMaxAngle/rotateDurationBase/moveDuration: prefab dùng đúng default của script
+            var pour = root.AddComponent<BottlePourAnimator>();
+            var pourSo = new SerializedObject(pour);
+            pourSo.FindProperty("leftRotatePoint").objectReferenceValue = leftPivotRt;
+            pourSo.FindProperty("rightRotatePoint").objectReferenceValue = rightPivotRt;
+            pourSo.FindProperty("streamLine").objectReferenceValue = streamLine;
+            pourSo.FindProperty("liquidView").objectReferenceValue = liquidView;
+            pourSo.ApplyModifiedProperties();
+
+            // LayoutElement: giữ size cố định 140x200 trong VerticalLayoutGroup của BottlesRoot
+            var layout = root.AddComponent<LayoutElement>();
+            layout.minWidth = 140;
+            layout.minHeight = 200;
+            layout.preferredWidth = 140;
+            layout.preferredHeight = 200;
+            layout.flexibleWidth = 0;
+            layout.flexibleHeight = 0;
+
+            return SavePrefab(root, path);
         }
 
         // ===== Tool button =====

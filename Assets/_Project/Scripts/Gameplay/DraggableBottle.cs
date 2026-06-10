@@ -16,11 +16,16 @@ namespace ChemistryGame.Gameplay
         [SerializeField] private TMP_Text amountText;
 
         [Header("Chất rắn (solid / precipitate render)")]
-        [Tooltip("Sprite 'bột/hạt' tùy chọn. Khi chất là rắn/kết tủa, liquidImage đổi sang sprite này để KHÔNG nhìn như chất lỏng. Để trống = chỉ tô đặc (opaque) + tag nhãn.")]
-        [SerializeField] private Sprite solidFillSprite;
+        [Tooltip("Sprite 'cục rắn'. Khi chất là rắn/kết tủa/tinh thể, CẢ CHAI đổi thành cục này " +
+                 "(tint theo VisualColor), ẩn phần chất lỏng bên trong. " +
+                 "Để trống = fallback kiểu cũ: tô đặc (opaque) lớp lỏng.")]
+        [SerializeField] private Sprite solidChunkSprite;
         [Tooltip("Hậu tố thêm vào nhãn cho chất rắn (vd ' (rắn)'). Để trống nếu không muốn.")]
         [SerializeField] private string solidLabelSuffix = " (rắn)";
         private Sprite _liquidFillSprite;   // cache sprite gốc của liquidImage (dạng chất lỏng)
+        private Sprite _bodySprite;         // cache visual gốc của bodyImage (dạng chai thủy tinh)
+        private Color _bodyColor;
+        private bool _bodyPreserveAspect;
         private bool _spriteCached;
 
         public SubstanceData Substance { get; private set; }
@@ -57,26 +62,64 @@ namespace ChemistryGame.Gameplay
         }
 
         /// <summary>Chất rắn / kết tủa / tinh thể — render khác chất lỏng (không nhìn như ống nghiệm nước).</summary>
-        private bool IsSolidLike => Substance != null && (Substance.IsSolid || Substance.IsPrecipitate);
+        public bool IsSolidLike => Substance != null && (Substance.IsSolid || Substance.IsPrecipitate);
+
+        /// <summary>Sprite cục rắn (cho GameplayController truyền vào animation thả cục).</summary>
+        public Sprite SolidChunkSprite => solidChunkSprite;
 
         private void Refresh()
         {
             if (Substance == null) return;
 
-            if (liquidImage != null)
+            if (!_spriteCached)
             {
-                if (!_spriteCached) { _liquidFillSprite = liquidImage.sprite; _spriteCached = true; }
-
-                if (IsSolidLike)
+                if (liquidImage != null) _liquidFillSprite = liquidImage.sprite;
+                if (bodyImage != null)
                 {
-                    var c = Substance.VisualColor; c.a = 1f;     // rắn: tô đặc, đục
-                    liquidImage.color = c;
-                    if (solidFillSprite != null) liquidImage.sprite = solidFillSprite;
+                    _bodySprite = bodyImage.sprite;
+                    _bodyColor = bodyImage.color;
+                    _bodyPreserveAspect = bodyImage.preserveAspect;
+                }
+                _spriteCached = true;
+            }
+
+            // Chunk mode: vật rắn KHÔNG hiển thị như ống nghiệm — cả chai là 1 cục.
+            bool chunkMode = IsSolidLike && solidChunkSprite != null && bodyImage != null;
+
+            if (bodyImage != null)
+            {
+                if (chunkMode)
+                {
+                    var c = Substance.VisualColor; c.a = 1f;     // cục đặc, đục
+                    bodyImage.sprite = solidChunkSprite;
+                    bodyImage.preserveAspect = true;
+                    bodyImage.color = c;
                 }
                 else
                 {
-                    liquidImage.color = Substance.VisualColor;   // lỏng/dung dịch: giữ độ trong suốt
-                    if (_liquidFillSprite != null) liquidImage.sprite = _liquidFillSprite;
+                    bodyImage.sprite = _bodySprite;
+                    bodyImage.preserveAspect = _bodyPreserveAspect;
+                    bodyImage.color = _bodyColor;
+                }
+            }
+
+            if (liquidImage != null)
+            {
+                // Chunk mode: cục rắn không có phần "nước" — ẩn hẳn child Liquid.
+                liquidImage.gameObject.SetActive(!chunkMode);
+
+                if (!chunkMode)
+                {
+                    if (IsSolidLike)
+                    {
+                        var c = Substance.VisualColor; c.a = 1f;     // fallback thiếu sprite: tô đặc, đục
+                        liquidImage.color = c;
+                    }
+                    else
+                    {
+                        liquidImage.color = Substance.VisualColor;   // lỏng/dung dịch: giữ độ trong suốt
+                        if (_liquidFillSprite != null) liquidImage.sprite = _liquidFillSprite;
+                    }
                 }
             }
 
